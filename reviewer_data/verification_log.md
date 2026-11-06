@@ -83,3 +83,37 @@ IL6 on four.
    differently-controlled set that still looks defensible.
 3. mmc5 carries the same `dc:creator` / `cp:lastModifiedBy` metadata as the
    other workbooks. The strip step applies to it too.
+
+## df.total — confirmed, and it corroborates the design
+
+Inverting `t` against `P.Value` for 400 genes per contrast gives
+**df.total = 85.128**, identical in all 24 contrasts (min = max = median).
+The brief's 85.13 is exact.
+
+This independently supports the annex's experimental design:
+
+| | |
+|---|---|
+| annex: 38 arm x timepoint groups, 114 libraries | 114 - 38 = 76 residual df |
+| limma `df.total` = `df.residual` + `df.prior` | implied df.prior = 9.128 |
+| annex: n = 3 biological replicates per arm | 38 x 3 = 114 |
+
+A df.prior near 9 is ordinary for empirical Bayes moderation on a fit this
+size. The design is internally consistent and the data agrees with it.
+
+Taken with the constant AveExpr (1.0989 in all 24 contrasts), this confirms a
+single linear model fitted across the whole dataset, as the annex states.
+
+## What the pub does and does not settle
+
+The paper's endothelial methods describe **only** the HUVEC experiment:
+HUVEC passage 2, rRNA depletion, NovaSeq 2 x 100, 25 M reads. The delivered
+data covers four cell lines and 24 contrasts, so the paper under-describes its
+own deposit. Its library-prep figures therefore describe the HUVEC arm it
+documented, not necessarily the whole 114-library fit.
+
+Consequence: where the annex and the paper disagree on library prep
+(poly(A) vs rRNA depletion, 2 x 150 / 30 M vs 2 x 100 / 25 M) and on HUVEC
+passage (P4 vs P2), the data settles none of it. The design claims the data
+does settle — four lines, 114 libraries, 38 groups, single fit, n = 3 — all
+hold.
