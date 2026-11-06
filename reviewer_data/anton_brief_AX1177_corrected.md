@@ -72,9 +72,9 @@ foreclosed the `both-windows-rejection` mode.
 | File | Contents | States the world how |
 |---|---|---|
 | `mmc2.xlsx` | Olink serum associations: 1094 assays × OR, 95% CI, p, adj.p vs composite endpoint; 13 panels | the clinical prognostic layer |
-| `mmc3.xlsx` | 79 histology blocks from 31 donors: demographics, pathology text, SARS-CoV-2 status, IHC scores | tissue context; unrelated cohort |
-| `mmc4.xlsx` | HUVEC IL-33red vs vehicle, 6 h and 24 h, 26,211 genes | the stimulation reference |
-| `mmc5.xlsx` | 24 contrasts across HUVEC, HGMEC, A549, MCF7 × control arm × timepoint, 26,113 genes each | **the decisive file** |
+| `mmc3.xlsx` | 78 histology blocks from 31 donors: demographics, pathology text, SARS-CoV-2 status, IHC scores | tissue context; unrelated cohort |
+| `mmc4.xlsx` | HUVEC IL-33red vs vehicle, 6 h and 24 h, 26,210 genes | the stimulation reference |
+| `mmc5.xlsx` | 24 contrasts across HUVEC, HGMEC, A549, MCF7 × control arm × timepoint, 26,210 genes each (26,113 distinct symbols) | **the decisive file** |
 | `AX-1177_methods_annex.md` | authored methods and annotation; no results, no interpretation | the editable layer |
 
 `mmc6` (ISARIC investigator list) is **dropped**: real names, institutional
@@ -103,18 +103,18 @@ emails and ORCIDs, no analytical value.
 | SELE adj.P 0.495; VCAM1 0.497; CXCL8 0.177 | mmc5 | yes | 0, direct read |
 | ST2 rank 2, OR 3.02 | mmc2 | yes | 0 |
 | standalone arms 31 / 36 (HUVEC), 62 / 67 (HGMEC) | mmc5 | yes | 1 |
-| receptor-null floor 27 / 15 (A549), 20 / 26 (MCF7) | mmc5 | yes | 1 |
-| HUVEC 6 h / 24 h inhibition 1124 / 417 | mmc5 | yes | 1 |
-| HGMEC 6 h / 24 h inhibition 485 / 134 | mmc5 | yes | 1 |
+| receptor-null floor 27 / 17 (A549), 20 / 26 (MCF7) | mmc5 | yes | 1 |
+| HUVEC 6 h / 24 h inhibition 1126 / 417 | mmc5 | yes | 1 |
+| HGMEC 6 h / 24 h inhibition 487 / 135 | mmc5 | yes | 1 |
 | HUVEC stimulation 1068 / 512 | mmc4 | yes | 1 |
 | *IL1RL1* significant in 0 of 24 contrasts | mmc5 | yes | 1, scan |
-| **median \|logFC\| 2.01 vs 0.74 (6 h), 2.23 vs 0.51 (24 h)** | mmc5 | yes | 2 |
-| r 0.625 (6 h) / 0.303 (24 h) | mmc5 | yes | 2 |
-| sign agreement 76.9% / 64.3% | mmc5 | yes | 2 |
-| replication 28.0% / 5.5% | mmc5 | yes | 2 |
-| attribution overlap 6 / 1124 | mmc5 | yes | 2 |
+| **median \|logFC\| 2.0140 vs 0.7367 (6 h), 2.2349 vs 0.5136 (24 h)** | mmc5 | yes | 2 |
+| r 0.6216 (6 h) / 0.3032 (24 h) | mmc5 | yes | 2 |
+| sign agreement 76.82% / 64.27% | mmc5 | yes | 2 |
+| direction+nominal replication 28.0% / 5.5%; mirror replication 19.45% / 4.56%; Jaccard 0.1571 / 0.0356 | mmc5 | yes | 2 |
+| attribution overlap 6 / 1126 | mmc5 | yes | 2 |
 | 1094 assays → 1064 analytes; 178 hits → 169 | mmc2 | yes | 2 |
-| df.total 85.13 uniform across all 24 contrasts | mmc5 | yes | 2, invert t against P |
+| df.total 85.128 uniform across all 24 contrasts | mmc5 | yes | 2, invert t against P |
 
 Every anchor is a computation over mounted numeric cells. No handbook values, no
 transformed or synthetic quantities, nothing resting on literature. No thin
@@ -164,11 +164,11 @@ Full membership table to `/tmp/outputs/`, not the body.
 
 | Leg | Claim established | Mounted evidence | Route-necessary |
 |---|---|---|---|
-| 1 | the antibody effect is ligand-dependent, not artifact | standalone 31/36, 62/67 vs null floor 27/15, 20/26; overlap 6/1124 | yes |
-| 2 | the HUVEC 6 h attributable set is 1124 under the package criterion | mmc5, HUVEC 6 h isotype-controlled, adj.P<0.05 and \|logFC\|>1 | yes |
-| 3 | **HGMEC effects are systematically attenuated** | median \|logFC\| 2.01 vs 0.74 (2.73×); 2.23 vs 0.51 (4.35×) | **yes — everything turns on it** |
-| 4 | the lines agree at 6 h and not at 24 h | r 0.625 vs 0.303; sign 76.9% vs 64.3%; replication 28.0% vs 5.5% | yes |
-| 5 | a fixed fold-change cut understates agreement given leg 3 | 218 vs 315 off the same base; recovered genes begin at magnitude rank 61 | yes |
+| 1 | the antibody effect is ligand-dependent, not artifact | standalone 31/36, 62/67 vs null floor 27/17, 20/26; overlap 6/1126 | yes |
+| 2 | the HUVEC 6 h attributable set is 1126 under the package criterion | mmc5, HUVEC 6 h isotype-controlled, adj.P<0.05 and \|logFC\|>1 | yes |
+| 3 | **HGMEC effects are systematically attenuated** | median \|logFC\| 2.0140 vs 0.7367 (2.734×); 2.2349 vs 0.5136 (4.351×) | **yes — everything turns on it** |
+| 4 | the lines agree at 6 h and not at 24 h | r 0.6216 vs 0.3032; sign 76.82% vs 64.27%; direction+nominal replication 28.0% vs 5.5% | yes |
+| 5 | a fixed fold-change cut understates agreement given leg 3 | 219 vs 315 off the same base; the 107 recovered genes begin at magnitude rank 79 (ACKR3, \|logFC\| 3.710) | yes |
 | 6 | the reproducible core is coherent suppressed inflammatory biology | interferon, NF-κB (incl. NFKB2 −2.86, RELB −3.27), CSF and cytokine, and chemokine modules all present; F3 −5.47, C3 −4.62; every member of the named modules is negative | yes, for the justification |
 | 7 | sST2 has no pharmacodynamic response | *IL1RL1* in 0 of 24 contrasts, absent from the core | serum product only |
 | 8 | the Olink delivery is 1094 assays over 1064 analytes | 26 analytes on more than one panel, IL6 on four | serum product only |
@@ -180,31 +180,43 @@ answer.** Criterion grid, HUVEC 6 h:
 
 | base filter | mirror | sign+adjP<.05 | sign+adjP<.10 | sign+rawP<.05 | sign+\|lFC\|>0.5 | sign only |
 |---|---|---|---|---|---|---|
-| adj.P<.05 only (4237) | 240 | 951 | 1147 | 1720 | 776 | 3524 |
-| adj.P<.05, \|lFC\|>0.585 (1823) | 238 | 556 | 623 | 846 | 732 | 1495 |
-| adj.P<.05, \|lFC\|>1 (1124) | 218 | 315 | 348 | 458 | 579 | 864 |
+| adj.P<.05 only (4239) | 241 | 951 | 1147 | 1720 | 776 | 3525 |
+| adj.P<.05, \|lFC\|>0.585 (1825) | 239 | 556 | 623 | 846 | 732 | 1496 |
+| adj.P<.05, \|lFC\|>1 (1126) | 219 | 315 | 348 | 458 | 579 | 865 |
 
 Defensible corrected answers span 315 to 1720. **The mirror column is nearly
-invariant at 240 / 238 / 218** because the second line's fold-change cut is the
+invariant at 241 / 239 / 219** because the second line's fold-change cut is the
 binding constraint regardless of base. A reported count of 215–245 alongside a
 reproducibility-failure claim is therefore diagnostic of the mirror rule.
 
-Fisher and Stouffer both return 864, identical to sign-only, because the HUVEC
+Fisher and Stouffer both return 865, identical to sign-only, because the HUVEC
 p-value dominates the combination.
 
-**Translational shortlist is criterion-dependent, in two ways.** Off the 219
-core: 6 analytes under exact symbol matching (B4GALT1, CCL20, CTSS, IL1B, IL6,
-TNFRSF11B), 9 if Olink's legacy assay names are reconciled to current symbols
-(adds CSF-1 → CSF1, IL-18R1 → IL18R1, MCP-3 → CCL7). Off the 315 core: 10 and
-13 respectively, both adding BIRC2, FSTL3, TANK, TRIM21.
+**Translational shortlist: the join rule must be stated, and the golden
+reconciles.** Olink reports protein assay names, not gene symbols. Off the
+219-gene mirror core:
 
-**The golden uses exact symbol matching, 6 and 10.** mmc2 carries only `panel`
-and `assay` and no gene identifier, so the alias reconciliation requires
-knowledge from outside the mounted package. Exact matching is what a solver
-working the delivered record produces.
+| Join rule | n | Members |
+|---|---|---|
+| exact symbol string | 5 | B4GALT1, CCL20, CTSS, IL1B, IL6 |
+| **legacy names reconciled** | **9** | adds CSF-1 → CSF1, IL-18R1 → IL18R1, MCP-3 → CCL7, OPG → TNFRSF11B |
 
-**Both joins are acceptable.** A solver who reconciles the legacy names has
-done more, not less, and must not be penalised for the larger shortlist.
+Off the 315-gene direction-plus-nominal core: 9 exact, **13** reconciled
+(B4GALT1, BIRC2, CCL20, CSF-1, CTSS, FSTL3, IL-18R1, IL1B, IL6, MCP-3, OPG,
+TANK, TRIM21).
+
+**The golden reconciles: 9 and 13.** The four aliases are standard protein-to-
+gene mappings with one correct answer each, and the prompt welcomes domain
+knowledge in interpretation. The alias set is closed: of the 169 significant
+analytes, every name maps to a symbol, so the reconciliation is determinate
+rather than open-ended.
+
+Note that an exact-string join gives 5, not 6. The figure of 6 is exact
+matching plus the OPG alias alone, which no stated rule produces.
+
+**Both joins are acceptable** where the rule is stated. A solver who reports 5
+or 6 under a declared exact-matching rule has been internally consistent; the
+error to penalise is an unstated rule or a count that does not follow from it.
 
 **The module predicate must be stated, not the counts.** Interferon and
 chemokine membership reproduces exactly at 14 and 9, but NF-κB is 9 or 10
@@ -223,8 +235,8 @@ look like transcriptional noise, but that has not been tested.
 
 **Provenance form**, to be used for every number:
 
-> Median |logFC| across the 1124 HUVEC-significant genes is 2.01 in HUVEC and
-> 0.74 for the same genes in HGMEC (`mmc5.xlsx`,
+> Median |logFC| across the 1126 HUVEC-significant genes is 2.0140 in HUVEC and
+> 0.7367 for the same genes in HGMEC (`mmc5.xlsx`,
 > `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs` and `..._HGMEC_6hrs`, median of
 > absolute `logFC` over the HUVEC-significant subset).
 
@@ -244,11 +256,11 @@ transcripts is the fastest route to the required one to five.
 
 | Short name | Fails to check / measure / correct for | Why it attracts | Refuting fact | Counterfactual |
 |---|---|---|---|---|
-| `threshold-intersection` | whether between-line effect-size difference invalidates a fixed fold-change cut as a reproducibility test | intersecting significant sets is the standard move, and both arrive pre-thresholded by the package's own criterion | median \|logFC\| 2.01 vs 0.74 over the same genes | direction plus nominal significance gives 315 and r 0.625; the intersection gives 218 and reads as failure |
-| `both-windows-rejection` | that the correction separates the two timepoints | 0.157 and 0.036 both read as low; one uniform conclusion is tidier | r 0.625 vs 0.303; replication 28.0% vs 5.5% | 6 h carries, 24 h does not |
+| `threshold-intersection` | whether between-line effect-size difference invalidates a fixed fold-change cut as a reproducibility test | intersecting significant sets is the standard move, and both arrive pre-thresholded by the package's own criterion | median \|logFC\| 2.0140 vs 0.7367 over the same genes | direction plus nominal significance gives 315 and r 0.6216; the intersection gives 219 and reads as failure |
+| `both-windows-rejection` | that the correction separates the two timepoints | Jaccard 0.1571 and 0.0356 both read as low; one uniform conclusion is tidier | r 0.6216 vs 0.3032; direction+nominal replication 28.0% vs 5.5% | 6 h carries, 24 h does not |
 | `assay-as-analyte` | reconciliation of assay identifiers across panels | one row per assay, 1094 rows, the obvious count | 26 analytes appear on more than one panel | 1064 analytes, 169 significant |
-| `prognostic-as-pharmacodynamic` | whether the top-ranked marker responds to the intervention | sST2 ranks second of 1094 at OR 3.02 and is the pathway's own receptor | *IL1RL1* not significant in any of 24 contrasts | shortlist of 6 or 10 by declared criterion, sST2 excluded |
-| `unverified-attribution` | the ligand-independent antibody term | the isotype appears in the contrast name, which looks like it handles it | the contrast is (Ab+IL-33) vs (isotype+IL-33); the antibody-alone term sits in the numerator only | standalone 31 and 62 against a null floor of 15–27; overlap 6/1124, attribution holds |
+| `prognostic-as-pharmacodynamic` | whether the top-ranked marker responds to the intervention | sST2 ranks second of 1094 at OR 3.02 and is the pathway's own receptor | *IL1RL1* not significant in any of 24 contrasts | shortlist of 5-9 (219 core) or 9-13 (315 core) by declared criterion, sST2 excluded |
+| `unverified-attribution` | the ligand-independent antibody term | the isotype appears in the contrast name, which looks like it handles it | the contrast is (Ab+IL-33) vs (isotype+IL-33); the antibody-alone term sits in the numerator only | standalone 31 and 62 against a null floor of 17–37; overlap 6/1126, attribution holds |
 | `magnitude-ranked-response` | the significance filter when naming the strongest effects | SELE, VCAM1 and CXCL8 are the textbook endothelial readouts and carry three of the ten largest fold changes | adj.P 0.495, 0.497, 0.177 | none is attributable; ICAM1 at adj.P 0.0101 is |
 
 Six predicted so that one to five survive contact. The first two carry the
@@ -260,9 +272,9 @@ verdict; the rest fail independently of it.
 
 | Escape | Local appeal | Foreclosing fact | Where mounted |
 |---|---|---|---|
-| "different tissues, so divergence is expected and HUVEC is the relevant line" | cell-type differences are real | the same two lines agree at 6 h, r 0.625 and 77%; tissue identity would apply at both timepoints | both timepoints, mmc5 |
-| "HGMEC simply isn't IL-33 responsive" | no HGMEC vehicle arm exists | 485 genes are antibody-reversed in HGMEC at 6 h; you cannot reverse what was not driven | mmc5, HGMEC 6 h |
-| "check receptor expression per line via AveExpr" | the column is right there | one fit across 114 libraries; AveExpr identical to two decimals across all four lines | annex §5, and mmc5 |
+| "different tissues, so divergence is expected and HUVEC is the relevant line" | cell-type differences are real | the same two lines agree at 6 h, r 0.6216 and 76.82%; tissue identity would apply at both timepoints | both timepoints, mmc5 |
+| "HGMEC simply isn't IL-33 responsive" | no HGMEC vehicle arm exists | 487 genes are antibody-reversed in HGMEC at 6 h; you cannot reverse what was not driven | mmc5, HGMEC 6 h |
+| "check receptor expression per line via AveExpr" | the column is right there | one fit across 114 libraries; AveExpr is per-gene identical at full precision across all 24 contrasts, for all 26,210 genes | annex §5, and mmc5 |
 | "report the top hits, they are the biology" | top hits are the mechanism | top 50 by magnitude is identical under both criteria | criterion grid |
 | "sST2 ranks second, nominate it" | it is the pathway's own receptor | *IL1RL1* in 0 of 24 contrasts | mmc5 |
 | "pool the timepoints for power" | more samples | the question asks which timepoint carries; pooling cannot answer it | contract |
@@ -273,7 +285,7 @@ verdict; the rest fail independently of it.
 
 ### Hidden basin
 
-The second endothelial line's effects are systematically 2.73-fold smaller, so a
+The second endothelial line's effects are systematically 2.734-fold smaller, so a
 fixed fold-change threshold rejects reproducibility by construction at the
 timepoint where the response is in fact reproducible.
 
@@ -286,7 +298,7 @@ timepoint where the response is in fact reproducible.
 |---|---|
 | the criterion | stated as a predicate; does it account for between-line effect size |
 | internal consistency | does the reported count follow from the solver's own declared base filter and rule |
-| the diagnostic | a count of 215–245 alongside a reproducibility-failure claim indicates the mirror rule |
+| the diagnostic | a count of 215–245 alongside a reproducibility-failure claim indicates the mirror rule (measured mirror values are 219, 239, 241) |
 | the conclusion | 6 h carries, 24 h does not |
 | analyte handling | 1064 and 169, not 1094 and 178 |
 | sST2 | excluded with a stated reason |
@@ -350,7 +362,8 @@ score. Other variations may also be neutral — use your judgment.
 - How Olink assay identifiers are matched to genes for the circulating-marker
   shortlist. Exact symbol matching and reconciliation of legacy assay names
   (OPG, CSF-1, IL-18R1, MCP-3) are both defensible and give different
-  shortlists. Either is acceptable where the rule is stated.
+  shortlists. Either is acceptable where the rule is stated and the members
+  follow from it.
 - Whether supporting analysis is presented as tables, prose or figures.
 - Length, section ordering and file layout beyond the one-line recommendation.
 - Noting that one cell line has no unstimulated baseline arm.

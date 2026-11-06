@@ -147,3 +147,39 @@ n = 9 COVID, n = 9 non-COVID pneumonia, n = 4 non-pneumonia, total 22.
 
 So the column is a join key into the lung RNA-seq dataset, which is not
 delivered in any mmc workbook. It points at data a solver cannot reach.
+
+## Leg 5 and the Jaccard figures
+
+| Claim | Brief | Measured |
+|---|---|---|
+| Jaccard of the two thresholded sets | 0.157 / 0.036 | **0.1571 / 0.0356** |
+| recovered genes begin at magnitude rank | 61 | **79** |
+
+The Jaccard figures are exact: 219/1394 at 6 h and 19/533 at 24 h. The brief
+never names them as Jaccard indices; the `both-windows-rejection` row carries
+them bare, which is why they were hard to place.
+
+Leg 5's magnitude rank is wrong. Ranking the 1126-gene HUVEC base by |logFC|
+descending, the 107 genes recovered by the direction-plus-nominal rule but
+missed by the mirror rule begin at **rank 79**, ACKR3 at |logFC| 3.710. The
+next five are SERPINB2 (152), GCH1 (244), AL356534.1 (383), NOCT (408),
+RBM47 (472). The argument is unaffected and arguably stronger: the recovered
+genes are spread from rank 79 to the tail, not clustered low.
+
+## Translational shortlist, settled
+
+| Join rule | 219 core | 315 core |
+|---|---|---|
+| exact symbol string | 5 | 9 |
+| legacy names reconciled | **9** | **13** |
+
+Four aliases, each with one correct answer: CSF-1 -> CSF1, IL-18R1 -> IL18R1,
+MCP-3 -> CCL7, OPG -> TNFRSF11B.
+
+The reconciliation is determinate, not open-ended: of the 169 significant
+analytes every name maps to a symbol, so the alias set is closed. Only 15 of
+the 169 are not bare uppercase strings, and OPG shows that bare uppercase does
+not imply identity.
+
+The brief's figure of 6 is exact matching plus the OPG alias alone. No stated
+rule produces it. The golden reconciles and reports 9 and 13.
