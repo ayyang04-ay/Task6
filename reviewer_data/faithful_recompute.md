@@ -71,3 +71,36 @@ faithful predicate.
 
 1094 assays, 1064 analytes, 178 significant rows, 169 significant analytes.
 26 analytes on more than one panel; IL6 on four, SCF and FGF-21 on three.
+
+## The two inhibition contrast families give the same verdict
+
+Both families exist for both endothelial lines and both timepoints. Running
+the full basin on each:
+
+| Family | tp | n | med HUVEC | med HGMEC | ratio | r | sign | dir+nom |
+|---|---|---|---|---|---|---|---|---|
+| isotype-controlled | 6 h | 1126 | 2.0140 | 0.7367 | 2.734x | 0.6216 | 76.82% | 28.0% |
+| isotype-controlled | 24 h | 417 | 2.2349 | 0.5136 | 4.351x | 0.3032 | 64.27% | 5.5% |
+| IL-33 alone | 6 h | 1075 | 2.0058 | 0.7145 | 2.807x | 0.6481 | 78.60% | 29.7% |
+| IL-33 alone | 24 h | 547 | 2.1878 | 0.4434 | 4.934x | 0.2321 | 58.50% | 6.6% |
+
+`isotype-controlled` is `Compound_47_IL33_vs_IL33_NIP228_<line>_<tp>`;
+`IL-33 alone` is `Compound_47_IL33_vs_IL33_<line>_<tp>`.
+
+Every structural feature survives the substitution, and three of them are
+larger on the non-isotype contrast: attenuation 2.81x and 4.93x against
+2.73x and 4.35x, the r gap 0.648 to 0.232 against 0.622 to 0.303, and the
+sign gap 78.6% to 58.5% against 76.8% to 64.3%.
+
+**Consequence for the design.** A solver who picks the non-isotype contrast
+reaches the same conclusion: HGMEC is attenuated at both timepoints, 6 h
+carries and 24 h does not. A careful expert could defend either choice, so
+this is not a failure mode by the FA bar. It belongs in the derivation notes
+as a degree of freedom the verdict is robust to, not in the pre-registered
+mode table.
+
+The one measurable cost of the wrong choice: the 24 h attributable set
+inflates from 417 to 547. Those extra 130 genes carry a ligand-independent
+antibody term that the isotype arm removes. That is a real defect in the
+derivation, and worth credit if a solver names it, but it does not move the
+recommendation.
