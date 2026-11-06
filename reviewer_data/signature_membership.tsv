@@ -1,0 +1,316 @@
+ensembl	symbol	gene_name	huvec_logFC	huvec_adjP	hgmec_logFC	hgmec_adjP	hgmec_passes_lfc1
+ENSG00000164400	CSF2	colony stimulating factor 2 (granulocyte-macrophage)	-12.2128	9.400e-45	-7.0974	2.532e-16	True
+ENSG00000115009	CCL20	chemokine (C-C motif) ligand 20	-9.8418	2.225e-20	-5.5549	4.797e-10	True
+ENSG00000285744	AC083837.1		-9.1672	6.819e-38	-6.2881	2.237e-14	True
+ENSG00000006210	CX3CL1	chemokine (C-X3-C motif) ligand 1	-8.673	2.762e-18	-4.9862	1.179e-07	True
+ENSG00000163734	CXCL3	chemokine (C-X-C motif) ligand 3	-8.3964	1.729e-33	-6.6834	8.242e-31	True
+ENSG00000108342	CSF3	colony stimulating factor 3 (granulocyte)	-8.2786	2.247e-18	-6.5114	1.688e-11	True
+ENSG00000237988	OR2I1P	olfactory receptor, family 2, subfamily I, member 1 pseudogene	-8.2739	1.045e-23	-4.8758	5.629e-17	True
+ENSG00000261618	LINC02605		-8.2282	3.128e-19	-7.1329	2.032e-15	True
+ENSG00000124875	CXCL6	chemokine (C-X-C motif) ligand 6	-8.138	1.089e-16	-3.8573	4.593e-09	True
+ENSG00000232810	TNF	tumor necrosis factor	-7.6654	7.018e-30	-2.2475	3.030e-02	True
+ENSG00000169245	CXCL10	chemokine (C-X-C motif) ligand 10	-7.5133	1.161e-18	-2.8239	2.785e-03	True
+ENSG00000081041	CXCL2	chemokine (C-X-C motif) ligand 2	-6.7007	1.335e-28	-6.2474	9.540e-23	True
+ENSG00000163121	NEURL3	neuralized E3 ubiquitin protein ligase 3	-6.3842	1.029e-13	-4.0465	1.848e-05	True
+ENSG00000276462	BX255923.2		-6.3589	1.893e-16	-3.4016	2.083e-03	True
+ENSG00000050730	TNIP3	TNFAIP3 interacting protein 3	-6.2581	2.067e-20	-4.1744	1.879e-15	True
+ENSG00000049249	TNFRSF9	tumor necrosis factor receptor superfamily, member 9	-6.2479	1.669e-20	-5.0059	5.141e-12	True
+ENSG00000123610	TNFAIP6	tumor necrosis factor, alpha-induced protein 6	-6.0508	2.433e-15	-3.5853	8.843e-05	True
+ENSG00000136244	IL6	interleukin 6	-5.9676	8.586e-14	-2.8588	2.373e-04	True
+ENSG00000056558	TRAF1	TNF receptor-associated factor 1	-5.9513	3.184e-42	-4.5625	9.177e-36	True
+ENSG00000164181	ELOVL7	ELOVL fatty acid elongase 7	-5.836	4.054e-14	-6.3012	3.334e-15	True
+ENSG00000163735	CXCL5	chemokine (C-X-C motif) ligand 5	-5.7563	2.600e-21	-4.3974	2.901e-08	True
+ENSG00000110848	CD69	CD69 molecule	-5.7435	2.212e-26	-6.8181	1.525e-22	True
+ENSG00000267607	AC011511.5		-5.7317	7.296e-12	-3.1142	2.376e-03	True
+ENSG00000115919	KYNU	kynureninase	-5.7069	5.828e-07	-1.9143	1.424e-07	True
+ENSG00000100678	SLC8A3	solute carrier family 8 (sodium/calcium exchanger), member 3	-5.7033	2.663e-10	-5.4319	1.971e-15	True
+ENSG00000140379	BCL2A1	BCL2-related protein A1	-5.6077	8.321e-15	-2.6862	1.120e-14	True
+ENSG00000117525	F3	coagulation factor III (thromboplastin, tissue factor)	-5.4739	8.623e-27	-3.3226	6.300e-09	True
+ENSG00000198535	C2CD4A	C2 calcium-dependent domain containing 4A	-5.466	4.399e-16	-4.2752	1.733e-06	True
+ENSG00000119508	NR4A3	nuclear receptor subfamily 4, group A, member 3	-5.4169	3.438e-20	-1.8897	3.896e-03	True
+ENSG00000023445	BIRC3	baculoviral IAP repeat containing 3	-5.3371	1.037e-32	-8.8212	2.121e-21	True
+ENSG00000135378	PRRG4	proline rich Gla (G-carboxyglutamic acid) 4 (transmembrane)	-5.3066	9.103e-27	-1.5324	3.191e-05	True
+ENSG00000178860	MSC	musculin	-5.3022	3.789e-15	-2.894	2.131e-07	True
+ENSG00000105246	EBI3	Epstein-Barr virus induced 3	-5.2939	3.402e-15	-4.6198	2.649e-08	True
+ENSG00000112096	SOD2	superoxide dismutase 2, mitochondrial	-5.1574	3.581e-20	-3.6865	2.154e-07	True
+ENSG00000108688	CCL7	chemokine (C-C motif) ligand 7	-4.9922	2.421e-12	-4.24	2.239e-13	True
+ENSG00000164761	TNFRSF11B	tumor necrosis factor receptor superfamily, member 11b	-4.9854	3.324e-20	-1.9065	1.140e-06	True
+ENSG00000167207	NOD2	nucleotide-binding oligomerization domain containing 2	-4.931	5.887e-13	-2.5129	1.792e-02	True
+ENSG00000118503	TNFAIP3	tumor necrosis factor, alpha-induced protein 3	-4.8097	1.035e-45	-3.6671	5.425e-36	True
+ENSG00000185101	ANO9	anoctamin 9	-4.7862	3.546e-23	-3.0722	1.027e-17	True
+ENSG00000179826	MRGPRX3	MAS-related GPR, member X3	-4.7741	2.259e-18	-3.0918	1.228e-05	True
+ENSG00000271503	CCL5	chemokine (C-C motif) ligand 5	-4.7504	7.939e-08	-3.9513	3.563e-05	True
+ENSG00000253831	ETV3L	ets variant 3-like	-4.6987	1.433e-18	-2.4627	2.027e-04	True
+ENSG00000125730	C3	complement component 3	-4.6241	4.068e-10	-2.5737	3.045e-03	True
+ENSG00000203635	AC144450.1		-4.6098	5.570e-11	-1.709	9.879e-03	True
+ENSG00000115008	IL1A	interleukin 1, alpha	-4.6065	9.971e-10	-2.7988	1.862e-05	True
+ENSG00000160224	AIRE	autoimmune regulator	-4.5547	1.202e-09	-3.2409	4.533e-03	True
+ENSG00000137571	SLCO5A1	solute carrier organic anion transporter family, member 5A1	-4.3434	7.149e-08	-2.9489	1.289e-03	True
+ENSG00000185467	KPNA7	karyopherin alpha 7 (importin alpha 8)	-4.2059	5.520e-08	-3.346	1.011e-04	True
+ENSG00000172602	RND1	Rho family GTPase 1	-4.1945	3.457e-36	-3.275	2.504e-27	True
+ENSG00000163347	CLDN1	claudin 1	-4.167	3.441e-14	-2.314	7.984e-06	True
+ENSG00000160223	ICOSLG	inducible T-cell co-stimulator ligand	-4.164	4.977e-09	-3.1658	3.926e-05	True
+ENSG00000125726	CD70	CD70 molecule	-4.1548	5.776e-12	-1.0482	3.477e-02	True
+ENSG00000279903	AP006248.3		-3.9977	5.448e-07	-4.24	5.304e-11	True
+ENSG00000131203	IDO1	indoleamine 2,3-dioxygenase 1	-3.9755	2.652e-07	-3.8135	2.207e-06	True
+ENSG00000125538	IL1B	interleukin 1, beta	-3.9716	1.401e-07	-3.2817	1.461e-04	True
+ENSG00000112149	CD83	CD83 molecule	-3.9441	1.786e-14	-4.956	2.367e-13	True
+ENSG00000253522	MIR3142HG		-3.8701	1.557e-20	-3.1575	2.483e-17	True
+ENSG00000251258	RFPL4B	ret finger protein-like 4B	-3.7547	1.567e-10	-3.2947	1.317e-05	True
+ENSG00000279932	AP006248.4		-3.7453	4.850e-05	-2.8123	7.904e-03	True
+ENSG00000221869	CEBPD	CCAAT/enhancer binding protein (C/EBP), delta	-3.7219	8.784e-28	-3.2262	4.490e-11	True
+ENSG00000144476	ACKR3	atypical chemokine receptor 3	-3.7101	1.910e-29	-0.8465	1.064e-02	False
+ENSG00000271856	LINC01215		-3.7067	2.033e-10	-4.7236	5.716e-19	True
+ENSG00000260823	AC026461.3		-3.6792	1.872e-06	-2.1166	2.846e-02	True
+ENSG00000205502	C2CD4B	C2 calcium-dependent domain containing 4B	-3.6414	9.690e-17	-3.9596	1.408e-09	True
+ENSG00000277117	FP565260.3		-3.5297	6.940e-19	-3.6553	7.794e-08	True
+ENSG00000258104	HIGD1AP9	HIG1 hypoxia inducible domain family, member 1A pseudogene 9	-3.5294	1.852e-06	-2.4659	3.143e-02	True
+ENSG00000115604	IL18R1	interleukin 18 receptor 1	-3.4542	7.340e-20	-2.3776	1.413e-11	True
+ENSG00000167034	NKX3-1	NK3 homeobox 1	-3.2951	1.299e-25	-1.7981	1.611e-10	True
+ENSG00000154451	GBP5	guanylate binding protein 5	-3.2938	1.090e-04	-2.6206	9.907e-04	True
+ENSG00000141469	SLC14A1	solute carrier family 14 (urea transporter), member 1 (Kidd blood group)	3.2901	1.129e-09	2.2596	1.361e-03	True
+ENSG00000104856	RELB	v-rel avian reticuloendotheliosis viral oncogene homolog B	-3.2667	1.261e-39	-3.5443	1.386e-31	True
+ENSG00000053108	FSTL4	follistatin-like 4	3.262	8.692e-07	2.7362	2.173e-04	True
+ENSG00000163874	ZC3H12A	zinc finger CCCH-type containing 12A	-3.2592	5.130e-31	-2.5825	8.679e-23	True
+ENSG00000100906	NFKBIA	nuclear factor of kappa light polypeptide gene enhancer in B-cells inhibitor, alpha	-3.2415	2.264e-56	-2.5736	2.318e-40	True
+ENSG00000179862	CITED4	Cbp/p300-interacting transactivator, with Glu/Asp-rich carboxy-terminal domain, 4	-3.2122	3.619e-20	-1.3858	2.698e-02	True
+ENSG00000286367	AC000072.1		3.1953	4.072e-04	2.5556	2.494e-02	True
+ENSG00000104312	RIPK2	receptor-interacting serine-threonine kinase 2	-3.1833	2.809e-56	-1.2184	6.495e-26	True
+ENSG00000228613	AC141930.1		-3.1714	4.163e-06	-2.7904	4.810e-04	True
+ENSG00000134321	RSAD2	radical S-adenosyl methionine domain containing 2	-3.1394	9.234e-04	-3.175	9.372e-03	True
+ENSG00000010030	ETV7	ets variant 7	-3.1328	2.152e-03	-2.7641	4.275e-02	True
+ENSG00000144802	NFKBIZ	nuclear factor of kappa light polypeptide gene enhancer in B-cells inhibitor, zeta	-3.1167	7.411e-40	-1.9895	5.460e-25	True
+ENSG00000197632	SERPINB2	serpin peptidase inhibitor, clade B (ovalbumin), member 2	-3.0828	1.688e-20	-0.9027	1.474e-03	False
+ENSG00000176907	TCIM		-3.0658	4.069e-39	-1.4871	3.387e-12	True
+ENSG00000166920	C15orf48	chromosome 15 open reading frame 48	-3.0588	5.864e-04	-3.1899	1.292e-04	True
+ENSG00000163545	NUAK2	NUAK family, SNF1-like kinase, 2	-3.0347	3.854e-25	-3.8961	2.019e-14	True
+ENSG00000184371	CSF1	colony stimulating factor 1 (macrophage)	-3.0173	1.392e-46	-2.2757	2.016e-24	True
+ENSG00000251136	AF117829.1		-2.9977	2.242e-38	-1.42	1.661e-13	True
+ENSG00000112299	VNN1	vanin 1	-2.9854	8.731e-03	-4.1701	2.866e-04	True
+ENSG00000087085	ACHE	acetylcholinesterase (Yt blood group)	-2.938	4.255e-07	-2.7921	1.820e-04	True
+ENSG00000187123	LYPD6	LY6/PLAUR domain containing 6	-2.9038	3.070e-19	-1.6988	8.417e-04	True
+ENSG00000173918	C1QTNF1	C1q and tumor necrosis factor related protein 1	-2.882	1.392e-18	-1.9102	1.718e-04	True
+ENSG00000077150	NFKB2	nuclear factor of kappa light polypeptide gene enhancer in B-cells 2 (p49/p100)	-2.8605	3.490e-42	-2.949	4.072e-32	True
+ENSG00000128342	LIF	leukemia inhibitory factor	-2.8603	3.013e-20	-3.428	6.470e-16	True
+ENSG00000188015	S100A3	S100 calcium binding protein A3	-2.8209	4.621e-09	-3.952	2.304e-08	True
+ENSG00000144218	AFF3	AF4/FMR2 family, member 3	-2.8084	5.897e-13	-1.1714	6.235e-06	True
+ENSG00000145365	TIFA	TRAF-interacting protein with forkhead-associated domain	-2.8038	9.292e-36	-2.2657	3.377e-24	True
+ENSG00000073282	TP63	tumor protein p63	-2.7972	4.001e-05	-1.9727	2.187e-02	True
+ENSG00000134070	IRAK2	interleukin-1 receptor-associated kinase 2	-2.7336	5.185e-32	-2.2786	1.182e-26	True
+ENSG00000131979	GCH1	GTP cyclohydrolase 1	-2.7163	1.751e-38	-0.952	3.673e-06	False
+ENSG00000145901	TNIP1	TNFAIP3 interacting protein 1	-2.683	1.583e-13	-1.913	4.416e-06	True
+ENSG00000172183	ISG20	interferon stimulated exonuclease gene 20kDa	-2.661	2.698e-27	-1.1671	2.729e-10	True
+ENSG00000124145	SDC4	syndecan 4	-2.6486	9.740e-48	-2.2245	5.573e-38	True
+ENSG00000146374	RSPO3	R-spondin 3	-2.6305	9.146e-09	-1.4782	1.238e-05	True
+ENSG00000028277	POU2F2	POU class 2 homeobox 2	-2.6202	6.590e-13	-3.5841	3.484e-15	True
+ENSG00000137203	TFAP2A	transcription factor AP-2 alpha (activating enhancer binding protein 2 alpha)	-2.5847	3.876e-10	-1.6291	1.497e-05	True
+ENSG00000165379	LRFN5	leucine rich repeat and fibronectin type III domain containing 5	-2.5818	4.314e-03	-3.4144	3.547e-06	True
+ENSG00000279805	Z95114.3		-2.5795	1.042e-04	-3.0992	2.596e-08	True
+ENSG00000010818	HIVEP2	human immunodeficiency virus type I enhancer binding protein 2	-2.5309	4.702e-48	-1.5343	7.546e-27	True
+ENSG00000196878	LAMB3	laminin, beta 3	-2.5254	1.112e-20	-1.4791	4.508e-17	True
+ENSG00000124479	NDP	Norrie disease (pseudoglioma)	2.5077	2.705e-04	2.1347	9.879e-03	True
+ENSG00000270607	AC009549.1		-2.5004	2.821e-07	-2.1852	6.235e-06	True
+ENSG00000107968	MAP3K8	mitogen-activated protein kinase kinase kinase 8	-2.479	9.046e-25	-2.0139	4.372e-16	True
+ENSG00000125347	IRF1	interferon regulatory factor 1	-2.4639	4.757e-33	-1.5801	6.470e-16	True
+ENSG00000189120	SP6	Sp6 transcription factor	-2.3928	3.220e-13	-1.0922	4.788e-02	True
+ENSG00000279467	AP000350.7		2.3902	9.936e-03	2.1698	2.612e-02	True
+ENSG00000163131	CTSS	cathepsin S	-2.3897	6.849e-16	-1.2923	2.067e-06	True
+ENSG00000153721	CNKSR3	CNKSR family member 3	-2.3873	6.214e-36	-1.3228	2.081e-15	True
+ENSG00000133519	ZDHHC8P1	zinc finger, DHHC-type containing 8 pseudogene 1	2.3848	9.816e-04	1.8974	4.318e-02	True
+ENSG00000286215	AL356534.1		-2.3796	7.185e-08	-0.9359	4.518e-02	False
+ENSG00000138675	FGF5	fibroblast growth factor 5	-2.3527	2.428e-08	-1.0407	2.930e-02	True
+ENSG00000172020	GAP43	growth associated protein 43	2.3384	1.806e-02	2.6323	1.771e-02	True
+ENSG00000151014	NOCT		-2.3245	5.734e-31	-0.9107	3.597e-10	False
+ENSG00000109320	NFKB1	nuclear factor of kappa light polypeptide gene enhancer in B-cells 1	-2.3238	2.875e-45	-1.3531	3.818e-27	True
+ENSG00000142765	SYTL1	synaptotagmin-like 1	2.3217	3.469e-03	2.2832	1.159e-02	True
+ENSG00000115267	IFIH1	interferon induced with helicase C domain 1	-2.3156	4.912e-24	-2.8632	1.374e-20	True
+ENSG00000181634	TNFSF15	tumor necrosis factor (ligand) superfamily, member 15	-2.2924	1.641e-05	-1.317	4.831e-02	True
+ENSG00000172738	TMEM217	transmembrane protein 217	-2.2754	1.090e-05	-2.2878	3.451e-05	True
+ENSG00000104951	IL4I1	interleukin 4 induced 1	-2.2057	3.168e-05	-1.6336	8.221e-03	True
+ENSG00000163694	RBM47	RNA binding motif protein 47	-2.1945	4.138e-03	-0.8979	2.404e-02	False
+ENSG00000248323	LUCAT1	lung cancer associated transcript 1 (non-protein coding)	-2.1937	1.805e-08	-1.7373	4.035e-09	True
+ENSG00000132204	LINC00470	long intergenic non-protein coding RNA 470	2.1925	7.771e-03	2.2698	1.342e-02	True
+ENSG00000145777	TSLP	thymic stromal lymphopoietin	-2.1862	4.961e-04	-2.9215	2.140e-10	True
+ENSG00000160326	SLC2A6	solute carrier family 2 (facilitated glucose transporter), member 6	-2.1814	1.949e-26	-1.5877	7.152e-16	True
+ENSG00000163132	MSX1	msh homeobox 1	-2.1759	2.652e-14	-1.3301	1.460e-04	True
+ENSG00000188629	ZNF177	zinc finger protein 177	2.1661	3.516e-03	2.2698	7.005e-03	True
+ENSG00000145779	TNFAIP8	tumor necrosis factor, alpha-induced protein 8	-2.1444	1.042e-24	-0.9569	3.295e-10	False
+ENSG00000131459	GFPT2	glutamine-fructose-6-phosphate transaminase 2	-2.1132	8.267e-35	-0.8085	6.715e-20	False
+ENSG00000135114	OASL	2'-5'-oligoadenylate synthetase-like	-2.1059	3.426e-04	-2.4327	2.842e-03	True
+ENSG00000171223	JUNB	jun B proto-oncogene	-2.0968	9.426e-29	-2.0082	4.733e-19	True
+ENSG00000162772	ATF3	activating transcription factor 3	-2.0959	1.663e-17	-1.0414	3.734e-05	True
+ENSG00000100767	PAPLN	papilin, proteoglycan-like sulfated glycoprotein	-2.0932	9.671e-25	-1.0945	1.718e-04	True
+ENSG00000135842	FAM129A	family with sequence similarity 129, member A	-2.0917	2.643e-24	-1.2377	2.959e-11	True
+ENSG00000283265	AL356234.3		-2.0909	8.301e-05	-2.4003	6.539e-06	True
+ENSG00000225489	AL354707.1		2.0905	2.259e-02	2.519	3.281e-03	True
+ENSG00000128284	APOL3	apolipoprotein L, 3	-2.0525	1.955e-05	-2.4426	1.457e-05	True
+ENSG00000171631	P2RY6	pyrimidinergic receptor P2Y, G-protein coupled, 6	-2.0126	3.877e-04	-1.7006	3.094e-04	True
+ENSG00000138944	SHISAL1		-2.0092	2.064e-04	-1.1604	5.872e-05	True
+ENSG00000285774	AL133444.1		-2.0038	1.813e-02	-1.9207	3.819e-02	True
+ENSG00000170525	PFKFB3	6-phosphofructo-2-kinase/fructose-2,6-biphosphatase 3	-2.0032	9.798e-20	-0.6744	4.358e-11	False
+ENSG00000159200	RCAN1	regulator of calcineurin 1	-2.001	8.815e-33	-0.6969	3.334e-08	False
+ENSG00000133106	EPSTI1	epithelial stromal interaction 1 (breast)	-1.9869	8.337e-03	-3.3051	4.150e-03	True
+ENSG00000101384	JAG1	jagged 1	-1.9761	1.949e-26	-0.9316	6.154e-21	False
+ENSG00000130066	SAT1	spermidine/spermine N1-acetyltransferase 1	-1.9505	6.059e-30	-0.5246	3.425e-07	False
+ENSG00000204128	C2orf72	chromosome 2 open reading frame 72	1.9453	4.053e-03	1.8974	1.610e-02	True
+ENSG00000149968	MMP3	matrix metallopeptidase 3 (stromelysin 1, progelatinase)	-1.9414	5.708e-03	-1.9558	2.576e-02	True
+ENSG00000058085	LAMC2	laminin, gamma 2	-1.9094	2.113e-05	-1.1813	1.287e-08	True
+ENSG00000226942	IL9RP3	interleukin 9 receptor pseudogene 3	1.9	4.591e-02	2.3451	1.569e-02	True
+ENSG00000152229	PSTPIP2	proline-serine-threonine phosphatase interacting protein 2	-1.8898	7.483e-16	-0.6949	2.291e-05	False
+ENSG00000164251	F2RL1	coagulation factor II (thrombin) receptor-like 1	-1.8711	7.418e-30	-1.0289	1.525e-22	True
+ENSG00000092969	TGFB2	transforming growth factor, beta 2	-1.8463	2.816e-23	-0.3288	1.206e-03	False
+ENSG00000148154	UGCG	UDP-glucose ceramide glucosyltransferase	-1.8353	2.219e-38	-0.5525	1.423e-07	False
+ENSG00000173193	PARP14	poly (ADP-ribose) polymerase family, member 14	-1.8246	2.314e-18	-1.8753	1.879e-15	True
+ENSG00000136052	SLC41A2	solute carrier family 41 (magnesium transporter), member 2	-1.8025	1.370e-22	-1.4675	2.728e-17	True
+ENSG00000027869	SH2D2A	SH2 domain containing 2A	-1.7974	5.331e-04	-1.3464	5.847e-03	True
+ENSG00000159231	CBR3	carbonyl reductase 3	-1.7868	5.205e-11	-0.6555	4.042e-02	False
+ENSG00000069399	BCL3	B-cell CLL/lymphoma 3	-1.7768	2.529e-22	-0.6068	2.467e-03	False
+ENSG00000146232	NFKBIE	nuclear factor of kappa light polypeptide gene enhancer in B-cells inhibitor, epsilon	-1.7555	6.134e-18	-1.3531	9.947e-13	True
+ENSG00000111912	NCOA7	nuclear receptor coactivator 7	-1.749	2.219e-38	-0.7258	6.014e-14	False
+ENSG00000157601	MX1	MX dynamin-like GTPase 1	-1.7302	8.082e-03	-2.5979	1.570e-02	True
+ENSG00000224445	LINC01708		1.7302	2.353e-02	2.2698	1.185e-03	True
+ENSG00000125848	FLRT3	fibronectin leucine rich transmembrane protein 3	1.717	1.350e-04	1.0291	2.212e-05	True
+ENSG00000134954	ETS1	v-ets avian erythroblastosis virus E26 oncogene homolog 1	-1.7094	1.210e-05	-1.3195	6.900e-03	True
+ENSG00000139174	PRICKLE1	prickle homolog 1 (Drosophila)	1.7049	1.339e-07	0.8279	3.479e-02	False
+ENSG00000221963	APOL6	apolipoprotein L, 6	-1.6987	1.996e-11	-2.3182	2.336e-12	True
+ENSG00000189067	LITAF	lipopolysaccharide-induced TNF factor	-1.6825	9.446e-06	-0.9401	4.473e-02	False
+ENSG00000166949	SMAD3	SMAD family member 3	-1.6698	1.345e-32	-0.8987	1.411e-22	False
+ENSG00000171435	KSR2	kinase suppressor of ras 2	1.6595	1.538e-19	1.1383	7.852e-16	True
+ENSG00000105499	PLA2G4C	phospholipase A2, group IVC (cytosolic, calcium-independent)	-1.6449	6.905e-11	-2.3408	5.645e-13	True
+ENSG00000132530	XAF1	XIAP associated factor 1	-1.6344	6.010e-04	-2.2441	5.137e-03	True
+ENSG00000107201	DDX58	DEAD (Asp-Glu-Ala-Asp) box polypeptide 58	-1.6298	1.002e-15	-0.9365	2.327e-06	False
+ENSG00000261239	ANKRD26P1	ankyrin repeat domain 26 pseudogene 1	-1.6079	3.954e-02	-2.3291	1.496e-04	True
+ENSG00000008517	IL32	interleukin 32	-1.6053	5.857e-04	-1.9055	2.243e-04	True
+ENSG00000020577	SAMD4A	sterile alpha motif domain containing 4A	-1.5836	6.915e-34	-0.7484	2.144e-14	False
+ENSG00000149289	ZC3H12C	zinc finger CCCH-type containing 12C	-1.5787	1.546e-25	-1.0989	1.879e-15	True
+ENSG00000180914	OXTR	oxytocin receptor	-1.5778	5.308e-10	-1.7363	2.336e-05	True
+ENSG00000100403	ZC3H7B	zinc finger CCCH-type containing 7B	-1.5724	1.371e-21	-0.6972	4.537e-07	False
+ENSG00000223392	CLDN10-AS1	CLDN10 antisense RNA 1	1.5723	1.057e-02	1.3109	1.385e-02	True
+ENSG00000285895	AP003557.2		-1.5713	1.658e-02	-1.3115	4.031e-02	True
+ENSG00000168394	TAP1	transporter 1, ATP-binding cassette, sub-family B (MDR/TAP)	-1.5654	2.440e-24	-1.6524	4.293e-21	True
+ENSG00000136048	DRAM1	DNA-damage regulated autophagy modulator 1	-1.5484	4.249e-29	-0.7492	2.989e-12	False
+ENSG00000184545	DUSP8	dual specificity phosphatase 8	-1.5468	2.493e-11	-1.1731	4.568e-06	True
+ENSG00000130589	HELZ2	helicase with zinc finger 2, transcriptional coactivator	-1.5455	5.475e-15	-1.1926	1.312e-07	True
+ENSG00000263528	IKBKE	inhibitor of kappa light polypeptide gene enhancer in B-cells, kinase epsilon	-1.5447	1.433e-18	-0.4907	2.222e-03	False
+ENSG00000184226	PCDH9	protocadherin 9	1.5441	2.444e-12	0.5873	1.682e-08	False
+ENSG00000119917	IFIT3	interferon-induced protein with tetratricopeptide repeats 3	-1.5396	2.121e-05	-1.5484	4.833e-04	True
+ENSG00000123689	G0S2	G0/G1 switch 2	-1.5343	8.704e-06	-1.9428	1.146e-10	True
+ENSG00000272269	AL138724.1		-1.5328	1.141e-04	-1.4354	6.921e-04	True
+ENSG00000112139	MDGA1	MAM domain containing glycosylphosphatidylinositol anchor 1	-1.5305	3.617e-06	-0.8796	3.908e-02	False
+ENSG00000126561	STAT5A	signal transducer and activator of transcription 5A	-1.528	6.175e-13	-1.1605	8.809e-08	True
+ENSG00000184058	TBX1	T-box 1	1.5253	8.581e-07	1.0529	3.013e-03	True
+ENSG00000083799	CYLD	cylindromatosis (turban tumor syndrome)	-1.5244	5.762e-31	-1.0455	9.604e-20	True
+ENSG00000118985	ELL2	elongation factor, RNA polymerase II, 2	-1.5101	7.817e-27	-0.3744	2.178e-04	False
+ENSG00000164136	IL15	interleukin 15	-1.5075	6.249e-09	-1.152	3.893e-05	True
+ENSG00000111817	DSE	dermatan sulfate epimerase	-1.5074	5.113e-20	-0.5934	5.386e-05	False
+ENSG00000180530	NRIP1	nuclear receptor interacting protein 1	-1.5065	7.072e-36	-1.1388	1.631e-25	True
+ENSG00000132003	ZSWIM4	zinc finger, SWIM-type containing 4	-1.5031	2.766e-09	-1.463	4.337e-07	True
+ENSG00000151748	SAV1	salvador family WW domain containing protein 1	-1.4946	2.283e-29	-0.3439	2.536e-03	False
+ENSG00000169855	ROBO1	roundabout, axon guidance receptor, homolog 1 (Drosophila)	-1.4901	3.984e-35	-0.4972	3.695e-11	False
+ENSG00000135312	HTR1B	5-hydroxytryptamine (serotonin) receptor 1B, G protein-coupled	1.4884	2.688e-06	1.2085	5.474e-04	True
+ENSG00000141682	PMAIP1	phorbol-12-myristate-13-acetate-induced protein 1	-1.4802	1.538e-14	-0.5021	3.256e-02	False
+ENSG00000125657	TNFSF9	tumor necrosis factor (ligand) superfamily, member 9	-1.4755	1.679e-03	-0.9253	2.574e-03	False
+ENSG00000166750	SLFN5	schlafen family member 5	-1.4484	3.483e-21	-0.5131	6.395e-05	False
+ENSG00000164932	CTHRC1	collagen triple helix repeat containing 1	-1.4469	2.816e-04	-1.3935	2.053e-03	True
+ENSG00000177409	SAMD9L	sterile alpha motif domain containing 9-like	-1.4461	1.276e-04	-1.2982	2.144e-03	True
+ENSG00000127472	PLA2G5	phospholipase A2, group V	-1.4425	4.229e-03	-2.7988	3.297e-06	True
+ENSG00000169247	SH3TC2	SH3 domain and tetratricopeptide repeats 2	1.4421	4.969e-04	1.052	2.108e-02	True
+ENSG00000131669	NINJ1	ninjurin 1	-1.4396	2.331e-15	-0.7553	7.460e-06	False
+ENSG00000119900	OGFRL1	opioid growth factor receptor-like 1	-1.433	2.193e-30	-0.9082	1.528e-14	False
+ENSG00000277639	AC007906.2		1.4253	5.505e-04	0.9975	1.824e-02	False
+ENSG00000104825	NFKBIB	nuclear factor of kappa light polypeptide gene enhancer in B-cells inhibitor, beta	-1.4213	2.733e-22	-0.7806	9.540e-10	False
+ENSG00000109079	TNFAIP1	tumor necrosis factor, alpha-induced protein 1 (endothelial)	-1.4161	5.130e-31	-0.8008	9.372e-15	False
+ENSG00000169242	EFNA1	ephrin-A1	-1.4004	7.681e-31	-2.2408	2.143e-22	True
+ENSG00000108984	MAP2K6	mitogen-activated protein kinase kinase 6	1.3976	8.793e-21	0.7789	2.603e-04	False
+ENSG00000174791	RIN1	Ras and Rab interactor 1	1.3917	3.852e-08	0.6343	4.908e-03	False
+ENSG00000122861	PLAU	plasminogen activator, urokinase	-1.3878	1.124e-15	-1.5053	1.641e-25	True
+ENSG00000128335	APOL2	apolipoprotein L, 2	-1.3682	5.044e-24	-1.1413	2.880e-18	True
+ENSG00000048052	HDAC9	histone deacetylase 9	-1.3654	1.986e-03	-1.5462	2.233e-03	True
+ENSG00000167100	SAMD14	sterile alpha motif domain containing 14	-1.3612	8.362e-04	-1.0656	4.963e-02	True
+ENSG00000135932	CAB39	calcium binding protein 39	-1.3346	3.383e-33	-0.3127	1.292e-04	False
+ENSG00000167767	KRT80	keratin 80	1.332	1.561e-02	1.0409	1.549e-02	True
+ENSG00000185745	IFIT1	interferon-induced protein with tetratricopeptide repeats 1	-1.3315	3.201e-02	-1.9981	1.260e-02	True
+ENSG00000141384	TAF4B	TAF4b RNA polymerase II, TATA box binding protein (TBP)-associated factor, 105kDa	-1.3312	2.035e-08	-0.5863	5.676e-03	False
+ENSG00000172159	FRMD3	FERM domain containing 3	1.3223	1.068e-07	0.8727	1.601e-06	False
+ENSG00000110844	PRPF40B	PRP40 pre-mRNA processing factor 40 homolog B (S. cerevisiae)	-1.3222	2.484e-13	-0.6833	4.601e-04	False
+ENSG00000166741	NNMT	nicotinamide N-methyltransferase	-1.2939	4.246e-20	-0.4342	1.148e-03	False
+ENSG00000146457	WTAP	Wilms tumor 1 associated protein	-1.293	2.219e-38	-0.4098	2.290e-08	False
+ENSG00000133401	PDZD2	PDZ domain containing 2	-1.2924	1.686e-05	-0.8685	4.243e-02	False
+ENSG00000114529	C3orf52	chromosome 3 open reading frame 52	-1.2864	1.157e-07	-0.6482	4.341e-03	False
+ENSG00000129173	E2F8	E2F transcription factor 8	1.2858	1.744e-19	0.6726	5.825e-07	False
+ENSG00000211448	DIO2	deiodinase, iodothyronine, type II	-1.2833	7.516e-04	-0.4296	5.196e-03	False
+ENSG00000076555	ACACB	acetyl-CoA carboxylase beta	1.2632	2.393e-08	0.8724	2.385e-03	False
+ENSG00000169871	TRIM56	tripartite motif containing 56	-1.2593	7.072e-36	-0.758	3.050e-14	False
+ENSG00000157064	NMNAT2	nicotinamide nucleotide adenylyltransferase 2	-1.249	2.681e-03	-1.0791	1.539e-02	True
+ENSG00000113504	SLC12A7	solute carrier family 12 (potassium/chloride transporter), member 7	-1.2473	1.293e-26	-1.2769	2.735e-28	True
+ENSG00000184988	TMEM106A	transmembrane protein 106A	-1.24	5.918e-11	-0.4714	2.613e-02	False
+ENSG00000105639	JAK3	Janus kinase 3	-1.2358	2.610e-04	-1.4091	6.163e-03	True
+ENSG00000135905	DOCK10	dedicator of cytokinesis 10	-1.235	1.843e-24	-0.2245	8.639e-06	False
+ENSG00000119938	PPP1R3C	protein phosphatase 1, regulatory subunit 3C	1.2312	1.006e-04	1.0365	6.566e-03	True
+ENSG00000116741	RGS2	regulator of G-protein signaling 2	-1.2301	1.441e-08	-1.1298	3.087e-08	True
+ENSG00000084112	SSH1	slingshot protein phosphatase 1	-1.2235	1.568e-41	-0.7173	5.331e-21	False
+ENSG00000079156	OSBPL6	oxysterol binding protein-like 6	1.2128	1.669e-11	0.5177	9.464e-03	False
+ENSG00000178764	ZHX2	zinc fingers and homeoboxes 2	-1.2105	3.483e-15	-0.6148	6.699e-04	False
+ENSG00000196776	CD47	CD47 molecule	-1.2085	4.665e-34	-0.4505	2.850e-10	False
+ENSG00000110218	PANX1	pannexin 1	-1.2014	1.183e-17	-0.8473	7.433e-12	False
+ENSG00000054967	RELT	RELT tumor necrosis factor receptor	-1.1956	1.694e-10	-0.6376	2.791e-04	False
+ENSG00000128590	DNAJB9	DnaJ (Hsp40) homolog, subfamily B, member 9	-1.1939	2.642e-15	-0.6274	1.396e-05	False
+ENSG00000129667	RHBDF2	rhomboid 5 homolog 2 (Drosophila)	-1.1932	4.914e-20	-0.7888	6.414e-06	False
+ENSG00000185022	MAFF	v-maf avian musculoaponeurotic fibrosarcoma oncogene homolog F	-1.1912	1.002e-07	-0.9895	3.888e-05	False
+ENSG00000166444	ST5	suppression of tumorigenicity 5	-1.1821	8.220e-13	-0.6867	9.252e-04	False
+ENSG00000110047	EHD1	EH-domain containing 1	-1.1821	6.926e-15	-0.4347	1.276e-03	False
+ENSG00000179630	LACC1	laccase (multicopper oxidoreductase) domain containing 1	-1.1804	8.024e-11	-0.7626	3.582e-05	False
+ENSG00000152778	IFIT5	interferon-induced protein with tetratricopeptide repeats 5	-1.1765	2.501e-12	-0.8219	9.183e-05	False
+ENSG00000090776	EFNB1	ephrin-B1	-1.1727	5.888e-09	-0.6455	1.002e-02	False
+ENSG00000110330	BIRC2	baculoviral IAP repeat containing 2	-1.1639	2.066e-21	-0.6319	2.422e-10	False
+ENSG00000142961	MOB3C	MOB kinase activator 3C	-1.1621	4.657e-11	-0.6905	5.140e-03	False
+ENSG00000160179	ABCG1	ATP-binding cassette, sub-family G (WHITE), member 1	-1.1621	1.559e-12	-0.9917	8.226e-05	False
+ENSG00000162695	SLC30A7	solute carrier family 30 (zinc transporter), member 7	-1.16	1.037e-21	-0.6173	1.277e-09	False
+ENSG00000161011	SQSTM1	sequestosome 1	-1.1555	1.731e-15	-1.0095	2.728e-17	True
+ENSG00000131323	TRAF3	TNF receptor-associated factor 3	-1.1534	2.550e-25	-0.7234	2.251e-15	False
+ENSG00000162616	DNAJB4	DnaJ (Hsp40) homolog, subfamily B, member 4	1.153	8.102e-13	0.6144	2.926e-04	False
+ENSG00000147454	SLC25A37	solute carrier family 25 (mitochondrial iron transporter), member 37	-1.1526	5.161e-29	-0.36	8.189e-05	False
+ENSG00000127666	TICAM1	toll-like receptor adaptor molecule 1	-1.1472	5.332e-12	-0.6125	2.762e-04	False
+ENSG00000196739	COL27A1	collagen, type XXVII, alpha 1	-1.144	1.480e-13	-0.8307	1.993e-08	False
+ENSG00000124508	BTN2A2	butyrophilin, subfamily 2, member A2	-1.1427	6.471e-14	-0.7747	1.911e-06	False
+ENSG00000157557	ETS2	v-ets avian erythroblastosis virus E26 oncogene homolog 2	-1.1392	5.762e-31	-0.515	2.028e-06	False
+ENSG00000240065	PSMB9	proteasome (prosome, macropain) subunit, beta type, 9	-1.1335	5.005e-04	-1.463	4.595e-04	True
+ENSG00000178078	STAP2	signal transducing adaptor family member 2	-1.1274	2.333e-09	-1.1081	1.110e-02	True
+ENSG00000123240	OPTN	optineurin	-1.1269	2.082e-12	-1.0402	5.714e-10	True
+ENSG00000236830	CBR3-AS1	CBR3 antisense RNA 1	-1.1249	1.462e-02	-1.5355	8.718e-04	True
+ENSG00000180801	ARSJ	arylsulfatase family, member J	-1.1245	3.228e-15	-0.3355	2.993e-02	False
+ENSG00000159128	IFNGR2	interferon gamma receptor 2 (interferon gamma transducer 1)	-1.1169	2.882e-17	-1.2375	2.863e-18	True
+ENSG00000132109	TRIM21	tripartite motif containing 21	-1.1135	4.982e-10	-0.7092	1.922e-04	False
+ENSG00000120875	DUSP4	dual specificity phosphatase 4	1.1058	9.295e-10	0.8545	1.347e-16	False
+ENSG00000086062	B4GALT1	UDP-Gal:betaGlcNAc beta 1,4- galactosyltransferase, polypeptide 1	-1.1047	1.562e-36	-1.0029	1.783e-30	True
+ENSG00000265107	GJA5	gap junction protein, alpha 5, 40kDa	1.0971	2.014e-02	1.4652	5.089e-04	True
+ENSG00000119922	IFIT2	interferon-induced protein with tetratricopeptide repeats 2	-1.0947	1.530e-02	-1.2893	3.744e-02	True
+ENSG00000079335	CDC14A	cell division cycle 14A	-1.0944	1.555e-08	-0.5197	4.275e-02	False
+ENSG00000186918	ZNF395	zinc finger protein 395	1.0894	7.912e-11	0.7469	2.599e-04	False
+ENSG00000070404	FSTL3	follistatin-like 3 (secreted glycoprotein)	-1.0836	3.552e-19	-0.9124	3.035e-17	False
+ENSG00000026950	BTN3A1	butyrophilin, subfamily 3, member A1	-1.0799	6.572e-08	-0.7276	2.144e-03	False
+ENSG00000137834	SMAD6	SMAD family member 6	1.077	1.611e-04	0.4176	1.489e-08	False
+ENSG00000134470	IL15RA	interleukin 15 receptor, alpha	-1.0748	1.500e-04	-1.0159	1.231e-03	True
+ENSG00000173334	TRIB1	tribbles pseudokinase 1	-1.065	6.504e-20	-0.5667	5.773e-08	False
+ENSG00000182541	LIMK2	LIM domain kinase 2	-1.0593	2.060e-24	-0.4828	6.060e-08	False
+ENSG00000169129	AFAP1L2	actin filament associated protein 1-like 2	1.0523	4.330e-02	2.2596	3.094e-04	True
+ENSG00000027697	IFNGR1	interferon gamma receptor 1	-1.0515	9.816e-21	-0.6064	5.039e-06	False
+ENSG00000198934	MAGEE1	melanoma antigen family E, 1	1.0486	1.128e-02	0.8784	1.099e-02	False
+ENSG00000163053	SLC16A14	solute carrier family 16, member 14	1.0477	3.636e-02	1.631	6.104e-03	True
+ENSG00000138735	PDE5A	phosphodiesterase 5A, cGMP-specific	-1.042	2.136e-10	-0.4416	8.780e-03	False
+ENSG00000170537	TMC7	transmembrane channel-like 7	1.0295	4.658e-10	0.3917	3.242e-02	False
+ENSG00000161791	FMNL3	formin-like 3	-1.0279	9.915e-11	-0.7709	2.747e-06	False
+ENSG00000100647	SUSD6		-1.0267	2.775e-21	-0.5535	4.923e-07	False
+ENSG00000136560	TANK	TRAF family member-associated NFKB activator	-1.0242	2.418e-22	-0.7823	7.777e-15	False
+ENSG00000179546	HTR1D	5-hydroxytryptamine (serotonin) receptor 1D, G protein-coupled	1.0221	1.304e-04	0.3873	4.109e-02	False
+ENSG00000111266	DUSP16	dual specificity phosphatase 16	-1.0205	7.614e-19	-0.6512	2.044e-06	False
+ENSG00000105088	OLFM2	olfactomedin 2	-1.0171	3.655e-02	-2.1688	7.518e-11	True
+ENSG00000111331	OAS3	2'-5'-oligoadenylate synthetase 3, 100kDa	-1.0147	1.778e-15	-1.009	1.170e-07	True
+ENSG00000143457	GOLPH3L	golgi phosphoprotein 3-like	-1.0107	1.926e-22	-0.4268	8.913e-05	False
+ENSG00000138678	GPAT3		1.0082	1.718e-08	0.5606	7.901e-09	False
+ENSG00000110911	SLC11A2	solute carrier family 11 (proton-coupled divalent metal ion transporter), member 2	-1.004	6.853e-29	-0.6093	4.894e-19	False
+ENSG00000164164	OTUD4	OTU deubiquitinase 4	-1.0029	8.007e-26	-0.7113	1.297e-14	False
+ENSG00000165806	CASP7	caspase 7, apoptosis-related cysteine peptidase	-1.0015	2.308e-24	-0.3558	2.398e-04	False
+ENSG00000100401	RANGAP1	Ran GTPase activating protein 1	-1.0008	2.529e-22	-0.2763	8.382e-04	False
+ENSG00000152402	GUCY1A2	guanylate cyclase 1, soluble, alpha 2	1.0003	4.025e-05	0.5997	5.242e-03	False
+ENSG00000137331	IER3	immediate early response 3	-1.0002	1.041e-13	-1.2928	1.086e-10	True

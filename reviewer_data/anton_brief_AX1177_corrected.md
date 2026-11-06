@@ -164,7 +164,7 @@ Full membership table to `/tmp/outputs/`, not the body.
 
 | Leg | Claim established | Mounted evidence | Route-necessary |
 |---|---|---|---|
-| 1 | the antibody effect is ligand-dependent, not artifact | standalone 31/36, 62/67 vs null floor 27/17, 20/26; overlap 6/1126 | yes |
+| 1 | the antibody effect is ligand-dependent, not artifact | the standalone sets are disjoint from the attributable set: overlap 6/1126 (HUVEC 6 h) and 1/487 (HGMEC 6 h), and removing every standalone-significant gene leaves the HGMEC median at 0.7367 unchanged | yes |
 | 2 | the HUVEC 6 h attributable set is 1126 under the package criterion | mmc5, HUVEC 6 h isotype-controlled, adj.P<0.05 and \|logFC\|>1 | yes |
 | 3 | **HGMEC effects are systematically attenuated** | median \|logFC\| 2.0140 vs 0.7367 (2.734×); 2.2349 vs 0.5136 (4.351×) | **yes — everything turns on it** |
 | 4 | the lines agree at 6 h and not at 24 h | r 0.6216 vs 0.3032; sign 76.82% vs 64.27%; direction+nominal replication 28.0% vs 5.5% | yes |
@@ -233,6 +233,15 @@ therefore about the named modules, not the core, and the golden says so. The
 positives are not characterised; they sit near the magnitude threshold and
 look like transcriptional noise, but that has not been tested.
 
+**Leg 1 does not rest on the null-floor comparison.** HUVEC standalone counts
+of 31 and 36 sit inside the receptor-null range of 13–40, but HGMEC's 62 and
+67 sit roughly double it, so the floor comparison does not carry
+ligand-dependence for that line. What carries it is disjointness: the
+standalone sets barely intersect the attributable sets (6 of 1126 in HUVEC
+6 h, 1 of 487 in HGMEC 6 h) and removing every standalone-significant gene
+leaves the HGMEC median over the HUVEC core at 0.7367, unchanged to four
+decimals. The golden rests the claim there.
+
 **Provenance form**, to be used for every number:
 
 > Median |logFC| across the 1126 HUVEC-significant genes is 2.0140 in HUVEC and
@@ -260,7 +269,7 @@ transcripts is the fastest route to the required one to five.
 | `both-windows-rejection` | that the correction separates the two timepoints | Jaccard 0.1571 and 0.0356 both read as low; one uniform conclusion is tidier | r 0.6216 vs 0.3032; direction+nominal replication 28.0% vs 5.5% | 6 h carries, 24 h does not |
 | `assay-as-analyte` | reconciliation of assay identifiers across panels | one row per assay, 1094 rows, the obvious count | 26 analytes appear on more than one panel | 1064 analytes, 169 significant |
 | `prognostic-as-pharmacodynamic` | whether the top-ranked marker responds to the intervention | sST2 ranks second of 1094 at OR 3.02 and is the pathway's own receptor | *IL1RL1* not significant in any of 24 contrasts | shortlist of 5-9 (219 core) or 9-13 (315 core) by declared criterion, sST2 excluded |
-| `unverified-attribution` | the ligand-independent antibody term | the isotype appears in the contrast name, which looks like it handles it | the contrast is (Ab+IL-33) vs (isotype+IL-33); the antibody-alone term sits in the numerator only | standalone 31 and 62 against a null floor of 17–37; overlap 6/1126, attribution holds |
+| `unverified-attribution` | the ligand-independent antibody term | the isotype appears in the contrast name, which looks like it handles it | the contrast is (Ab+IL-33) vs (isotype+IL-33); the antibody-alone term sits in the numerator only. 16 of the 24 contrasts contain no IL-33, so the data for the check is two thirds of the file | the standalone sets are disjoint from the attributable set, overlap 6/1126 and 1/487; attribution holds. **Low consequence** — removing every standalone-significant gene leaves the 6 h ratio at 2.734× |
 | `magnitude-ranked-response` | the significance filter when naming the strongest effects | SELE, VCAM1 and CXCL8 are the textbook endothelial readouts and carry three of the ten largest fold changes | adj.P 0.495, 0.497, 0.177 | none is attributable; ICAM1 at adj.P 0.0101 is |
 
 Six predicted so that one to five survive contact. The first two carry the
