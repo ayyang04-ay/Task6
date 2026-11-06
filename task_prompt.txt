@@ -1,9 +1,9 @@
 We have an anti-IL-33 antibody, AX-1177, in preclinical development for viral lower respiratory tract disease.
 
-The in vitro package and the supporting clinical datasets are mounted in /tmp/world/filesystem. Treat the mounted package as the complete and authoritative record for this programme. Domain knowledge is welcome in interpretation; figures, findings and conclusions must come from the mounted files.
+The full data package is available in /tmp/world/filesystem. Treat the mounted package as the complete and authoritative record for this programme. All figures, findings and conclusions must be grounded in the mounted files.
 
-I need to take a recommendation to the programme committee on whether the mechanistic package supports carrying this forward. Build me the proposal, opening with your recommendation in one line at the top (/tmp/outputs/answer.md).
+I need to take a recommendation to the programme committee on whether the package supports carrying this forward. Build me the proposal, opening with your recommendation in one line at the top (/tmp/outputs/answer.md).
 
 It has to be highly defensible. Claims and recommendations need explicit reasoning, cited numbers and values, and sound methodology. Save any analysis you run under /tmp/outputs.
 
-Keep this at the level of interpretation of the data package. I need the response signature and timepoint we would carry forward, what the model data supports, and which circulating markers are worth taking into the clinic.
+The proposal should be highly defensible from our dataset, and include some key elements of interest from the board: the response signature and timepoint we would carry forward, what the model data supports, and which circulating markers are worth taking into the clinic.
