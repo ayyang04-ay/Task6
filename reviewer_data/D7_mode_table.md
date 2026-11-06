@@ -2,7 +2,7 @@
 
 RLS short ID fpfj2b81. Task `task_c95a3b4fb7e14881853c61756d8086e3`.
 
-Each entry below is set out the same way:
+Six modes. Each entry below is set out the same way:
 
 - **If a solver falls in** — what they actually do and conclude
 - **What we would claim** — the method failure, stated as what was not
@@ -155,43 +155,7 @@ not appear at all.
 
 ---
 
-## 6. `unverified-attribution` — the open call
-
-**If a solver falls in.** They treat the isotype-controlled contrast as
-having handled the antibody's own effect, because `NIP228` appears in the
-contrast name, and never look at the antibody-alone arms.
-
-**What we would claim.** They did not verify that the attributable response
-is ligand-dependent. The contrast is (Ab + IL-33) vs (isotype + IL-33), so
-the antibody-alone term sits in the numerator only and is not differenced out.
-
-**Case for.**
-
-- The data for the check is **two thirds of the file**: 16 of the 24
-  contrasts in mmc5 contain no IL-33, sitting in the same `Comparison` column
-  the solver is already filtering. Hard to argue a careful expert would not
-  notice.
-- The premise is load-bearing. Everything downstream assumes the 1126 genes
-  are IL-33-dependent.
-- Confirmable: either the standalone contrasts appear in the transcript or
-  they do not.
-
-**Case against.**
-
-- **It changes no number.** Dropping every gene significant in either
-  standalone arm leaves 1114 of 1126 and moves the attenuation from 2.7337×
-  to 2.7341×. The solver reaches the same answer either way.
-- Trusting a control arm named in the contrast is arguably what a careful
-  expert does, and "a careful expert could defend it" is the bar failing.
-
-**Where I land.** Keep it, ranked last. The discoverability figure makes it
-hard to defend, and a low-consequence mode is still a mode — the bar asks
-what was not checked, not whether the answer came out wrong. But the call is
-yours and it is reversible either way.
-
----
-
-## 7. mmc5 sheet duplication — approved for addition
+## 6. mmc5 sheet duplication
 
 **If a solver falls in.** They call `pd.read_excel('mmc5.xlsx')` with
 defaults, or concatenate both sheets, or filter on sheet name for timepoint,
@@ -230,6 +194,7 @@ read the `24h` sheet.
 
 | Candidate | Why not |
 |---|---|
+| **`unverified-attribution`** — not checking the ligand-independent antibody term | **Cut.** The check changes no number: dropping every gene significant in either standalone arm leaves 1114 of 1126 and moves the attenuation from 2.7337x to 2.7341x. The solver reaches the same answer whether or not they run it. Against that, the data is highly discoverable (16 of the 24 contrasts contain no IL-33), so skipping it is hard to defend — but a mode that cannot change an answer is weak FA material. Record the figures if a transcript shows the check was skipped; do not pre-register it. |
 | **contrast-family choice** — using `Compound_47_IL33_vs_IL33_<line>` instead of the isotype-controlled family | Same verdict, and three features come out larger: attenuation 2.807× and 4.934×, r 0.6481 to 0.2321, sign 78.60% to 58.50%. A careful expert could defend either family, so it fails the defensibility bar. Belongs in the derivation notes. The 24 h set does inflate from 417 to 547, carrying a ligand-independent term, which is worth credit if a solver names it. |
 | **Olink join rule** | Both exact matching and legacy-name reconciliation are defensible and the grader accepts either. The mode-shaped version is an **unstated** join — reconciling some aliases and not others — which is what the brief's own figure of 6 was: exact matching plus the `OPG` alias alone, a count no stated rule produces. Worth watching for; too narrow to pre-register. |
 | **mmc3 `Tissue RNA`** | 22 of 78 blocks carry `Zr4940_<n>` identifiers, matching the paper's 9 + 9 + 4 lung RNA-seq cohort, pointing at data in no mmc file. But mmc2 holds assay-level summary statistics with no patient identifiers, so a serum-to-tissue join is **impossible**, not merely unwise. A solver can err in prose but cannot produce a wrong number. Kept as foreclosure so the absence anchor has something to foreclose. |

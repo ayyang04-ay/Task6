@@ -6,4 +6,4 @@ I need to take a recommendation to the programme committee on whether the packag
 
 It has to be highly defensible. Claims and recommendations need explicit reasoning, cited numbers and values, and sound methodology. Save any analysis you run under /tmp/outputs.
 
-The proposal should be highly defensible from our dataset, and include some key elements of interest from the board: the response signature and timepoint we would carry forward, what the model data supports, and which circulating markers are worth taking into the clinic.
+The board will want to know what we'd measure, in which model, and when.
