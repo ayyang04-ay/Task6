@@ -36,19 +36,25 @@ criterion grid label these differently and should be reconciled.
 
 ## Not confirmed
 
+Superseded for the transcriptomic counts by `gene_universe_audit.md`. In
+summary: 26,113 is the distinct-symbol count and is correct; 26,210 is the
+locus count. Excluding Rfam symbols reproduces 485, 134, 15, 218 and the
+2.73x ratio. Only two figures follow no tested rule:
+
+| Anchor | Brief | All rows | Rfam excluded |
+|---|---|---|---|
+| HUVEC inhibition 6 h | 1124 | 1126 | 1122 |
+| HUVEC inhibition 24 h | 417 | 417 | 415 |
+
+1124 is the brief's headline count and is most likely a slip.
+
+The mmc2 figures are a separate error that still stands:
+
 | Anchor | Brief | Measured |
 |---|---|---|
-| genes per contrast | 26,113 | 26,210 |
-| HUVEC inhibition 6 h | 1124 | 1126 |
-| HGMEC inhibition | 485 / 134 | 487 / 135 |
-| null floor A549 | 27 / 15 | 27 / 17 |
 | mmc2 analytes | 1077 | 1064 |
 | mmc2 significant analytes | 173 | 169 |
 | analytes on more than one panel | 15, IL6 on three | 26, IL6 on four |
-
-The first four are one error: a 26,113-gene universe drops ~97 rows and takes
-a hit or two off each count. The rule that produced it needs identifying
-before the golden quotes any count.
 
 The mmc2 figures are a separate, independent error. Panel suffixes are
 -ONCII, -ONCIII, -INFI, -CVDII, -CVDIII, -CRE, -IMO, -MET, -NEX, -ODA.
