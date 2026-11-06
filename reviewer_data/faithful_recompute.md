@@ -183,3 +183,60 @@ not imply identity.
 
 The brief's figure of 6 is exact matching plus the OPG alias alone. No stated
 rule produces it. The golden reconciles and reports 9 and 13.
+
+## Attribution: how discoverable is the check, and what does it cost to skip
+
+### Discoverability
+
+Of the 24 contrasts in mmc5, **16 contain no IL-33 at all** — they are
+antibody-against-control contrasts in all four lines, with DMSO and PBS arms
+for the epithelial pair. Only 8 involve IL-33.
+
+So two thirds of the file is antibody-without-ligand data, sitting in the same
+`Comparison` column as the inhibition contrasts. Anyone who lists the
+contrasts sees them. The check is one filter away, not buried.
+
+### What the antibody alone does
+
+| Line | arm | 6 h | 24 h |
+|---|---|---|---|
+| HUVEC | vs NIP228 | 31 | 36 |
+| HGMEC | vs NIP228 | 62 | 67 |
+| A549 | vs NIP228 | 27 | 17 |
+| A549 | vs DMSO | 29 | 27 |
+| A549 | vs PBS | 37 | 36 |
+| MCF7 | vs NIP228 | 20 | 26 |
+| MCF7 | vs DMSO | 30 | 30 |
+| MCF7 | vs PBS | 40 | 13 |
+
+The receptor-null floor runs 13 to 40. HUVEC at 31 and 36 sits inside it.
+**HGMEC at 62 and 67 sits above it**, roughly double, which is the one result
+in this table that is not obviously background.
+
+### Does it contaminate the inhibition sets
+
+| Line | tp | inhibition | standalone | overlap | % of inhibition |
+|---|---|---|---|---|---|
+| HUVEC | 6 h | 1126 | 31 | 6 | 0.53% |
+| HUVEC | 24 h | 417 | 36 | 6 | 1.44% |
+| HGMEC | 6 h | 487 | 62 | 1 | 0.21% |
+| HGMEC | 24 h | 135 | 67 | 2 | 1.48% |
+
+Negligible everywhere, and the shared genes are mostly unannotated
+transcripts: AC008105.1, AC027088.5, DHRS2, EPHA7, FGF18, MMP3 at HUVEC 6 h;
+AC091133.2 alone at HGMEC 6 h.
+
+### Consequence of skipping
+
+Removing every standalone-significant gene from the HUVEC base leaves the
+basin unchanged:
+
+| tp | set | n | median HUVEC / HGMEC | ratio |
+|---|---|---|---|---|
+| 6 h | all | 1126 | 2.0140 / 0.7367 | 2.734x |
+| 6 h | standalone removed | 1114 | 2.0154 / 0.7371 | **2.734x** |
+| 24 h | all | 417 | 2.2349 / 0.5136 | 4.351x |
+| 24 h | standalone removed | 408 | 2.2373 / 0.5137 | **4.355x** |
+
+So the check is cheap, highly discoverable, and confirms the result. Skipping
+it leaves a premise unverified but costs nothing numerically.
