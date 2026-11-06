@@ -1,6 +1,9 @@
 # Anton Task Brief — AX-1177 anti-IL-33 mechanistic package
 
-RLS short ID: fpfj2b81   RLS URL ID: [ ]
+RLS short ID: fpfj2b81
+RLS URL ID: task_c95a3b4fb7e14881853c61756d8086e3
+Campaign: camp_0589d1e96758477586df0e43dd8eeec1
+URL: https://studio.mercor.com/annotator/tasks/task_c95a3b4fb7e14881853c61756d8086e3/?campaignId=camp_0589d1e96758477586df0e43dd8eeec1
 
 > Create the task in RLS **first** and record both IDs here. They are needed in
 > different places and hunting for them later is a recurring tax.
