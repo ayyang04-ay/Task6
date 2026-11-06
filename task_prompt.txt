@@ -6,4 +6,4 @@ I need to take a recommendation to the programme committee on whether the packag
 
 It has to be highly defensible. Claims and recommendations need explicit reasoning, cited numbers and values, and sound methodology. Save any analysis you run under /tmp/outputs.
 
-The board will want to know what we'd measure, in which model, and when.
+The board will want to know what we'd measure, in which model, when, and what goes into the clinic.
