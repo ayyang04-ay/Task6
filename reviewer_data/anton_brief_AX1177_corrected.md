@@ -1,6 +1,6 @@
 # Anton Task Brief — AX-1177 anti-IL-33 mechanistic package
 
-RLS short ID: [ ]   RLS URL ID: [ ]
+RLS short ID: fpfj2b81   RLS URL ID: [ ]
 
 > Create the task in RLS **first** and record both IDs here. They are needed in
 > different places and hunting for them later is a recurring tax.
@@ -169,7 +169,7 @@ Full membership table to `/tmp/outputs/`, not the body.
 | 3 | **HGMEC effects are systematically attenuated** | median \|logFC\| 2.01 vs 0.74 (2.73×); 2.23 vs 0.51 (4.35×) | **yes — everything turns on it** |
 | 4 | the lines agree at 6 h and not at 24 h | r 0.625 vs 0.303; sign 76.9% vs 64.3%; replication 28.0% vs 5.5% | yes |
 | 5 | a fixed fold-change cut understates agreement given leg 3 | 218 vs 315 off the same base; recovered genes begin at magnitude rank 61 | yes |
-| 6 | the reproducible core is coherent suppressed inflammatory biology | 14 IFN, 9 NF-κB incl. NFKB2/RELB, 7 CSF and cytokine, 9 chemokine, F3, C3; all negative | yes, for the justification |
+| 6 | the reproducible core is coherent suppressed inflammatory biology | interferon, NF-κB (incl. NFKB2 −2.86, RELB −3.27), CSF and cytokine, and chemokine modules all present; F3 −5.47, C3 −4.62; every member of the named modules is negative | yes, for the justification |
 | 7 | sST2 has no pharmacodynamic response | *IL1RL1* in 0 of 24 contrasts, absent from the core | serum product only |
 | 8 | the Olink delivery is 1094 assays over 1064 analytes | 26 analytes on more than one panel, IL6 on four | serum product only |
 
@@ -192,9 +192,34 @@ reproducibility-failure claim is therefore diagnostic of the mirror rule.
 Fisher and Stouffer both return 864, identical to sign-only, because the HUVEC
 p-value dominates the combination.
 
-**Translational shortlist is criterion-dependent:** 6 analytes off the 218 core
-(B4GALT1, CCL20, CTSS, IL1B, IL6, TNFRSF11B), 10 off the 315 core (adds BIRC2,
-FSTL3, TANK, TRIM21).
+**Translational shortlist is criterion-dependent, in two ways.** Off the 219
+core: 6 analytes under exact symbol matching (B4GALT1, CCL20, CTSS, IL1B, IL6,
+TNFRSF11B), 9 if Olink's legacy assay names are reconciled to current symbols
+(adds CSF-1 → CSF1, IL-18R1 → IL18R1, MCP-3 → CCL7). Off the 315 core: 10 and
+13 respectively, both adding BIRC2, FSTL3, TANK, TRIM21.
+
+**The golden uses exact symbol matching, 6 and 10.** mmc2 carries only `panel`
+and `assay` and no gene identifier, so the alias reconciliation requires
+knowledge from outside the mounted package. Exact matching is what a solver
+working the delivered record produces.
+
+**Both joins are acceptable.** A solver who reconciles the legacy names has
+done more, not less, and must not be penalised for the larger shortlist.
+
+**The module predicate must be stated, not the counts.** Interferon and
+chemokine membership reproduces exactly at 14 and 9, but NF-κB is 9 or 10
+depending on whether BIRC3 counts, and CSF and cytokine is 7 under a narrow
+reading (CSF1-3, IL1A, IL1B, IL6, TNF) or 15 under a broad one that admits
+IL15RA, IL18R1, IL32, IL4I1, IL9RP3 and TNFSF15. The golden states the
+predicate it used and does not quote a bare module count.
+
+**The core is not uniformly negative.** 184 of 219 genes are negative and 35
+positive. No positive belongs to any named module: they are SLC14A1, FSTL4,
+NDP, GAP43, CNFN, ABCC11, GATM, MLXIPL, ZNF177, SYTL1, C2orf72, a set of
+antisense and lincRNA transcripts, two pseudogenes and RF00003. The claim is
+therefore about the named modules, not the core, and the golden says so. The
+positives are not characterised; they sit near the magnitude threshold and
+look like transcriptional noise, but that has not been tested.
 
 **Provenance form**, to be used for every number:
 
@@ -322,6 +347,10 @@ The following are examples of acceptable variations that should not affect the
 score. Other variations may also be neutral — use your judgment.
 - The particular reproducibility criterion chosen, and the resulting gene count,
   provided the criterion is stated and the count follows from it.
+- How Olink assay identifiers are matched to genes for the circulating-marker
+  shortlist. Exact symbol matching and reconciliation of legacy assay names
+  (OPG, CSF-1, IL-18R1, MCP-3) are both defensible and give different
+  shortlists. Either is acceptable where the rule is stated.
 - Whether supporting analysis is presented as tables, prose or figures.
 - Length, section ordering and file layout beyond the one-line recommendation.
 - Noting that one cell line has no unstimulated baseline arm.
