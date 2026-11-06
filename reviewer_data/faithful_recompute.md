@@ -104,3 +104,46 @@ inflates from 417 to 547. Those extra 130 genes carry a ligand-independent
 antibody term that the isotype arm removes. That is a real defect in the
 derivation, and worth credit if a solver names it, but it does not move the
 recommendation.
+
+## Module composition of the mirror core
+
+219 genes, 219 distinct symbols. Counts under a regex over gene symbols:
+
+| Module | Brief | Measured | Members |
+|---|---|---|---|
+| interferon | 14 | **14** | EPSTI1, HELZ2, IFIH1, IFIT1, IFIT2, IFIT3, IRF1, ISG20, MX1, OAS3, OASL, RSAD2, SAMD9L, XAF1 |
+| chemokine | 9 | **9** | CCL5, CCL7, CCL20, CX3CL1, CXCL2, CXCL3, CXCL5, CXCL6, CXCL10 |
+| NF-kB | 9 | **10** | BIRC3, NFKB1, NFKB2, NFKBIA, NFKBIE, NFKBIZ, RELB, TNFAIP3, TNFAIP6, TRAF1 |
+| CSF and cytokine | 7 | **15** | CSF1, CSF2, CSF3, IL1A, IL1B, IL6, IL15, IL15RA, IL18R1, IL32, IL4I1, IL9RP3, LIF, TNF, TNFSF15 |
+
+Interferon and chemokine match exactly. NF-kB differs by BIRC3 alone, which
+is an IAP and arguably outside the module. The CSF and cytokine count is
+definition-dependent: a narrow reading of CSF1-3, IL1A, IL1B, IL6, TNF gives
+7, the brief's figure. Neither is an error; the module predicate has to be
+stated in the golden rather than the count quoted bare.
+
+`NFKB2` at -2.8605 and `RELB` at -3.2667 are both present, as the brief says.
+`F3` at -5.4739 and `C3` at -4.6241 likewise.
+
+### "all negative" needs qualifying
+
+The brief's leg 6 says the core is "all negative". **184 of 219 are negative
+and 35 are positive.** But zero of the positives belong to any named module:
+they are SLC14A1, FSTL4, NDP, GAP43, CNFN, ABCC11, GATM, MLXIPL, ZNF177,
+SYTL1, C2orf72, plus antisense and lincRNA transcripts, two pseudogenes and
+RF00003.
+
+So the claim is true of the named inflammatory modules and false of the core
+as a whole. The golden should say "every member of the named modules is
+negative", not "all negative".
+
+Full membership in `scratch/analysis/mirror_core_symbols.json`.
+
+## mmc3 `Tissue RNA` column
+
+22 of 78 blocks carry an identifier of the form `Zr4940_<n>`, 20 distinct
+values. The count matches the paper's lung bulk RNA-seq cohort exactly:
+n = 9 COVID, n = 9 non-COVID pneumonia, n = 4 non-pneumonia, total 22.
+
+So the column is a join key into the lung RNA-seq dataset, which is not
+delivered in any mmc workbook. It points at data a solver cannot reach.
