@@ -142,12 +142,19 @@ them. This is conservative with respect to our conclusion.
 
 ## 4. Circulating markers worth taking into the clinic
 
-The serum dataset reports **1094 assays over 1064 distinct analytes**; 26
+The serum dataset reports **1094 assays over 1063 distinct analytes**. 27
 analytes appear on more than one panel, IL6 on four and SCF and FGF-21 on
-three (`mmc2.xlsx`, `panel` and `assay` columns, panel suffixes -INFI,
--CVDII, -CVDIII, -ONCII, -ONCIII, -CRE, -IMO, -MET, -NEX, -ODA removed). Of
-178 assay rows with `adj.p.value < 0.05`, **169 are distinct analytes**.
-Counting assays rather than analytes overstates both figures.
+three. Of 178 assay rows with `adj.p.value < 0.05`, **169 are distinct
+analytes**. Counting assays rather than analytes overstates both figures.
+
+**Reconciliation rule** (`mmc2.xlsx`, `panel` and `assay` columns): merge two
+assay names that differ only by a trailing panel suffix. Applying it to every
+trailing all-capital token rather than to a fixed list gives 28 groups over 60
+assays; one of those, `TR-AP` with `TR`, is spurious because TR-AP is
+tartrate-resistant acid phosphatase rather than `TR` on a panel named AP.
+Excluding it leaves **27 groups over 58 assays, 31 duplicate rows, 1063
+analytes**. A fixed suffix list omits at least `NEUI` and so misses
+`GDNF-INFI` with `GDNF-NEUI`, which is how a count of 1064 arises.
 
 **Shortlist: 13 analytes** that are both prognostic in serum and inside the
 6 h signature. Odds ratios are per log unit, adjusted for age, sex and NEWS2
@@ -217,7 +224,7 @@ this dataset: every one of the 169 significant analyte names maps to a symbol.
 | **Carry both timepoints.** Both Jaccard values, 0.1571 and 0.0356, are low in absolute terms, which invites one uniform conclusion. | The statistics separate cleanly: r 0.6216 against 0.3032, sign agreement 76.82% against 64.27%, signature 315 against 23. The 6 h result reproduces and the 24 h result does not. |
 | **Nominate soluble ST2 as the pharmacodynamic biomarker.** Second of 1094 analytes, OR 3.0243, and the pathway's own receptor. | `IL1RL1` is not significant in any of 24 contrasts, minimum `adj.P.Val` 0.9614. Prognostic, not pharmacodynamic. |
 | **Report SELE and VCAM1 as the mechanism.** Among the largest fold changes and the expected endothelial biology. | `adj.P.Val` 0.4950 and 0.4965. Not attributable. |
-| **Use the 1094-assay and 178-hit figures.** One row per assay is the obvious count. | 26 analytes sit on more than one panel. The reconciled figures are 1064 analytes and 169 significant. |
+| **Use the 1094-assay and 178-hit figures.** One row per assay is the obvious count. | 27 analytes sit on more than one panel. The reconciled figures are 1063 analytes and 169 significant. |
 | **Discount HGMEC as the wrong vascular bed.** HUVEC is macrovascular venous, HGMEC glomerular microvascular; divergence is expected. | The same two lines agree at 6 h, r 0.6216 and 76.82% sign agreement. A bed-identity difference would apply at both timepoints. |
 | **Pool the timepoints for power.** n = 3 per arm is small and pooling would increase it. | The question is which window to carry. Pooling cannot answer it, and the two windows differ in exactly the respect being tested. |
 | **Draw on the lung tissue dataset.** `mmc3.xlsx` carries IL-33 immunohistochemistry in endothelium across 78 blocks from 31 donors. | Unrelated cohort. `mmc2.xlsx` reports assay-level summary statistics over 100 serum patients with no patient identifiers, so no link to the 31 tissue donors can be established or excluded. The tissue data cannot inform the in vitro conclusion. |
