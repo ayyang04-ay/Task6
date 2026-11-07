@@ -209,12 +209,47 @@ this dataset: every one of the 169 significant analyte names maps to a symbol.
   marker for selecting patients, not a readout for confirming target
   engagement, and using it as the latter would report drug effect where none
   is measurable.
-- **The adhesion molecules.** SELE, VCAM1 and CXCL8 carry three of the ten
-  largest fold changes in the HUVEC 6 h contrast at −10.9852, −8.7623 and
-  −8.4467, and they are the textbook endothelial activation readouts. None is
-  attributable: `adj.P.Val` 0.4950, 0.4965 and 0.1772 respectively. ICAM1 at
-  −5.9116 and `adj.P.Val` 0.0101 is attributable and is the adhesion readout
-  the data supports.
+- **The adhesion molecules, on an indeterminacy rather than a null result.**
+  SELE, VCAM1 and CXCL8 carry three of the ten largest fold changes in the
+  HUVEC 6 h contrast at −10.9852, −8.7623 and −8.4467, and they are the
+  textbook endothelial activation readouts. Their delivered adjusted p values
+  are 0.4950, 0.4965 and 0.1772, but **those q-values rest on variance
+  estimates the same fit contradicts, so the package does not establish
+  attribution for them either way.**
+
+  Implied standard errors, `|logFC / t|` in
+  `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs`, against the 1126-gene
+  attributable set as the reference population:
+
+  | | implied SE |
+  |---|---|
+  | the 1126-gene set: median, and maximum over all members | 0.5128, **1.7439** |
+  | CXCL8 | 4.110 |
+  | SLC7A2 | 5.207 |
+  | CCL2 | 5.758 |
+  | VCAM1 | 7.019 |
+  | SELE | 8.779 |
+  | PTGS2 | 25.442 |
+  | CXCL1 | 1137.323 |
+
+  No member of the set this proposal relies on exceeds an implied SE of 1.75.
+  The genes above sit from 2.4 to 650 times that ceiling. CSF2 at `logFC`
+  −12.2128 is assigned SE 0.393 by the same model over the same 114 libraries
+  while SELE at −10.9852 is assigned 8.779, and CXCL1 carries `t` of
+  −0.0071 against `logFC` −8.0443. It is not an expression-level artefact:
+  these genes have higher `AveExpr` (median −0.554) than the nine
+  well-behaved genes above `|logFC|` 8 (−2.571). No mechanism for it is
+  offered here.
+
+  So these are not negative results. They are measurements the delivered
+  statistics cannot resolve, and nominating them as pharmacodynamic readouts is
+  unsupported for that reason rather than because the effect is absent.
+
+- **ICAM1 is the adhesion readout the data does support**, at `logFC` −5.9116
+  and `adj.P.Val` 0.0101 in the inhibition contrast, driven in the first place
+  at −5.9656 and 0.0098 in `mmc4.xlsx`,
+  `IL33_vs_Nontreated_HUVEC_6_hrs`. Its implied SE of 1.744 is the largest in
+  the attributable set but lies inside it.
 
 ## 5. What this package does not contain
 
