@@ -1,11 +1,11 @@
 AX-1177 is our anti-IL-33 antibody. It has been in preclinical development against viral lower respiratory tract disease in our respiratory portfolio. I need to justify every asset to the committee.
 
-All of our data on AX-1177 is dumped in /tmp/world/filesystem. Treat these files as our in-house files, and your recommendations should be based on our data. Work only from them, with no web access. Cite our data to support all relevant reasoning points, as this is what the committee will want to see, and tell me how you got to any number you lean on. Analyse as of 1 November 2026.
+All of our data on AX-1177 is dumped. Treat these files as our in-house files, and your recommendations should be based on our data. Cite our data to support all relevant reasoning points, as this is what the committee will want to see.
 
-For the committee audit, I want your recommendation: Do I keep this asset in our portfolio?
+For the committee audit, I want your recommendation: Do I keep this asset in our portfolio? Regardless of yes or no, I need a strong defensible case to present, so build out the position with as strong support and defence as the data allows.
 
-Either way, lay out your reasoning, and tell me what you considered and ruled out.
+And either way I need the forward view, because if I drop this I have to be able to say what we are dropping. What indication does our data actually point at — we have been running at viral LRTD, is that right? What would the next studies have to establish? Propose biomarkers, a sampling timepoint and a plan for next steps, and say which of those markers could go into patients and in what role.
 
-And either way I need the forward view, because if I drop this I have to say what we would have been dropping. What indication does our data actually point at — we have been running at viral LRTD, is that right? What would the next studies have to establish? What would we measure to know the drug is working, at what sampling timepoint, and which of those markers could go into patients and in what role?
+Tell me what you considered and ruled out.
 
 Interpretation of our data only. No bench procedures.
