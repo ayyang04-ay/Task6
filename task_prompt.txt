@@ -1,17 +1,11 @@
-AX-1177 is our anti-IL-33 antibody. It has been in preclinical development against viral lower respiratory tract disease for two years and it holds one of six slots in the respiratory portfolio. Next year's plan is fixed in December. The slot either carries forward or it goes to another programme, and I cannot hold it open for another cycle.
+AX-1177 is our anti-IL-33 antibody. It has been in preclinical development against viral lower respiratory tract disease in our respiratory portfolio. I need to justify every asset to the committee.
 
-Everything the programme has generated on the mechanism and on the human biology is in /tmp/world/filesystem. It is a working directory rather than a curated one, so some of what is in there will not bear on this. Work only from those files, with no web access, and treat them as the complete record for the programme. Analyse as of 1 November 2026.
+All of our data on AX-1177 is dumped in /tmp/world/filesystem. Treat these files as our in-house files, and your recommendations should be based on our data. Work only from them, with no web access. Cite our data to support all relevant reasoning points, as this is what the committee will want to see, and tell me how you got to any number you lean on. Analyse as of 1 November 2026.
 
-I have to take a position into the December review, so I need your read on four things.
+For the committee audit, I want your recommendation: Do I keep this asset in our portfolio?
 
-Does the slot carry forward? Your call, and why.
+Either way, lay out your reasoning, and tell me what you considered and ruled out.
 
-What do the next studies have to establish, and what would each one settle?
+And either way I need the forward view, because if I drop this I have to say what we would have been dropping. What indication does our data actually point at — we have been running at viral LRTD, is that right? What would the next studies have to establish? What would we measure to know the drug is working, at what sampling timepoint, and which of those markers could go into patients and in what role?
 
-Which indication should we be developing against, and what in the data puts it there? We have been running at viral LRTD. Is that right?
-
-What would we measure to know the drug is working — the readouts, the model system, the sampling timepoint? And which of those could plausibly go into patients, in what role?
-
-Whatever numbers you lean on, tell me the file each came from and how you reduced it. And tell me what you considered and set aside, with what closed each one.
-
-Interpretation of the delivered data only. No bench procedures.
+Interpretation of our data only. No bench procedures.

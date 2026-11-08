@@ -1,0 +1,163 @@
+# AX-1177 — committee audit
+
+**Keep it. The data establishes that the antibody engages IL-33 and shows what
+programme it blocks, but not that the pathway causes the disease, and the
+programme it blocks is not the type 2 biology anti-IL-33 is usually developed
+against. That is a reason to redirect it, not to drop it.**
+
+---
+
+## 1. What our data establishes
+
+**The antibody engages the ligand, and the effect needs the ligand present.**
+In HUVEC at 6 h, 1126 genes change with the antibody against the isotype
+control in the presence of IL-33 (`mmc5.xlsx`,
+`Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs`, `adj.P.Val < 0.05` and
+`|logFC| > 1`). That is not an antibody artefact. The antibody-alone arms
+(`Compound_47_vs_NIP228_<line>_<tp>`, no IL-33) return 31 and 36 genes in
+HUVEC and 62 and 67 in HGMEC, and those sets barely intersect the attributable
+sets — 6 genes of 1126 in HUVEC 6 h, 1 of 487 in HGMEC 6 h. Dropping every
+gene significant in either antibody-alone arm leaves 1114 of the 1126 and moves
+the between-line attenuation from 2.7337x to 2.7341x. The two epithelial lines,
+which never received IL-33, bound the null at 13 to 40 genes across six arms.
+
+**It reproduces in a second endothelial bed, at 6 h only.** Over the same 1126
+genes, median `|logFC|` is 2.0140 in HUVEC and 0.7367 in HGMEC at 6 h, a factor
+of 2.7337; at 24 h it is 2.2349 against 0.5136, a factor of 4.3512. Pearson r
+across the two lines is 0.6216 at 6 h and 0.3032 at 24 h; sign agreement
+76.82% and 64.27%. Requiring the same direction and nominal significance in
+HGMEC leaves 315 genes at 6 h and 23 at 24 h.
+
+Note what that is not. A second fixed `|logFC| > 1` cut in HGMEC returns 219
+and reads as a reproducibility failure, but the cut is invalid on a line whose
+effects are 2.7-fold smaller — it removes genes for being small — and it admits
+11 genes with opposite signs in the two lines, including RF00003 at +2.5564 in
+HUVEC and −2.7988 in HGMEC.
+
+## 2. What our data does not establish
+
+**That IL-33 causes the disease.** No file involves a virus, an animal or a
+dose. `mmc2.xlsx` is cross-sectional at enrolment in 100 hospitalised patients
+with no treatment arm, so it shows that soluble ST2 tracks outcome — rank 2 of
+1094 assays, OR 3.0243 (1.83 to 5.01) — and cannot show that anything moves on
+treatment. `mmc3.xlsx` is post-mortem tissue from a different cohort with no
+identifiers shared with `mmc2`, so the two cannot be linked either way. The
+package is silent on causality, not negative.
+
+Three further gaps bear on the audit. The annex places affinity, potency and
+exposure outside the delivery (§1), so there is no potency or exposure data at
+all. Only reduced IL-33 was tested, although §1 names an oxidised form.
+Each endothelial line is one donor and three wells, not three donors (§3), and
+HGMEC has no vehicle arm, so the IL-33 response in the second line is never
+measured — only the part the antibody reverses. The Benjamini-Hochberg
+correction in `mmc2` reproduces only at 1,194 tests against 1,094 delivered,
+so roughly 100 analysed assays are absent and at least four were significant.
+IL-33 itself is not among the 1,094.
+
+## 3. The indication our data points at, and whether viral LRTD is right
+
+**Viral LRTD is the right disease area and the wrong mechanism to be
+developing against.** Anti-IL-33 is conventionally pursued through type 2
+inflammation. Our data shows IL-33 driving nothing of the kind in endothelium.
+
+In `mmc4.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`:
+
+| Arm | What IL-33 does |
+|---|---|
+| type 2 effectors IL5, IL13, CCL11, CCL24, IL25 | **not present in the table at all** |
+| IL4 −1.229, TSLP +0.176, CCL26 −0.839, GATA3 −0.978, IL1RL1 +1.602 | none significant; IL4 is negative |
+| interferon: IFIT1 +1.939, IFIT3 +1.727, MX1 +1.913, OAS3 +1.095, CXCL10 +6.887, IRF1 +2.608, ISG20 +2.937 | all significant |
+| neutrophil recruitment: CXCL2 +6.768, CXCL3 +8.279, CXCL5 +5.301, CXCL6 +9.406, CSF2 +10.296, CSF3 +8.319, IL1B +3.649, IL6 +5.817 | all significant |
+| haemostasis and complement: F3 +5.636, SERPINE1 +1.744, C3 +4.791 up; **THBD −1.001 down** | all significant |
+
+The last row is the one that sets the indication. Tissue factor and PAI-1 up
+with thrombomodulin down is a coherent procoagulant switch in the endothelium,
+not an inflammatory gene list. Taken with the interferon and neutrophil arms,
+what the antibody blocks is interferon-driven, neutrophilic endothelial
+activation with a prothrombotic shift.
+
+The same four modules carry into the reproducible 315-gene set, and every
+member of each is negative under antibody: 16 interferon genes, 10 NF-κB
+including NFKB2 −2.8605 and RELB −3.2667, 7 CSF and cytokine, 9 chemokine,
+plus F3 −5.4739 and C3 −4.6241.
+
+That phenotype is what the rest of the package selects for. `mmc2`'s endpoint
+is ICU admission, mechanical ventilation or death. `mmc3` samples 20
+COVID-positive and 10 COVID-negative pneumonia blocks against 5
+non-pneumonia. So: stay in viral LRTD, but develop against the severe
+endothelial-injury and coagulopathy phenotype rather than a type 2 one, and
+select patients on that basis. Nothing in the package supports an asthma,
+COPD or atopic indication, and the absence of the type 2 arm is a positive
+reason not to try.
+
+## 4. What the next studies have to establish
+
+| Study | What it has to settle | Why our data cannot |
+|---|---|---|
+| Infection model in vivo, with dosing after inoculation | whether blocking IL-33 changes outcome once disease is established | nothing in the package involves a virus, an animal or a dose |
+| IL-33 measured in patients, longitudinally, against outcome | whether the ligand itself rises and tracks severity | IL-33 is absent from the 1,094 delivered assays; only the receptor was measured |
+| Potency and exposure characterisation | whether 10 µg/mL relates to an achievable concentration | annex §1 places affinity, potency and exposure outside the delivery |
+| The oxidised form against the same readouts | whether engagement covers both species | only IL-33red was tested |
+| Repeat in pulmonary endothelium, multiple donors | whether the programme is general or vascular-bed and donor specific | one donor per line, three wells; HGMEC is glomerular, not pulmonary |
+| Deliver the HGMEC vehicle arm and the archived counts | the size of the IL-33 response in the second line, and the variance estimates | no HGMEC vehicle arm; counts and the fitted model are not delivered (§5) |
+| Confirm the test article is AX-1177 | that any of this applies to our asset | the annex names Compound_47 and never links it to AX-1177 |
+
+## 5. What to measure, when, and what could go into patients
+
+**Readout.** The 315-gene reproducible set, and within it the four modules
+above. The single most informative tissue readout is the procoagulant switch,
+because it is the part with a plausible clinical correlate: F3, SERPINE1 and
+THBD together.
+
+**Model.** Primary human lung microvascular endothelium, not HUVEC and not
+HGMEC. Both delivered lines are off-target beds — umbilical vein and glomerulus
+— and the attenuation between them, 2.7-fold, is itself evidence that bed
+identity matters.
+
+**Timepoint: 6 h.** This is where the response reproduces across beds
+(r 0.6216, 76.82% sign agreement, 315 genes). At 24 h it does not (0.3032,
+64.27%, 23 genes). Sample at 6 h and treat 24 h as exploratory.
+
+**Markers that could go into patients.** Thirteen analytes are both
+prognostic in `mmc2` and inside the 6 h reproducible set. Eight have usable
+precision, by which I mean an upper 95% bound under about 11:
+
+| Analyte | Gene | Serum OR (95% CI) | HUVEC 6 h logFC |
+|---|---|---|---|
+| CCL20 | CCL20 | 1.830 (1.284–2.608) | −9.8418 |
+| MCP-3 | CCL7 | 1.719 (1.253–2.356) | −4.9922 |
+| IL6 | IL6 | 2.066–2.308 across four panels | −5.9676 |
+| B4GALT1 | B4GALT1 | 2.315 (1.399–3.832) | −1.1047 |
+| IL1B | IL1B | 2.447 (1.284–4.662) | −3.9716 |
+| FSTL3 | FSTL3 | 2.527 (1.294–4.934) | −1.0836 |
+| TRIM21 | TRIM21 | 2.950 (1.494–5.825) | −1.1135 |
+| TANK | TANK | 3.324 (1.631–6.775) | −1.0242 |
+
+Roles differ and the distinction matters. These eight are candidate
+**pharmacodynamic** readouts: each is IL-33-driven, antibody-reversed, and
+measurable in serum. **sST2 is a stratification marker, not a pharmacodynamic
+one** — see section 6. ICAM1 is the **target-engagement** readout among the
+adhesion molecules, at `adj.P.Val` 0.0101 and an implied standard error of
+1.744, which is the largest in the 1126-gene set but inside it.
+
+Four of the thirteen need the analyte-to-gene mapping before they appear at
+all: `OPG` is TNFRSF11B, `CSF-1` is CSF1, `MCP-3` is CCL7, `IL-18R1` is
+IL18R1. Matching Olink assay names to gene symbols literally returns five of
+the thirteen and drops those four. On the same point, the delivery is 1094
+assays over **1063** distinct analytes: 27 analytes sit on more than one panel,
+IL6 on four, SCF and FGF-21 on three. Of 178 significant assay rows, 169 are
+distinct analytes.
+
+## 6. Considered and ruled out
+
+| Option | What closed it |
+|---|---|
+| **Drop the asset.** Nothing here shows the pathway causes disease, and there is no in vivo, potency or exposure data. | Target engagement is established and the blocked programme is characterised and reproducible at 6 h across two beds. That is a validation gap, not a dead target, and the gap is closable with the studies in section 4. |
+| **Keep the type 2 framing.** It is where anti-IL-33 is developed and the standard indication set. | IL5, IL13, CCL11, CCL24 and IL25 are not in the table; IL4 is −1.229 and not significant; TSLP, CCL26, GATA3 and IL1RL1 are all non-significant. The package gives no type 2 response to block. |
+| **Conclude the response does not reproduce across lines.** Intersecting the two threshold-filtered sets gives 219 of 1126, a Jaccard of 0.1571. | The threshold is invalid on a line whose effects are 2.7337-fold smaller, and it admits 11 sign-discordant genes. On direction plus nominal significance the same data gives 315 and r 0.6216. |
+| **Carry both timepoints.** Both Jaccard values, 0.1571 and 0.0356, look low. | The statistics separate: r 0.6216 against 0.3032, sign agreement 76.82% against 64.27%, 315 genes against 23. |
+| **Nominate sST2 as the pharmacodynamic readout.** Second of 1094 at OR 3.0243, and the pathway's own receptor. | `mmc2` has no drug arm, so it cannot show sST2 moves on treatment, and no file measures sST2 protein under antibody. The only receptor measurement is the `IL1RL1` transcript, which is +1.6020 in `mmc4` and −1.6799 in the matching inhibition contrast with `t` of 0.1925 and −0.2018 — an implied standard error near 8.32, far outside the 1.7439 ceiling of the 1126-gene set, so it resolves nothing either way. Prognostic and for patient selection: yes. Target engagement: not shown. |
+| **Report SELE and VCAM1 as blocked.** They carry the largest fold changes, −10.9852 and −8.7623, and are the textbook endothelial activation readouts. | Their implied standard errors are 8.779 and 7.019 against a ceiling of 1.7439 across the whole attributable set, so the delivered q-values of 0.4950 and 0.4965 establish nothing in either direction. CXCL1 at `t` −0.0071 and CXCL8, SLC7A2, CCL2 and PTGS2 are in the same condition. Indeterminate, not negative — and not citable as blocked. |
+| **Use 1094 proteins and 178 hits.** One row per assay is the obvious count. | 27 analytes appear on more than one panel. The reconciled figures are 1063 and 169. |
+| **Quote CSF-1, CTSS or BIRC2 as markers.** All three are significant and carry the largest odds ratios: 90.095, 23.199 and 12.437. | Their intervals are 4.200–1932.572, 2.691–200.019 and 2.409–64.215. Significant, but the magnitude is not estimated at n = 100 and no study could be sized on them. |
+| **Use the lung tissue to support the mechanism.** `mmc3` has IL-33 immunohistochemistry in endothelium across 78 blocks from 31 donors. | Different cohort, and `mmc2` carries assay-level summaries with no patient identifiers, so no link can be established or excluded. Its `Tissue RNA` column names 22 samples whose RNA data is not in the delivery. |
