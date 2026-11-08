@@ -201,14 +201,36 @@ this dataset: every one of the 169 significant analyte names maps to a symbol.
 
 **Excluded, with reasons.**
 
-- **Soluble ST2.** `ST2` is the second-ranked analyte of 1094 at an odds ratio
-  of 3.0243 (`mmc2.xlsx`, row 2 by `adj.p.value`), and it is the receptor for
-  the pathway's own ligand. It has **no pharmacodynamic response**: `IL1RL1`
-  is not significant in any of the 24 contrasts in `mmc5.xlsx`, minimum
-  `adj.P.Val` 0.9614, and it is absent from the signature. It is a prognostic
-  marker for selecting patients, not a readout for confirming target
-  engagement, and using it as the latter would report drug effect where none
-  is measurable.
+- **Soluble ST2, excluded as a pharmacodynamic readout because the package
+  measures no pharmacodynamics for it.** `ST2` is the second-ranked analyte of
+  1094 at an odds ratio of 3.0243 (`mmc2.xlsx`, row 2 by `adj.p.value`), and it
+  is the receptor for the pathway's own ligand, so it is the obvious
+  nomination. Three things stand between it and that role, and none of them is
+  a q-value.
+
+  First, `mmc2.xlsx` is a cross-sectional association study at enrolment with
+  **no drug arm**. It establishes that sST2 tracks outcome. It cannot establish
+  that sST2 moves on treatment, and no file in the package does.
+
+  Second, the only measurement of the receptor under the antibody is the
+  `IL1RL1` **transcript**, in endothelial cells. Soluble ST2 is a shed protein;
+  its serum concentration need not follow endothelial `IL1RL1` transcript in
+  either direction, and the package holds no sST2 protein measurement under
+  treatment.
+
+  Third, that transcript does not resolve either way. `IL1RL1` is +1.6020 in
+  `mmc4.xlsx` `IL33_vs_Nontreated_HUVEC_6_hrs` and −1.6799 in the matching
+  isotype-controlled inhibition contrast, both beyond twofold, but with `t` of
+  0.1925 and −0.2018 — an implied SE near 8.32, outside the 1.7439
+  ceiling of the attributable set for the same reason SELE and VCAM1 are. Its
+  minimum `adj.P.Val` of 0.9614 across the 24 contrasts therefore carries no
+  more weight here than SELE's 0.4950 does above, and this proposal does not
+  rest on it.
+
+  So sST2 is a **prognostic and patient-selection marker**, on evidence the
+  package does support. Nominating it to confirm target engagement asserts a
+  drug effect the package never measured. Offering it for stratification or
+  enrichment is a different claim and the data backs that one.
 - **The adhesion molecules, on an indeterminacy rather than a null result.**
   SELE, VCAM1 and CXCL8 carry three of the ten largest fold changes in the
   HUVEC 6 h contrast at −10.9852, −8.7623 and −8.4467, and they are the
