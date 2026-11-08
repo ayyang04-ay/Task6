@@ -44,6 +44,18 @@ treatment. `mmc3.xlsx` is post-mortem tissue from a different cohort with no
 identifiers shared with `mmc2`, so the two cannot be linked either way. The
 package is silent on causality, not negative.
 
+**And the tissue data argues against elevation in the target disease.**
+`mmc3.xlsx` scores IL-33 immunohistochemistry in three compartments. Median
+scores by group, COVID-negative non-pneumonia / COVID-negative pneumonia /
+COVID-positive pneumonia: bronchial and bronchiolar basal epithelium 5.50 /
+4.25 / 4.25; endothelium 5.50 / 5.50 / 4.75; vascular smooth muscle 3.25 /
+3.25 / 2.75. COVID-positive pneumonia carries the **lowest** median in every
+compartment, and staining sits near the top of the scale in the controls. So
+the one tissue dataset in the package does not show IL-33 raised in the
+disease the programme is aimed at. It is a different cohort from the serum
+patients and was read by a single reader, so it cannot close the question —
+but it does not support the premise either.
+
 Three further gaps bear on the audit. The annex places affinity, potency and
 exposure outside the delivery (§1), so there is no potency or exposure data at
 all. Only reduced IL-33 was tested, although §1 names an oxidised form.
