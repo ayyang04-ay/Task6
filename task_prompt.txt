@@ -1,9 +1,17 @@
-We have an anti-IL-33 antibody, AX-1177, in preclinical development for viral lower respiratory tract disease.
+AX-1177 is our anti-IL-33 antibody. It has been in preclinical development against viral lower respiratory tract disease for two years and it holds one of six slots in the respiratory portfolio. Next year's plan is fixed in December. The slot either carries forward or it goes to another programme, and I cannot hold it open for another cycle.
 
-The full data package is available in /tmp/world/filesystem. Treat the mounted package as the complete and authoritative record for this programme. All figures, findings and conclusions must be grounded in the mounted files.
+Everything the programme has generated on the mechanism and on the human biology is in /tmp/world/filesystem. It is a working directory rather than a curated one, so some of what is in there will not bear on this. Work only from those files, with no web access, and treat them as the complete record for the programme. Analyse as of 1 November 2026.
 
-I need to take a recommendation to the programme committee on whether the package supports carrying this forward. Build me the proposal, opening with your recommendation in one line at the top (/tmp/outputs/answer.md).
+I need a position I can take into the December review.
 
-It has to be highly defensible. Claims and recommendations need explicit reasoning, cited numbers and values, and sound methodology. Save any analysis you run under /tmp/outputs.
+Open with where you come down on the slot, in your own words, and then the reasoning.
 
-The board will want to know what we'd measure, in which model, when, and what goes into the clinic.
+Tell me what the next studies have to establish, and what each one would settle.
+
+Tell me which indication we should be developing against, and what in the data puts it there rather than somewhere else. We have been running at viral LRTD. Say whether that is right.
+
+Tell me what we would measure to know the drug is working: the readouts, the model system, and the sampling timepoint. Say which of those markers could plausibly be taken into patients, and in what role.
+
+Give me the numbers you rely on, each with the file it came from and how you reduced it. And give me what you considered and set aside, named, each with the reason that closed it.
+
+Interpretation of the delivered data only. No bench procedures.
