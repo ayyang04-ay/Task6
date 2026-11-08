@@ -18,6 +18,9 @@ parameters. It records no results and no interpretation.
 | NIP228 | Non-binding isotype control antibody; no known human antigen | Human IgG1 | 10 µg/mL |
 | IL-33red | Recombinant human IL-33, reduced form, mature processed species (residues 112–270) | Recombinant protein | 30 ng/mL |
 
+Compound_47 is the research designation for AX-1177. NIP228 is the isotype
+control.
+
 Compound_47 nominal molecular weight 146 kDa. NIP228 nominal molecular weight 146 kDa.
 IL-33red nominal molecular weight 18.1 kDa.
 
