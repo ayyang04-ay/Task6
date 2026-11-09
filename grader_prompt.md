@@ -66,7 +66,6 @@ exhaustive — apply your judgment to any other issues you identify.
 - Stating affinity, potency or exposure values, which are not in the delivered
   package.
 
-
 C) NEUTRAL
 The following are examples of acceptable variations that should not affect the
 score. Other variations may also be neutral — use your judgment.
