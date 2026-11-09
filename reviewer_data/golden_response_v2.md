@@ -72,64 +72,55 @@ IL-33 itself is not among the 1,094.
 developing against.** Anti-IL-33 is conventionally pursued through type 2
 inflammation. Our data shows IL-33 driving nothing of the kind in endothelium.
 
-In `mmc4.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`. Percentiles are of `AveExpr`
-within the 26,210-gene universe, because a non-result on an unexpressed gene is
-not a negative.
+In `mmc4.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`. The delivered statistics in
+this file are not uniformly usable, so each gene is taken with its implied
+standard error, `|logFC / t|`, against the file's median of 0.339. Genes beyond
+about five times that are not interpretable in either direction, and the
+`AveExpr` column cannot stand in for expression here because it carries one
+value per gene across all 114 libraries, including the two epithelial lines.
 
-| Gene | Expression percentile | logFC | adj.P |
-|---|---|---|---|
-| IL5, IL13, CCL11, CCL24, IL25 | **not in the universe** | — | — |
-| GATA3 | 90.6 | −0.978 | 0.9869 |
-| IL1RL1 | 52.8 | +1.602 | 0.9803 |
-| CCL26 | 28.7 | −0.839 | 0.5467 |
-| TSLP | 5.2 | +0.176 | 0.9705 |
-| IL4 | 4.0 | −1.229 | 0.3371 |
-| SERPINE1 | 88.1 | **+1.744** | 0.0000 |
-| THBD | 66.3 | **−1.001** | 0.0000 |
-| F3 | 54.5 | **+5.636** | 0.0000 |
-| C3 | 50.5 | **+4.791** | 0.0000 |
-| IFIT1 | 53.7 | +1.939 | 0.0014 |
-| IL6 | 43.8 | +5.817 | 0.0000 |
-| CSF2 | 13.8 | **+10.296** | 0.0000 |
-| CXCL10 | 5.8 | **+6.887** | 0.0000 |
+**The type 2 axis, taken honestly.**
 
-Read carefully, three different things are going on and only two of them are
-evidence.
+| Gene | logFC | implied SE | adj.P | usable? |
+|---|---|---|---|---|
+| IL4 | −1.229 | 0.759 (2.2×) | 0.3371 | **yes — a real null** |
+| TSLP | +0.176 | 0.606 (1.8×) | 0.9705 | **yes — a real null** |
+| CCL26 | −0.839 | 0.724 (2.1×) | 0.5467 | **yes — a real null** |
+| GATA3 | −0.978 | **22.891 (67.6×)** | 0.9869 | no |
+| IL1RL1 | +1.602 | **8.324 (24.6×)** | 0.9803 | no |
+| IL5, IL13, CCL11, CCL24, IL25 | — | — | — | absent from the gene universe |
 
-**Not evidence.** IL5, IL13, CCL11, CCL24 and IL25 are absent from the gene
-universe entirely, so they were filtered as unexpressed and never measured.
-Nothing follows from their absence. Endothelium is not a type 2 effector cell
-and these cytokines come from other lineages, so an expert would expect this.
+Three measured type 2 genes have sound statistics and none of them moves.
+GATA3 and IL1RL1 cannot be used in either direction: their standard errors put
+them in the same unreadable class as SELE at 8.866 and VCAM1 at 7.064, and a
+proposal leaning on GATA3's `adj.P` of 0.9869 makes the same mistake as one
+leaning on SELE's 0.4979. The five absent effectors were filtered as
+unexpressed and support no claim; endothelium is not a type 2 effector cell, so
+an expert would expect that.
 
-**Evidence, and the stronger kind.** Where the type 2 axis *is* well measured
-it does not move. GATA3, the master type 2 transcription factor, sits at the
-90.6th percentile of expression and changes by −0.978 at adj.P 0.9869.
-IL1RL1, the receptor, sits at the 52.8th and changes by +1.602 at 0.9803.
-These are informative negatives on genes the assay can clearly see.
+**What is blocked, on readable statistics throughout.** Every gene below has an
+implied SE under three times the median.
 
-**Evidence, and the weaker kind.** IL4 and TSLP sit at the 4th and 5.2nd
-percentiles, where a small effect would be undetectable. But a large one would
-not: CXCL10 sits at the 5.8th percentile and is induced +6.887, and CSF2 at
-the 13.8th is induced +10.296. So the absence of a comparably large type 2
-induction is suggestive even at the floor, without being conclusive.
+- **Interferon (10):** IFIT1 +1.939, IFIT2 +1.948, IFIT3 +1.727, MX1 +1.913,
+  OAS3 +1.095, OASL +3.400, IRF1 +2.608, ISG20 +2.937, RSAD2 +2.028,
+  CXCL10 +6.887.
+- **Neutrophil chemokines (4):** CXCL2 +6.768, CXCL3 +8.279, CXCL5 +5.301,
+  CXCL6 +9.406. **CXCL1 and CXCL8 are excluded** — SE 1154.884 and 4.061 —
+  even though both are neutrophil chemokines carrying large fold changes.
+- **CSF and cytokine (5):** CSF2 +10.296, CSF3 +8.319, TNF +7.885, IL6 +5.817,
+  IL1B +3.649.
+- **Haemostasis and complement (4):** F3 +5.636 and SERPINE1 +1.744 up with
+  **THBD −1.001 down**, C3 +4.791 up. A procoagulant switch on four genes whose
+  standard errors are 1.0×, 0.3×, 0.4× and 1.8× the median — the best-measured
+  part of the whole response.
 
-**What does move is well expressed and coherent.** Tissue factor at the 54.5th
-percentile rises +5.636, PAI-1 at the 88.1st rises +1.744, and thrombomodulin
-at the 66.3rd falls −1.001 — a procoagulant switch on three well-measured
-genes, not a list of inflammatory hits. Complement C3 at the 50.5th rises
-+4.791.
+**So the claim is about what the package can support, and about which of its
+numbers can be read.** It cannot support a type 2 indication: the three type 2
+genes measured cleanly do not move, the two measured badly cannot be read, and
+the effectors were never measured. What it can support, on twenty-three genes
+with sound statistics, is a programme that is interferon-driven, neutrophilic
+and procoagulant.
 
-The interferon and neutrophil arms are significant throughout, with values:
-interferon — IFIT1 +1.939, IFIT3 +1.727, MX1 +1.913, OAS3 +1.095, CXCL10
-+6.887, IRF1 +2.608, ISG20 +2.937; neutrophil recruitment — CSF2 +10.296,
-CXCL6 +9.406, CSF3 +8.319, CXCL3 +8.279, CXCL2 +6.768, IL6 +5.817, CXCL5
-+5.301, IL1B +3.649. All at `adj.P.Val` below 0.05, most at 0.0000.
-
-**So the claim is about what the package can support, not about type 2 being
-absent.** It cannot support a type 2 indication: the effectors were never
-measured, and the two type 2 genes it does measure well do not move. What it
-can support is a programme that is interferon-driven, neutrophilic and
-procoagulant.
 
 
 The same four modules carry into the reproducible 315-gene set, and every
@@ -197,17 +188,24 @@ tighter than most: a u95/l95 ratio of 2.74 against a median of 3.92 across the
 178 significant rows, 39th tightest of them. This is not a marginal hit read
 off the top of a ranking.
 
-**The ranking itself is weaker than the Bonferroni result, and that is why the
-enrichment test matters.** 893 of 1094 odds ratios exceed 1 (binomial p
-1.6e-104) and 176 of the 178 significant rows point the same way, so in this
-panel being prognostic is close to universal and a high rank partly reflects
-assay precision. Rank therefore cannot carry a claim on its own; Bonferroni
-survival can, and so can enrichment. Testing the latter: 38 of the 315
-signature genes have any analyte on the panel, 13 of those 38 are significant
-in serum, and the base rate is 169 of 1063, or 15.9%. Expected overlap 6.0
-against 13 observed — **2.15-fold enrichment, hypergeometric p 0.0037**. So the
-in vitro programme and human outcome are linked as a statistical claim and not
-as a list.
+**The ranking itself is weaker than the Bonferroni result, and the enrichment
+is a property of this signature rather than of the response generally.** 893 of
+1094 odds ratios exceed 1 (binomial p 1.6e-104) and 176 of the 178 significant
+rows point the same way, so a high rank partly reflects assay precision and an
+intersection with the signature establishes nothing on its own. The test must
+compare like with like: among analytes whose gene was measured in the RNA data
+at all, is the significance rate higher inside the signature? It is — 13 of 38
+against 129 of 729, **34.2% against 17.7%, Fisher OR 2.419, p 0.0169**.
+Comparing instead against the base rate over all 1063 analytes, including those
+mapping to no measured gene, inflates this to 2.15-fold at p 0.0037 and should
+not be used.
+
+The result is sensitive to how the signature is drawn. On the tight 315-gene
+direction-plus-nominal core it holds. On looser signatures of several hundred to
+a thousand genes the same test returns null, because a larger set is less
+specific. So a proposal that defines a broader signature and finds no
+enrichment has not made an error.
+
 
 
 **Markers that could go into patients.** Thirteen analytes are both
@@ -248,7 +246,7 @@ distinct analytes.
 | **Keep the type 2 framing.** It is where anti-IL-33 is developed and the standard indication set. | IL5, IL13, CCL11, CCL24 and IL25 are not in the table; IL4 is −1.229 and not significant; TSLP, CCL26, GATA3 and IL1RL1 are all non-significant. The package gives no type 2 response to block. |
 | **Conclude the response does not reproduce across lines.** Intersecting the two threshold-filtered sets gives 219 of 1126, a Jaccard of 0.1571. | The threshold is invalid on a line whose effects are 2.7337-fold smaller, and it admits 11 sign-discordant genes. On direction plus nominal significance the same data gives 315 and r 0.6216. |
 | **Carry both timepoints.** Both Jaccard values, 0.1571 and 0.0356, look low. | The statistics separate: r 0.6216 against 0.3032, sign agreement 76.82% against 64.27%, 315 genes against 23. |
-| **Nominate sST2 as the pharmacodynamic readout.** Second of 1094 at OR 3.0243, and the pathway's own receptor. | `mmc2` has no drug arm, so it cannot show sST2 moves on treatment, and no file measures sST2 protein under antibody. The only receptor measurement is the `IL1RL1` transcript, which is +1.6020 in `mmc4` and −1.6799 in the matching inhibition contrast with `t` of 0.1925 and −0.2018 — an implied standard error near 8.32, far outside the 1.7439 ceiling of the 1126-gene set, so it resolves nothing either way. Prognostic and for patient selection: yes. Target engagement: not shown. |
+| **Nominate sST2 as the pharmacodynamic readout.** Second of 1094 at OR 3.0243, and the pathway's own receptor. | Two reasons, and the first is specific to sST2 rather than general. Soluble ST2 is the decoy receptor for the drug's own target, so its serum concentration moves with pathway activity and with disease severity at once; a fall after dosing cannot be attributed to target engagement rather than to the patient improving. Every other marker proposed here sits downstream of the receptor and does not carry that confound. Second, nothing in the package resolves its behaviour under antibody: the only receptor measurement is the `IL1RL1` transcript, +1.6020 in `mmc4` and −1.6799 in the matching inhibition contrast, with an implied standard error near 8.32 against a median of 0.34, so it is unreadable either way. Prognostic and for patient selection: yes, on the Bonferroni result. Target engagement or pharmacodynamics: not shown, and not resolvable here. |
 | **Report SELE and VCAM1 as blocked.** They carry the largest fold changes, −10.9852 and −8.7623, and are the textbook endothelial activation readouts. | Their implied standard errors are 8.779 and 7.019 against a ceiling of 1.7439 across the whole attributable set, so the delivered q-values of 0.4950 and 0.4965 establish nothing in either direction. CXCL1 at `t` −0.0071 and CXCL8, SLC7A2, CCL2 and PTGS2 are in the same condition. Indeterminate, not negative — and not citable as blocked. |
 | **Use 1094 proteins and 178 hits.** One row per assay is the obvious count. | 27 analytes appear on more than one panel. The reconciled figures are 1063 and 169. |
 | **Quote CSF-1, CTSS or BIRC2 as markers.** All three are significant and carry the largest odds ratios: 90.095, 23.199 and 12.437. | Their intervals are 4.200–1932.572, 2.691–200.019 and 2.409–64.215. Significant, but the magnitude is not estimated at n = 100 and no study could be sized on them. |

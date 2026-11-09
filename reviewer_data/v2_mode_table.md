@@ -27,22 +27,22 @@ naming an indication.
 atopic indication, on the reasoning that anti-IL-33 is a type 2 drug. Never
 asks what IL-33 induces in the delivered data.
 
-**What refutes it.** `mmc4.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`. Stated
-carefully, because the strongest-looking version of this does not hold:
-IL5, IL13, CCL11, CCL24 and IL25 are absent from the 26,210-gene universe, so
-they were filtered as unexpressed and never measured — nothing follows from
-that. What does follow is that where the type 2 axis is well measured it does
-not move: **GATA3 at the 90.6th percentile of expression changes −0.978 at
-adj.P 0.9869**, and IL1RL1 at the 52.8th changes +1.602 at 0.9803. IL4 and
-TSLP sit at the 4th and 5.2nd percentiles, where only a large effect would
-show — and a large one would: CXCL10 at the 5.8th percentile is induced
-+6.887 and CSF2 at the 13.8th by +10.296. Against that, the interferon arm is significant
-throughout (CXCL10 +6.887, IFIT1 +1.939, IFIT3 +1.727, MX1 +1.913, OAS3
-+1.095, IRF1 +2.608, ISG20 +2.937), the neutrophil arm is significant
-throughout (CSF2 +10.296, CXCL6 +9.406, CSF3 +8.319, CXCL3 +8.279, CXCL5
-+5.301, CXCL2 +6.768, IL6 +5.817, IL1B +3.649), and haemostasis moves
-coherently: F3 +5.636 and SERPINE1 +1.744 up with **THBD −1.001 down**, C3
-+4.791 up.
+**What refutes it.** `mmc4.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`, taken with
+each gene's implied standard error `|logFC / t|` against the file median of
+0.339, because this file's statistics are not uniformly usable.
+
+Three type 2 genes are measured with sound standard errors and none moves:
+**IL4 −1.229 (SE 0.759), TSLP +0.176 (SE 0.606), CCL26 −0.839 (SE 0.724)**.
+What is blocked is interferon, neutrophilic and procoagulant on 23 genes with
+SE under three times the median, including F3 +5.636 (SE 0.333) and SERPINE1
++1.744 (SE 0.112) rising as **THBD −1.001 (SE 0.123)** falls.
+
+Two things cannot be used and an earlier version of this table wrongly relied
+on them. **GATA3 (SE 22.891) and IL1RL1 (SE 8.324)** sit in the same unreadable
+class as SELE (8.866) and VCAM1 (7.064), so neither their non-significance nor
+anything else about them is interpretable. And IL5, IL13, CCL11, CCL24 and
+IL25 are absent from the gene universe, filtered as unexpressed, so nothing
+follows from their absence. A solver that omits all of these is correct.
 
 **Counterfactual.** The indication is the severe endothelial-injury and
 coagulopathy phenotype of viral LRTD, selected on that basis. Type 2
