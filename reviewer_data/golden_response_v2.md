@@ -122,13 +122,32 @@ because it is the part with a plausible clinical correlate: F3, SERPINE1 and
 THBD together.
 
 **Model.** Primary human lung microvascular endothelium, not HUVEC and not
-HGMEC. Both delivered lines are off-target beds — umbilical vein and glomerulus
-— and the attenuation between them, 2.7-fold, is itself evidence that bed
-identity matters.
+HGMEC. The 2.7337-fold attenuation between the two delivered lines is usually
+read as a correction to apply when judging reproducibility, and it is that. It
+is also a direct measurement of how much vascular bed identity changes the
+result: between umbilical vein and kidney glomerulus the same antibody effect
+differs 2.7337-fold at 6 h and 4.3512-fold at 24 h. Both beds are wrong for a
+lung indication, so an effect sized in them cannot be assumed to transfer to
+lung microvasculature at any particular magnitude, and none of the delivered
+figures can power a study in it.
 
 **Timepoint: 6 h.** This is where the response reproduces across beds
 (r 0.6216, 76.82% sign agreement, 315 genes). At 24 h it does not (0.3032,
 64.27%, 23 genes). Sample at 6 h and treat 24 h as exploratory.
+
+**The overlap has to be shown enriched, not asserted.** In this panel 893 of
+1094 odds ratios exceed 1 (binomial p 1.6e-104), and 176 of the 178
+significant assay rows point the same way. Being prognostic here is close to
+universal, so intersecting the signature with it proves nothing on its own.
+Tested: 38 of the 315 signature genes have any analyte on the panel, 13 of
+those 38 are significant in serum, and the base rate is 169 significant
+analytes of 1063, or 15.9%. Expected overlap 6.0 against 13 observed —
+**2.15-fold enrichment, hypergeometric p 0.0037**. That is the one result in
+the package tying the in vitro programme to human outcome as a statistical
+claim rather than a list, and it is why ST2's rank of 2 cannot carry the
+argument alone: where four fifths of a panel rises with severity, rank is
+partly a measure of assay precision.
+
 
 **Markers that could go into patients.** Thirteen analytes are both
 prognostic in `mmc2` and inside the 6 h reproducible set. Eight have usable
