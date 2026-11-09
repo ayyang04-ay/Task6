@@ -124,29 +124,46 @@ THBD together.
 **Model.** Primary human lung microvascular endothelium, not HUVEC and not
 HGMEC. The 2.7337-fold attenuation between the two delivered lines is usually
 read as a correction to apply when judging reproducibility, and it is that. It
-is also a direct measurement of how much vascular bed identity changes the
-result: between umbilical vein and kidney glomerulus the same antibody effect
-differs 2.7337-fold at 6 h and 4.3512-fold at 24 h. Both beds are wrong for a
-lung indication, so an effect sized in them cannot be assumed to transfer to
-lung microvasculature at any particular magnitude, and none of the delivered
-figures can power a study in it.
+is also a measurement of how much vascular bed identity changes the effect
+size: 2.7337-fold at 6 h and 4.3512-fold at 24 h between umbilical vein and
+kidney glomerulus, neither of which is pulmonary.
+
+What that licenses and what it does not. **Direction and membership do
+transfer**: 315 genes move the same way in both beds at 6 h, sign agreement is
+76.82%, and the four modules are negative in both. So the hypothesis that lung
+microvascular endothelium behaves in the same direction is reasonable, and it
+is the best inference the package supports. **Magnitude does not transfer**:
+if two off-target beds differ by 2.7 to 4.4-fold, no delivered figure can be
+used to size an effect in a third. That is why the confirmatory experiment has
+to be run in lung endothelium rather than inferred from these numbers, and why
+it should be powered on the direction and the gene set rather than on the
+effect sizes reported here.
 
 **Timepoint: 6 h.** This is where the response reproduces across beds
 (r 0.6216, 76.82% sign agreement, 315 genes). At 24 h it does not (0.3032,
 64.27%, 23 genes). Sample at 6 h and treat 24 h as exploratory.
 
-**The overlap has to be shown enriched, not asserted.** In this panel 893 of
-1094 odds ratios exceed 1 (binomial p 1.6e-104), and 176 of the 178
-significant assay rows point the same way. Being prognostic here is close to
-universal, so intersecting the signature with it proves nothing on its own.
-Tested: 38 of the 315 signature genes have any analyte on the panel, 13 of
-those 38 are significant in serum, and the base rate is 169 significant
-analytes of 1063, or 15.9%. Expected overlap 6.0 against 13 observed —
-**2.15-fold enrichment, hypergeometric p 0.0037**. That is the one result in
-the package tying the in vitro programme to human outcome as a statistical
-claim rather than a list, and it is why ST2's rank of 2 cannot carry the
-argument alone: where four fifths of a panel rises with severity, rank is
-partly a measure of assay precision.
+**ST2 is the strongest single piece of human evidence in the package, and it
+survives the strictest available bar.** Only three of the 1094 assays clear
+Bonferroni at 0.05/1094 = 4.57e-05: HGF at p 3e-06, **ST2 at p 1.7e-05**, and
+HGF again on a second panel. At analyte level that is two analytes, and one of
+them is the pathway's own receptor. ST2's odds ratio is 3.0243 (1.83 to 5.01)
+per log unit after adjustment for age, sex and NEWS2, and its interval is
+tighter than most: a u95/l95 ratio of 2.74 against a median of 3.92 across the
+178 significant rows, 39th tightest of them. This is not a marginal hit read
+off the top of a ranking.
+
+**The ranking itself is weaker than the Bonferroni result, and that is why the
+enrichment test matters.** 893 of 1094 odds ratios exceed 1 (binomial p
+1.6e-104) and 176 of the 178 significant rows point the same way, so in this
+panel being prognostic is close to universal and a high rank partly reflects
+assay precision. Rank therefore cannot carry a claim on its own; Bonferroni
+survival can, and so can enrichment. Testing the latter: 38 of the 315
+signature genes have any analyte on the panel, 13 of those 38 are significant
+in serum, and the base rate is 169 of 1063, or 15.9%. Expected overlap 6.0
+against 13 observed — **2.15-fold enrichment, hypergeometric p 0.0037**. So the
+in vitro programme and human outcome are linked as a statistical claim and not
+as a list.
 
 
 **Markers that could go into patients.** Thirteen analytes are both
