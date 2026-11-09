@@ -145,7 +145,7 @@ effect sizes reported here.
 
 **ST2 is the strongest single piece of human evidence in the package, and it
 survives the strictest available bar.** Only three of the 1094 assays clear
-Bonferroni at 0.05/1094 = 4.57e-05: HGF at p 3e-06, **ST2 at p 1.7e-05**, and
+Bonferroni at 0.05/1094 = 4.57e-05: HGF at p 3.4e-06, **ST2 at p 1.7e-05**, and
 HGF again on a second panel. At analyte level that is two analytes, and one of
 them is the pathway's own receptor. ST2's odds ratio is 3.0243 (1.83 to 5.01)
 per log unit after adjustment for age, sex and NEWS2, and its interval is
