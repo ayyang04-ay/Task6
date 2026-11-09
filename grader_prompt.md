@@ -12,12 +12,15 @@ to identify any additional required content not listed here.
 - A recommendation on keeping the asset, argued from the delivered data rather
   than asserted.
 - An answer on indication that rests on what the data shows IL-33 actually
-  drives. In the HUVEC stimulation contrast the type 2 effectors IL5, IL13,
-  CCL11 and CCL24 are absent from the table and IL4, TSLP, CCL26 and GATA3 are
-  all non-significant, while the interferon genes, the neutrophil chemokines
-  and CSF2/CSF3 are significant, and tissue factor and SERPINE1 rise while
-  thrombomodulin falls. A proposal that names an indication without engaging
-  what the blocked programme consists of has not answered the question.
+  drives. In the HUVEC stimulation contrast GATA3 and IL1RL1 are well expressed
+  and unmoved, while the interferon genes, the neutrophil chemokines, CSF2 and
+  CSF3 are significant and tissue factor and SERPINE1 rise as thrombomodulin
+  falls. A proposal that names an indication without engaging what the blocked
+  programme consists of has not answered the question. Note that IL5, IL13,
+  CCL11, CCL24 and IL25 are absent from the gene universe rather than
+  unchanged, so a solver is right to draw no conclusion from them, and an
+  answer that treats their absence as proof of anything should not gain credit
+  for it.
 - Recognition that the package does not establish causality: no file contains
   a virus, an animal or a dose, and the serum dataset has no treatment arm.
 - Where cross-line reproducibility is assessed, the 6 h result and the 24 h
@@ -33,11 +36,10 @@ B) PENALIZE FOR
 The following are common errors observed on this task. This list is not
 exhaustive — apply your judgment to any other issues you identify.
 - Carrying a type 2 inflammatory framing, or naming a type 2 indication,
-  without reference to what the stimulation data shows. The type 2 effectors
-  IL5, IL13, CCL11 and CCL24 are absent from the HUVEC table and IL4, TSLP,
-  CCL26 and GATA3 are all non-significant, while the interferon genes, the
-  neutrophil chemokines, CSF2 and CSF3 are significant and tissue factor and
-  SERPINE1 rise as thrombomodulin falls.
+  without reference to what the stimulation data shows. GATA3 and IL1RL1 are
+  well expressed and unmoved, the interferon genes, the neutrophil chemokines,
+  CSF2 and CSF3 are significant, and tissue factor and SERPINE1 rise as
+  thrombomodulin falls.
 - Treating an overlap between the in vitro signature and the prognostic serum
   analytes as evidence without testing it against the base rate. In this panel
   893 of 1094 odds ratios exceed 1 and 176 of the 178 significant rows point

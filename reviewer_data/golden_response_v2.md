@@ -72,21 +72,65 @@ IL-33 itself is not among the 1,094.
 developing against.** Anti-IL-33 is conventionally pursued through type 2
 inflammation. Our data shows IL-33 driving nothing of the kind in endothelium.
 
-In `mmc4.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`:
+In `mmc4.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`. Percentiles are of `AveExpr`
+within the 26,210-gene universe, because a non-result on an unexpressed gene is
+not a negative.
 
-| Arm | What IL-33 does |
-|---|---|
-| type 2 effectors IL5, IL13, CCL11, CCL24, IL25 | **not present in the table at all** |
-| IL4 −1.229, TSLP +0.176, CCL26 −0.839, GATA3 −0.978, IL1RL1 +1.602 | none significant; IL4 is negative |
-| interferon: IFIT1 +1.939, IFIT3 +1.727, MX1 +1.913, OAS3 +1.095, CXCL10 +6.887, IRF1 +2.608, ISG20 +2.937 | all significant |
-| neutrophil recruitment: CXCL2 +6.768, CXCL3 +8.279, CXCL5 +5.301, CXCL6 +9.406, CSF2 +10.296, CSF3 +8.319, IL1B +3.649, IL6 +5.817 | all significant |
-| haemostasis and complement: F3 +5.636, SERPINE1 +1.744, C3 +4.791 up; **THBD −1.001 down** | all significant |
+| Gene | Expression percentile | logFC | adj.P |
+|---|---|---|---|
+| IL5, IL13, CCL11, CCL24, IL25 | **not in the universe** | — | — |
+| GATA3 | 90.6 | −0.978 | 0.9869 |
+| IL1RL1 | 52.8 | +1.602 | 0.9803 |
+| CCL26 | 28.7 | −0.839 | 0.5467 |
+| TSLP | 5.2 | +0.176 | 0.9705 |
+| IL4 | 4.0 | −1.229 | 0.3371 |
+| SERPINE1 | 88.1 | **+1.744** | 0.0000 |
+| THBD | 66.3 | **−1.001** | 0.0000 |
+| F3 | 54.5 | **+5.636** | 0.0000 |
+| C3 | 50.5 | **+4.791** | 0.0000 |
+| IFIT1 | 53.7 | +1.939 | 0.0014 |
+| IL6 | 43.8 | +5.817 | 0.0000 |
+| CSF2 | 13.8 | **+10.296** | 0.0000 |
+| CXCL10 | 5.8 | **+6.887** | 0.0000 |
 
-The last row is the one that sets the indication. Tissue factor and PAI-1 up
-with thrombomodulin down is a coherent procoagulant switch in the endothelium,
-not an inflammatory gene list. Taken with the interferon and neutrophil arms,
-what the antibody blocks is interferon-driven, neutrophilic endothelial
-activation with a prothrombotic shift.
+Read carefully, three different things are going on and only two of them are
+evidence.
+
+**Not evidence.** IL5, IL13, CCL11, CCL24 and IL25 are absent from the gene
+universe entirely, so they were filtered as unexpressed and never measured.
+Nothing follows from their absence. Endothelium is not a type 2 effector cell
+and these cytokines come from other lineages, so an expert would expect this.
+
+**Evidence, and the stronger kind.** Where the type 2 axis *is* well measured
+it does not move. GATA3, the master type 2 transcription factor, sits at the
+90.6th percentile of expression and changes by −0.978 at adj.P 0.9869.
+IL1RL1, the receptor, sits at the 52.8th and changes by +1.602 at 0.9803.
+These are informative negatives on genes the assay can clearly see.
+
+**Evidence, and the weaker kind.** IL4 and TSLP sit at the 4th and 5.2nd
+percentiles, where a small effect would be undetectable. But a large one would
+not: CXCL10 sits at the 5.8th percentile and is induced +6.887, and CSF2 at
+the 13.8th is induced +10.296. So the absence of a comparably large type 2
+induction is suggestive even at the floor, without being conclusive.
+
+**What does move is well expressed and coherent.** Tissue factor at the 54.5th
+percentile rises +5.636, PAI-1 at the 88.1st rises +1.744, and thrombomodulin
+at the 66.3rd falls −1.001 — a procoagulant switch on three well-measured
+genes, not a list of inflammatory hits. Complement C3 at the 50.5th rises
++4.791.
+
+The interferon and neutrophil arms are significant throughout, with values:
+interferon — IFIT1 +1.939, IFIT3 +1.727, MX1 +1.913, OAS3 +1.095, CXCL10
++6.887, IRF1 +2.608, ISG20 +2.937; neutrophil recruitment — CSF2 +10.296,
+CXCL6 +9.406, CSF3 +8.319, CXCL3 +8.279, CXCL2 +6.768, IL6 +5.817, CXCL5
++5.301, IL1B +3.649. All at `adj.P.Val` below 0.05, most at 0.0000.
+
+**So the claim is about what the package can support, not about type 2 being
+absent.** It cannot support a type 2 indication: the effectors were never
+measured, and the two type 2 genes it does measure well do not move. What it
+can support is a programme that is interferon-driven, neutrophilic and
+procoagulant.
+
 
 The same four modules carry into the reproducible 315-gene set, and every
 member of each is negative under antibody: 16 interferon genes, 10 NF-κB
