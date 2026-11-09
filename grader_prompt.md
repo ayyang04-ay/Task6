@@ -32,8 +32,24 @@ to identify any additional required content not listed here.
 B) PENALIZE FOR
 The following are common errors observed on this task. This list is not
 exhaustive — apply your judgment to any other issues you identify.
-- Carrying a type 2 inflammatory framing, or a type 2 indication, without
-  reference to what the stimulation data shows.
+- Carrying a type 2 inflammatory framing, or naming a type 2 indication,
+  without reference to what the stimulation data shows. The type 2 effectors
+  IL5, IL13, CCL11 and CCL24 are absent from the HUVEC table and IL4, TSLP,
+  CCL26 and GATA3 are all non-significant, while the interferon genes, the
+  neutrophil chemokines, CSF2 and CSF3 are significant and tissue factor and
+  SERPINE1 rise as thrombomodulin falls.
+- Treating an overlap between the in vitro signature and the prognostic serum
+  analytes as evidence without testing it against the base rate. In this panel
+  893 of 1094 odds ratios exceed 1 and 176 of the 178 significant rows point
+  the same way, so being prognostic is close to universal and an intersection
+  establishes nothing until it is shown to exceed chance.
+- Using the between-cell-line effect-size difference only to adjust a
+  threshold, and then recommending a model system or a confirmatory study
+  without reference to it. The same effect differs by roughly 2.7-fold at 6 h
+  and 4.4-fold at 24 h between two cell lines, neither of which is pulmonary,
+  which bears directly on what the next experiment has to be run in.
+- Treating the odds ratios for CSF-1, CTSS or BIRC2 as estimated magnitudes
+  when their confidence intervals span orders of magnitude.
 - Concluding that the response does not reproduce across cell lines on the
   basis of intersecting two threshold-filtered gene sets, where effect sizes
   in the second line are roughly 2.7-fold smaller over the same genes.
@@ -45,10 +61,9 @@ exhaustive — apply your judgment to any other issues you identify.
 - Citing SELE, VCAM1, CXCL8 or CXCL1 as part of the blocked response without
   addressing their standard errors, which are far outside the range spanned by
   the attributable set.
-- Treating the odds ratios for CSF-1, CTSS or BIRC2 as estimated magnitudes
-  when their confidence intervals span orders of magnitude.
 - Stating affinity, potency or exposure values, which are not in the delivered
   package.
+
 
 C) NEUTRAL
 The following are examples of acceptable variations that should not affect the
