@@ -34,25 +34,38 @@ the body and opens with a decision line has made no error a careful expert
 would recognise, so it fails the defensibility bar. That share of the spread
 carries no FA signal.
 
-## Two more places the prompt does not ask for what is scored
+## Retracted — two claims in the original version of this file
 
-**The forward plan has no criterion and conflicts with the grounding line.**
-The prompt asks what to measure, in which model, when, and what goes into the
-clinic. The package holds no in vivo, PK, tox or clinical-design data. The
-prompt also says all figures, findings and conclusions must be grounded in the
-mounted files. The deliverable is therefore unanswerable as specified, and the
-QA records that every rollout invented a labelling scheme to reconcile the two.
-No A item covers the forward plan at all.
+The version first committed here credited two QA findings that I later
+established were wrong. Both are withdrawn.
 
-This was predicted. When the grounding sentence was tightened and "Domain
-knowledge is welcome in interpretation" was dropped, the risk flagged was that
-the stricter line forbids the external knowledge the forward plan needs. The
-QA found it independently. The fix is to restore a clause permitting labelled
-domain knowledge.
+**Retracted: "the forward plan has no criterion and conflicts with the
+grounding line."** The prompt's four asks map one to one onto the golden's
+products: what we'd measure to the signature, in which model to the cross-line
+section, when to the timepoint, what goes into the clinic to the circulating
+markers. All four are groundable in the delivered files under the natural
+reading of an in vitro package, where "in which model" means cell line and
+"when" means sampling timepoint. The QA reached the conflict by reading them
+expansively, as animal models and a programme timeline, and its own problem
+linter noted the ambiguity. The conflict was an artefact of the expansive
+reading, not a defect in the prompt.
 
-**The circulating-marker shortlist** appears in section C as a neutral
-variation but is required by no A item and asked for by no prompt sentence
-until "what goes into the clinic", which does not name analytes.
+**Retracted: "this was predicted."** It was not. The flag I had raised about
+dropping "Domain knowledge is welcome in interpretation" was narrower — that
+the stricter line might forbid the Olink alias reconciliation — and is a
+different claim from the QA's. Presenting the two as the same thing
+overstated both. The writer has since ruled on the underlying point: the hits
+are grounded in the data and the interpretation is the application of domain
+expertise, so no clause is needed.
+
+**Retracted: "the circulating-marker shortlist is asked for by no prompt
+sentence."** "What goes into the clinic" asks for it.
+
+What survives from this section is only the A1 finding above, which is
+independently established: the grader required the timepoint contrast inside
+the one-line recommendation where the prompt asked only for a recommendation
+in one line.
+
 
 ## Three of the six modes need work
 
@@ -164,9 +177,11 @@ here either way.
    the delivered standard errors. Qualify the golden's claim.
 4. Narrow the adhesion penalty so it cannot catch ICAM1, whose HUVEC 6 h
    reversal is significant at adj.P 0.0102.
-5. Restore a clause permitting labelled domain knowledge, so the forward-plan
-   deliverable is answerable.
-6. Add an A item for the forward plan, or drop the ask from the prompt.
+5. ~~Restore a clause permitting labelled domain knowledge.~~ Withdrawn — see
+   the retraction above. The writer has ruled that the hits are grounded in the
+   data and the interpretation is domain expertise applied to them.
+6. ~~Add an A item for the forward plan.~~ Withdrawn — the prompt does ask for
+   it, at "what goes into the clinic".
 7. Re-export with `outputs` selected.
 
 Items 1 to 6 are a new problem version and a new run. The current 8 transcripts
