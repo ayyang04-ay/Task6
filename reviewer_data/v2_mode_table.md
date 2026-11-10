@@ -52,7 +52,7 @@ the two type 2 genes it does measure well are unmoved.
 
 **Occupancy: 0 of 8.** No run named THBD or SERPINE1, so none characterised
 the haemostatic shift directionally; four named F3 alone. Every type 2 mention
-in all eight concerns `AX-1177_postmortem_lung` eosinophil IHC or the Olink panel, not the
+in all eight concerns `mmc3` eosinophil IHC or the Olink panel, not the
 transcriptomic response.
 
 **Why it is not defensible to skip.** The prompt asks what indication the data
@@ -159,7 +159,7 @@ property of the source file rather than anything added.
 | Molar excess — 41.3-fold, all four inputs in the annex | Occupied 8 of 8. 5ee4d9d8: "only one 41:1 antibody-to-IL-33 molar ratio was tested". |
 | IL-33ox never tested though the annex claims dual-form binding | Occupied 8 of 8. |
 | Epithelial lines never receive IL-33 | Occupied 7 of 8 explicitly. |
-| AX-1177_postmortem_lung compartment analysis | Occupied 4 of 8, and they reached a finding the golden had missed. |
-| AX-1177_rnaseq_contrasts sheet duplication and row padding | Occupied 8 of 8. Three ran explicit row-matched identity tests; 85c06969 compared all 629,040 rows. |
+| mmc3 compartment analysis | Occupied 4 of 8, and they reached a finding the golden had missed. |
+| mmc5 sheet duplication and row padding | Occupied 8 of 8. Three ran explicit row-matched identity tests; 85c06969 compared all 629,040 rows. |
 | sST2 as a pharmacodynamic readout | Marginal in v1 and the basis has changed: IL1RL1's implied SE of 8.32 sits outside the attributable set's 1.7439 ceiling, so its non-significance resolves nothing. The golden now excludes sST2 because `AX-1177_serum_proteomics` has no drug arm and no file measures sST2 protein under antibody. Two v1 runs handled it correctly as a stratification marker. |
 | Threshold intersection giving 219 | The v1 basin. Occupied 0 of 8 in the sense that nobody fell in — every run used correlation, slope or sign agreement. Retained in the grader's B section because the error remains possible, but not expected to fire. |

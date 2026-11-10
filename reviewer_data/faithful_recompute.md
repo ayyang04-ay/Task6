@@ -146,7 +146,7 @@ values. The count matches the paper's lung bulk RNA-seq cohort exactly:
 n = 9 COVID, n = 9 non-COVID pneumonia, n = 4 non-pneumonia, total 22.
 
 So the column is a join key into the lung RNA-seq dataset, which is not
-delivered in any mmc workbook. It points at data a solver cannot reach.
+delivered in any workbook. It points at data a solver cannot reach.
 
 ## Leg 5 and the Jaccard figures
 

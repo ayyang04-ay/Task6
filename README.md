@@ -13,7 +13,7 @@ lower respiratory tract disease*, Mucosal Immunology, 10.1016/j.mucimm.2024.12.0
 | `scratch/source_untrusted/` | the original supplementary files, unmodified | no |
 | `scratch/analysis/` | verification scripts and their output | no |
 
-`scratch/` is gitignored. mmc5.xlsx is 133 MB and needs Git LFS to be committed.
+`scratch/` is gitignored. The largest workbook is ~123 MB as committed (the untouched original in `scratch/source_untrusted/mmc5.xlsx` is ~139 MB) and needs Git LFS.
 
 ## Source files on disk
 
@@ -52,13 +52,13 @@ identical across all 24 contrasts, confirming the single-model fit.
 ### Open before anything is written
 
 1. Gene universe. The brief's counts assume 26,113 genes per contrast;
-   mmc5 carries 26,210. This shifts several counts by 1-2 and is why the
+   `AX-1177_rnaseq_contrasts.xlsx` carries 26,210. This shifts several counts by 1-2 and is why the
    brief reads 1124 where the file gives 1126.
-2. mmc2 reconciliation. The brief says 1077 analytes and 173 significant;
+2. `AX-1177_serum_proteomics.xlsx` reconciliation. The brief says 1077 analytes and 173 significant;
    the file gives 1064 and 169, with 26 analytes on more than one panel and
    IL6 on four. All three figures in the brief are wrong.
 3. A549 24 h null floor. Brief says 15, file gives 17.
-4. mmc5 holds the same 24 contrasts twice, in sheets named `6h` and `24h`,
+4. `AX-1177_rnaseq_contrasts.xlsx` holds the same 24 contrasts twice, in sheets named `6h` and `24h`,
    values identical. The `6h` sheet is padded to 1,048,576 rows with
    419,535 empty ones. Reading sheet 0 by default picks up the padding.
 5. Two inhibition contrast families exist. `..._IL33_vs_IL33_NIP228_*` is

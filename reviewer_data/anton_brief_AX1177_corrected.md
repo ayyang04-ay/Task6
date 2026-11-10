@@ -391,9 +391,9 @@ context and give sixteen versions of one trajectory, which thins FA coverage.
 | Risk | Severity | Status |
 |---|---|---|
 | workbook metadata names source-paper authors and AZ's writing agency | **high** | mandatory build step, method proven lossless |
-| `mmc` filenames are an Elsevier supplementary fingerprint | medium | accepted by writer |
+| `mmc` filenames are an Elsevier supplementary fingerprint | medium | **fixed after v3**: 8 of 8 v3 runs pattern-matched the room, four naming the convention; files renamed |
 | `Compound_47` and `NIP228` are inside the data and cannot be renamed without editing files; NIP228 is a documented AZ control reagent | medium | accepted, unfixable |
-| a methods annex listing `AX-1177_serum_proteomics.xlsx` reads as repurposed | low | accepted |
+| a methods annex listing `mmc2.xlsx` reads as repurposed | low | **fixed**: mounted files renamed off the `mmc*` convention |
 | `unverified-attribution` and `magnitude-ranked-response` weakly forced by the prompt | low | may not appear; FA needs only one to five of six |
 | prompt reads over-instructive | low | writer hand-editing |
 

@@ -132,7 +132,7 @@ transcripts:
 | Pillar | Occupied by v1 runs? |
 |---|---|
 | P1 | yes — several ran the standalone-arm check |
-| **P2** | **no. Zero of eight.** No run observed that IL-33 induces no type 2 programme in endothelium; every type-2 mention concerns `AX-1177_postmortem_lung` eosinophil IHC or the Olink panel. No run named THBD or SERPINE1, so none characterised the procoagulant switch directionally. Four named F3 alone |
+| **P2** | **no. Zero of eight.** No run observed that IL-33 induces no type 2 programme in endothelium; every type-2 mention concerns `mmc3` eosinophil IHC or the Olink panel. No run named THBD or SERPINE1, so none characterised the procoagulant switch directionally. Four named F3 alone |
 | P3 | yes — all eight reached the timepoint result |
 | P4 | yes — all eight, and it is why they said no |
 | P5 | partly. None raised the odds-ratio precision problem |
