@@ -26,7 +26,7 @@ the data points at**.
 ## P1 — Target engagement is established and is ligand-dependent
 
 **For.** 1126 genes are attributable in HUVEC at 6 h (`AX-1177_rnaseq_contrasts`,
-`Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs`, `adj.P.Val < 0.05` and
+`Compound_47_IL33_vs_IL33_IC119_HUVEC_6hrs`, `adj.P.Val < 0.05` and
 `|logFC| > 1`). The effect requires ligand: the antibody-alone sets are
 disjoint from the attributable sets, overlap 6 of 1126 in HUVEC 6 h and 1 of
 487 in HGMEC 6 h, and dropping every standalone-significant gene leaves 1114
@@ -36,8 +36,8 @@ lines bound the null at 13 to 40 genes across six arms.
 **Against.** One donor per endothelial line, three wells not three donors
 (annex §3). One concentration, 10 ug/mL. Reduced IL-33 only; the oxidised form
 the annex names in §1 is never tested. No affinity, potency or exposure data —
-annex §1 places them outside the delivery. `Compound_47` is never linked to
-AX-1177.
+annex §1 places them outside the delivery. The annex states that `Compound_47` is the research designation for
+AX-1177, so the test article's identity is not in question.
 
 **Caveat.** HGMEC has no vehicle arm, so the IL-33 response there is never
 measured, only the part the antibody reverses.
@@ -81,8 +81,8 @@ Type 2 indications are not supported by anything in the room.
 **For.** Over the 1126-gene set: median `|logFC|` 2.0140 in HUVEC against
 0.7367 in HGMEC, a factor of 2.7337 at 6 h; 2.2349 against 0.5136, a factor of
 4.3512 at 24 h. Pearson r 0.6216 against 0.3032. Sign agreement 76.82% against
-64.27%. Signature 315 genes against 23 under direction plus nominal
-significance.
+64.27%. Signature 315 genes against 23 under direction plus adjusted
+significance (`adj.P.Val < 0.05`); nominal p would give 458 and 83.
 
 **Against.** A fixed `|logFC| > 1` cut applied to the attenuated line gives 219
 and reads as failure; the cut is invalid on that line and admits 11

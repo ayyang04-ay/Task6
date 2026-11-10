@@ -200,7 +200,7 @@ FSTL3, TANK, TRIM21).
 
 > Median |logFC| across the 1124 HUVEC-significant genes is 2.01 in HUVEC and
 > 0.74 for the same genes in HGMEC (`AX-1177_rnaseq_contrasts.xlsx`,
-> `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs` and `..._HGMEC_6hrs`, median of
+> `Compound_47_IL33_vs_IL33_IC119_HUVEC_6hrs` and `..._HGMEC_6hrs`, median of
 > absolute `logFC` over the HUVEC-significant subset).
 
 **The golden must not:** state a signature count as the answer; cite affinity,
@@ -338,7 +338,7 @@ context and give sixteen versions of one trajectory, which thins FA coverage.
 |---|---|---|
 | workbook metadata names source-paper authors and AZ's writing agency | **high** | mandatory build step, method proven lossless |
 | `mmc` filenames are an Elsevier supplementary fingerprint | medium | **fixed after v3**: 8 of 8 v3 runs pattern-matched the room, four naming the convention; files renamed |
-| `Compound_47` and `NIP228` are inside the data and cannot be renamed without editing files; NIP228 is a documented AZ control reagent | medium | accepted, unfixable |
+| `Compound_47` and `IC119` are inside the data and cannot be renamed without editing files; IC119 is a documented AZ control reagent | medium | accepted, unfixable |
 | a methods annex listing `mmc2.xlsx` reads as repurposed | low | **fixed**: mounted files renamed off the `mmc*` convention |
 | `unverified-attribution` and `magnitude-ranked-response` weakly forced by the prompt | low | may not appear; FA needs only one to five of six |
 | prompt reads over-instructive | low | writer hand-editing |

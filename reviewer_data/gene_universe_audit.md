@@ -46,8 +46,10 @@ runs two unrelated RNA-seq pipelines and only one produced these files.
 The v100 reference belongs to the lung tissue work, which is not delivered as
 a workbook. Nothing in AX-1177_rnaseq_huvec_il33 or AX-1177_rnaseq_contrasts was built against it. The annex's
 "aligned to GRCh38" is consistent; HG38 and GRCh38 are the same assembly. The
-annex's TMM normalisation and its <10-count filter appear in no methods
-section of the paper.
+mounted annex states only that low-expression genes were removed and that
+counts were normalised and transformed with voom; it names neither TMM nor a
+<10-count threshold. An unmounted draft of the annex source did, which is where
+an earlier version of this note came from.
 
 ## The rule behind the counts: Rfam exclusion
 

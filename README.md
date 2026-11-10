@@ -26,7 +26,12 @@ unchanged — the LFS object ids are identical across the rename.
 |---|---|---|---|
 | — | `mmc1.pdf` | — | supplementary methods. **Not mounted** |
 | `AX-1177_serum_proteomics.xlsx` | `mmc2.xlsx` | ST7 | Olink serum associations, 1094 assays |
-| `AX-1177_postmortem_lung.xlsx` | `mmc3.xlsx` | ST8 + ST9 | 78 histology blocks, 31 donors |
+| `AX-1177_postmortem_lung.xlsx` | `mmc3.xlsx` | ST8 + ST9 | 74 histology blocks, 31 donors |
+
+The post-mortem sheet has 78 rows below its header but only **74** carry a
+Histology Block ID: rows 17, 18, 68 and 69 are fully blank spacers, and row 80
+is a trailing blank. `len(pd.read_excel(...))` returns 78 and is not a block
+count. The donor count of 31 is unaffected.
 | `AX-1177_rnaseq_huvec_il33.xlsx` | `mmc4.xlsx` | ST10a | HUVEC IL-33red vs vehicle, 6 h and 24 h |
 | `AX-1177_rnaseq_contrasts.xlsx` | `mmc5.xlsx` | ST10b | 24 contrasts, four cell lines, both timepoints |
 | — | mmc6 | ST12 | ISARIC4C investigator list. **Dropped** |
@@ -61,7 +66,7 @@ identical across all 24 contrasts, confirming the single-model fit.
 4. `AX-1177_rnaseq_contrasts.xlsx` holds the same 24 contrasts twice, in sheets named `6h` and `24h`,
    values identical. The `6h` sheet is padded to 1,048,576 rows with
    419,535 empty ones. Reading sheet 0 by default picks up the padding.
-5. Two inhibition contrast families exist. `..._IL33_vs_IL33_NIP228_*` is
+5. Two inhibition contrast families exist. `..._IL33_vs_IL33_IC119_*` is
    isotype-controlled; `..._IL33_vs_IL33_*` is against IL-33 alone. The
    brief uses only the first.
 6. `df.total` and the module composition of the 219-gene core are unchecked.

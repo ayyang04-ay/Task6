@@ -12,9 +12,9 @@ against. That is a reason to redirect it, not to drop it.**
 **The antibody engages the ligand, and the effect needs the ligand present.**
 In HUVEC at 6 h, 1126 genes change with the antibody against the isotype
 control in the presence of IL-33 (`AX-1177_rnaseq_contrasts.xlsx`,
-`Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs`, `adj.P.Val < 0.05` and
+`Compound_47_IL33_vs_IL33_IC119_HUVEC_6hrs`, `adj.P.Val < 0.05` and
 `|logFC| > 1`). That is not an antibody artefact. The antibody-alone arms
-(`Compound_47_vs_NIP228_<line>_<tp>`, no IL-33) return 31 and 36 genes in
+(`Compound_47_vs_IC119_<line>_<tp>`, no IL-33) return 31 and 36 genes in
 HUVEC and 62 and 67 in HGMEC, and those sets barely intersect the attributable
 sets — 6 genes of 1126 in HUVEC 6 h, 1 of 487 in HGMEC 6 h. Dropping every
 gene significant in either antibody-alone arm leaves 1114 of the 1126 and moves
@@ -25,8 +25,8 @@ which never received IL-33, bound the null at 13 to 40 genes across six arms.
 genes, median `|logFC|` is 2.0140 in HUVEC and 0.7367 in HGMEC at 6 h, a factor
 of 2.7337; at 24 h it is 2.2349 against 0.5136, a factor of 4.3512. Pearson r
 across the two lines is 0.6216 at 6 h and 0.3032 at 24 h; sign agreement
-76.82% and 64.27%. Requiring the same direction and nominal significance in
-HGMEC leaves 315 genes at 6 h and 23 at 24 h.
+76.82% and 64.27%. Requiring the same direction and adjusted significance (`adj.P.Val < 0.05`) in
+HGMEC leaves 315 genes at 6 h and 23 at 24 h. Nominal p would give 458 and 83.
 
 Note what that is not. A second fixed `|logFC| > 1` cut in HGMEC returns 219
 and reads as a reproducibility failure, but the cut is invalid on a line whose
@@ -147,7 +147,6 @@ reason not to try.
 | The oxidised form against the same readouts | whether engagement covers both species | only IL-33red was tested |
 | Repeat in pulmonary endothelium, multiple donors | whether the programme is general or vascular-bed and donor specific | one donor per line, three wells; HGMEC is glomerular, not pulmonary |
 | Deliver the HGMEC vehicle arm and the archived counts | the size of the IL-33 response in the second line, and the variance estimates | no HGMEC vehicle arm; counts and the fitted model are not delivered (§5) |
-| Confirm the test article is AX-1177 | that any of this applies to our asset | the annex names Compound_47 and never links it to AX-1177 |
 
 ## 5. What to measure, when, and what could go into patients
 
@@ -250,4 +249,4 @@ distinct analytes.
 | **Report SELE and VCAM1 as blocked.** They carry the largest fold changes, −10.9852 and −8.7623, and are the textbook endothelial activation readouts. | Their implied standard errors are 8.779 and 7.019 against a ceiling of 1.7439 across the whole attributable set, so the delivered q-values of 0.4950 and 0.4965 establish nothing in either direction. CXCL1 at `t` −0.0071 and CXCL8, SLC7A2, CCL2 and PTGS2 are in the same condition. Indeterminate, not negative — and not citable as blocked. |
 | **Use 1094 proteins and 178 hits.** One row per assay is the obvious count. | 27 analytes appear on more than one panel. The reconciled figures are 1063 and 169. |
 | **Quote CSF-1, CTSS or BIRC2 as markers.** All three are significant and carry the largest odds ratios: 90.095, 23.199 and 12.437. | Their intervals are 4.200–1932.572, 2.691–200.019 and 2.409–64.215. Significant, but the magnitude is not estimated at n = 100 and no study could be sized on them. |
-| **Use the lung tissue to support the mechanism.** `AX-1177_postmortem_lung` has IL-33 immunohistochemistry in endothelium across 78 blocks from 31 donors. | Different cohort, and `AX-1177_serum_proteomics` carries assay-level summaries with no patient identifiers, so no link can be established or excluded. Its `Tissue RNA` column names 22 samples whose RNA data is not in the delivery. |
+| **Use the lung tissue to support the mechanism.** `AX-1177_postmortem_lung` has IL-33 immunohistochemistry in endothelium across 74 blocks from 31 donors. | Different cohort, and `AX-1177_serum_proteomics` carries assay-level summaries with no patient identifiers, so no link can be established or excluded. Its `Tissue RNA` column names 22 samples whose RNA data is not in the delivery. |

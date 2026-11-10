@@ -12,7 +12,7 @@ isotype-controlled HUVEC 6 h contrast, it has `adj.P.Val < 0.05` and
 `adj.P.Val < 0.05` and a `logFC` of the same sign.
 
 **Resulting count: 315 genes.** The HUVEC 6 h attributable set is 1126 genes
-(`AX-1177_rnaseq_contrasts.xlsx`, `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs`, count of rows with
+(`AX-1177_rnaseq_contrasts.xlsx`, `Compound_47_IL33_vs_IL33_IC119_HUVEC_6hrs`, count of rows with
 `adj.P.Val < 0.05` and `|logFC| > 1`). Of those, 315 meet the HGMEC condition
 (`..._HGMEC_6hrs`, same reduction plus sign agreement with the HUVEC `logFC`).
 
@@ -24,7 +24,7 @@ of reproducibility, for two independent reasons.
 First, effect sizes are systematically smaller in HGMEC. Median `|logFC|`
 across the 1126 HUVEC-significant genes is 2.0140 in HUVEC and 0.7367 for the
 same genes in HGMEC, a factor of 2.7337 (`AX-1177_rnaseq_contrasts.xlsx`,
-`Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs` and `..._HGMEC_6hrs`, median of
+`Compound_47_IL33_vs_IL33_IC119_HUVEC_6hrs` and `..._HGMEC_6hrs`, median of
 absolute `logFC` over the HUVEC-significant subset). A cut fixed at 1.0
 therefore falls near the centre of the HGMEC distribution and removes genes
 for being small, not for being irreproducible.
@@ -80,7 +80,7 @@ Both windows were assessed on the same predicate and the same contrasts.
 | signature under the stated predicate | **315** | **23** |
 | Jaccard of the two thresholded sets | 0.1571 | 0.0356 |
 
-(`AX-1177_rnaseq_contrasts.xlsx`, the four contrasts `Compound_47_IL33_vs_IL33_NIP228_{HUVEC,HGMEC}_{6hrs,24hrs}`;
+(`AX-1177_rnaseq_contrasts.xlsx`, the four contrasts `Compound_47_IL33_vs_IL33_IC119_{HUVEC,HGMEC}_{6hrs,24hrs}`;
 r and sign agreement computed over the HUVEC-significant subset at each
 timepoint, Jaccard over the two independently thresholded sets.)
 
@@ -97,7 +97,7 @@ attributable to vascular bed would apply at both timepoints.
 ## 3. What the model data supports
 
 **The effect is ligand-dependent.** Each endothelial line has an
-antibody-alone arm: `Compound_47_vs_NIP228_{line}_{tp}`, antibody against
+antibody-alone arm: `Compound_47_vs_IC119_{line}_{tp}`, antibody against
 isotype with no IL-33. These return 31 and 36 genes in HUVEC and 62 and 67 in
 HGMEC at 6 h and 24 h. More importantly they are **disjoint from the
 attributable sets**: 6 of 1126 in HUVEC 6 h and 1 of 487 in HGMEC 6 h.
@@ -240,7 +240,7 @@ this dataset: every one of the 169 significant analyte names maps to a symbol.
   attribution for them either way.**
 
   Implied standard errors, `|logFC / t|` in
-  `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs`, against the 1126-gene
+  `Compound_47_IL33_vs_IL33_IC119_HUVEC_6hrs`, against the 1126-gene
   attributable set as the reference population:
 
   | | implied SE |

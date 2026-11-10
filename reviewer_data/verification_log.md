@@ -52,13 +52,13 @@ The AX-1177_serum_proteomics figures are a separate error that still stands:
 
 | Anchor | Brief | Measured |
 |---|---|---|
-| AX-1177_serum_proteomics analytes | 1077 | 1064 |
+| AX-1177_serum_proteomics analytes | 1077 | 1063 |
 | AX-1177_serum_proteomics significant analytes | 173 | 169 |
 | analytes on more than one panel | 15, IL6 on three | 26, IL6 on four |
 
 The AX-1177_serum_proteomics figures are a separate, independent error. Panel suffixes are
 -ONCII, -ONCIII, -INFI, -CVDII, -CVDIII, -CRE, -IMO, -MET, -NEX, -ODA.
-Stripping them leaves 1064 analytes. SCF and FGF-21 are on three panels,
+Stripping them leaves 1063 analytes. SCF and FGF-21 are on three panels,
 IL6 on four.
 
 ## Not yet checked
@@ -77,7 +77,7 @@ IL6 on four.
    sheet and returns the padding; concatenating both sheets doubles every
    contrast. Either silently corrupts a count.
 2. Two inhibition contrast families exist for both lines and both
-   timepoints. `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs` is
+   timepoints. `Compound_47_IL33_vs_IL33_IC119_HUVEC_6hrs` is
    isotype-controlled (4239 / 1126); `Compound_47_IL33_vs_IL33_HUVEC_6hrs`
    is against IL-33 alone (4049 / 1075). A solver choosing the second gets a
    differently-controlled set that still looks defensible.
@@ -112,8 +112,10 @@ data covers four cell lines and 24 contrasts, so the paper under-describes its
 own deposit. Its library-prep figures therefore describe the HUVEC arm it
 documented, not necessarily the whole 114-library fit.
 
-Consequence: where the annex and the paper disagree on library prep
-(poly(A) vs rRNA depletion, 2 x 150 / 30 M vs 2 x 100 / 25 M) and on HUVEC
-passage (P4 vs P2), the data settles none of it. The design claims the data
-does settle — four lines, 114 libraries, 38 groups, single fit, n = 3 — all
-hold.
+Consequence: the mounted annex matches the paper on library prep (rRNA
+depletion, 2 x 100 bp, 25 M read pairs) and on HUVEC passage (P2), so there is
+no annex-versus-paper divergence to settle. An earlier draft of
+`source_brief/AX-1177_methods_annex.md` carried poly(A), 2 x 150 / 30 M, P4 and
+a TMM / <10-count filter; that draft was never mounted in any version. The
+design claims the data does settle — four lines, 114 libraries, 38 groups,
+single fit, n = 3 — all hold.

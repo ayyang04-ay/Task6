@@ -2,7 +2,7 @@
 
 Predicate: every row as delivered in `AX-1177_rnaseq_contrasts.xlsx`. No gene-class filter, no
 symbol deduplication, no annotation requirement. Contrast
-`Compound_47_IL33_vs_IL33_NIP228_<line>_<tp>` throughout, read from the `24h`
+`Compound_47_IL33_vs_IL33_IC119_<line>_<tp>` throughout, read from the `24h`
 sheet, which carries all 24 contrasts without the row padding in the `6h`
 sheet.
 
@@ -84,7 +84,7 @@ the full basin on each:
 | IL-33 alone | 6 h | 1075 | 2.0058 | 0.7145 | 2.807x | 0.6481 | 78.60% | 29.7% |
 | IL-33 alone | 24 h | 547 | 2.1878 | 0.4434 | 4.934x | 0.2321 | 58.50% | 6.6% |
 
-`isotype-controlled` is `Compound_47_IL33_vs_IL33_NIP228_<line>_<tp>`;
+`isotype-controlled` is `Compound_47_IL33_vs_IL33_IC119_<line>_<tp>`;
 `IL-33 alone` is `Compound_47_IL33_vs_IL33_<line>_<tp>`.
 
 Every structural feature survives the substitution, and three of them are
@@ -141,7 +141,7 @@ Full membership in `scratch/analysis/mirror_core_symbols.json`.
 
 ## AX-1177_postmortem_lung `Tissue RNA` column
 
-22 of 78 blocks carry an identifier of the form `Zr4940_<n>`, 20 distinct
+22 of 74 blocks carry an identifier of the form `Zr4940_<n>`, 20 distinct
 values. The count matches the paper's lung bulk RNA-seq cohort exactly:
 n = 9 COVID, n = 9 non-COVID pneumonia, n = 4 non-pneumonia, total 22.
 
@@ -200,12 +200,12 @@ contrasts sees them. The check is one filter away, not buried.
 
 | Line | arm | 6 h | 24 h |
 |---|---|---|---|
-| HUVEC | vs NIP228 | 31 | 36 |
-| HGMEC | vs NIP228 | 62 | 67 |
-| A549 | vs NIP228 | 27 | 17 |
+| HUVEC | vs IC119 | 31 | 36 |
+| HGMEC | vs IC119 | 62 | 67 |
+| A549 | vs IC119 | 27 | 17 |
 | A549 | vs DMSO | 29 | 27 |
 | A549 | vs PBS | 37 | 36 |
-| MCF7 | vs NIP228 | 20 | 26 |
+| MCF7 | vs IC119 | 20 | 26 |
 | MCF7 | vs DMSO | 30 | 30 |
 | MCF7 | vs PBS | 40 | 13 |
 

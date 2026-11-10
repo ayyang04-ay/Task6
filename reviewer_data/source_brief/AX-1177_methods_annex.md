@@ -15,12 +15,12 @@ parameters. It records no results and no interpretation.
 | Article | Description | Format | Working concentration |
 |---|---|---|---|
 | Compound_47 | Anti-IL-33 monoclonal antibody, binds the reduced and oxidised forms of human IL-33 | Human IgG1 | 10 µg/mL |
-| NIP228 | Non-binding isotype control antibody; no known human antigen | Human IgG1 | 10 µg/mL |
+| IC119 | Non-binding isotype control antibody; no known human antigen | Human IgG1 | 10 µg/mL |
 | IL-33red | Recombinant human IL-33, reduced form, mature processed species (residues 112–270) | Recombinant protein | 30 ng/mL |
 
-Compound_47 is the research designation for AX-1177. NIP228 is the isotype control.
+Compound_47 is the research designation for AX-1177. IC119 is the isotype control.
 
-Compound_47 nominal molecular weight 146 kDa. NIP228 nominal molecular weight 146 kDa.
+Compound_47 nominal molecular weight 146 kDa. IC119 nominal molecular weight 146 kDa.
 IL-33red nominal molecular weight 18.1 kDa.
 
 Vehicle articles: PBS and DMSO.
@@ -56,10 +56,10 @@ within each cell line and timepoint.
 | Arm | IL-33red | Antibody | Lines |
 |---|---|---|---|
 | Vehicle | — | — | HUVEC |
-| NIP228 | — | NIP228 | HUVEC, HGMEC |
+| IC119 | — | IC119 | HUVEC, HGMEC |
 | Compound_47 | — | Compound_47 | HUVEC, HGMEC |
 | IL-33red | 30 ng/mL | — | HUVEC, HGMEC |
-| IL-33red + NIP228 | 30 ng/mL | NIP228 | HUVEC, HGMEC |
+| IL-33red + IC119 | 30 ng/mL | IC119 | HUVEC, HGMEC |
 | IL-33red + Compound_47 | 30 ng/mL | Compound_47 | HUVEC, HGMEC |
 
 **Arms, epithelial lines (A549, MCF7):**
@@ -68,7 +68,7 @@ within each cell line and timepoint.
 |---|---|---|
 | PBS | — | — |
 | DMSO | — | — |
-| NIP228 | — | NIP228 |
+| IC119 | — | IC119 |
 | Compound_47 | — | Compound_47 |
 
 **Replication:** n = 3 biological replicates per arm per timepoint.

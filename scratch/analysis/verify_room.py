@@ -7,9 +7,9 @@ def chk(label, got, want, tol=0):
     if not ok: FAIL.append(label)
 
 print('== AX-1177_rnaseq_contrasts, from data_room ==')
-H='Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs'; G='Compound_47_IL33_vs_IL33_NIP228_HGMEC_6hrs'
-H24='Compound_47_IL33_vs_IL33_NIP228_HUVEC_24hrs'; G24='Compound_47_IL33_vs_IL33_NIP228_HGMEC_24hrs'
-STD='Compound_47_vs_NIP228_HUVEC_6hrs'
+H='Compound_47_IL33_vs_IL33_IC119_HUVEC_6hrs'; G='Compound_47_IL33_vs_IL33_IC119_HGMEC_6hrs'
+H24='Compound_47_IL33_vs_IL33_IC119_HUVEC_24hrs'; G24='Compound_47_IL33_vs_IL33_IC119_HGMEC_24hrs'
+STD='Compound_47_vs_IC119_HUVEC_6hrs'
 wb=openpyxl.load_workbook('data_room/AX-1177_rnaseq_contrasts.xlsx', read_only=True); ws=wb['24h']
 hdr=None; D=collections.defaultdict(dict); il=[]; tp=[]; AVE={}
 for r in ws.iter_rows(values_only=True):
