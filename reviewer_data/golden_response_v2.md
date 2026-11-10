@@ -70,9 +70,9 @@ monotonised and most rows' values are carried from a later rank. against 1,094 d
 so roughly 100 analysed assays are absent and at least four were significant.
 IL-33 itself is not among the 1,094.
 
-## 3. The indication our data points at, and whether severe lower viral respiratory infection is right
+## 3. The indication our data points at, and whether severe lower respiratory viral infection is right
 
-**Severe lower viral respiratory infection is the right disease area and the wrong mechanism to be
+**Severe lower respiratory viral infection is the right disease area and the wrong mechanism to be
 developing against.** Anti-IL-33 is conventionally pursued through type 2
 inflammation. Our data shows IL-33 driving nothing of the kind in endothelium.
 
@@ -135,7 +135,7 @@ plus F3 −5.4739 and C3 −4.6241.
 That phenotype is what the rest of the package selects for. `AX-1177_serum_proteomics`'s endpoint
 is ICU admission, mechanical ventilation or death. `AX-1177_postmortem_lung` samples 20
 COVID-positive and 10 COVID-negative pneumonia blocks against 5
-non-pneumonia. So: stay in severe lower viral respiratory infection, but develop against the severe
+non-pneumonia. So: stay in severe lower respiratory viral infection, but develop against the severe
 endothelial-injury and coagulopathy phenotype rather than a type 2 one, and
 select patients on that basis. Nothing in the package supports an asthma,
 COPD or atopic indication, and the absence of the type 2 arm is a positive

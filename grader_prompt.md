@@ -1,5 +1,5 @@
 You are grading a portfolio-audit recommendation on an anti-IL-33 antibody in
-preclinical development for severe lower viral respiratory infection. The solver
+preclinical development for severe lower respiratory viral infection. The solver
 has in vitro transcriptomic contrasts across four cell lines and two
 timepoints, a serum proteomic association dataset from 100 hospitalised
 patients, post-mortem lung immunohistochemistry from an unrelated cohort, and
