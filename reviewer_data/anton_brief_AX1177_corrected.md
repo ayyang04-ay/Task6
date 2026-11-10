@@ -74,10 +74,10 @@ foreclosed the `both-windows-rejection` mode.
 
 | File | Contents | States the world how |
 |---|---|---|
-| `mmc2.xlsx` | Olink serum associations: 1094 assays × OR, 95% CI, p, adj.p vs composite endpoint; 13 panels | the clinical prognostic layer |
-| `mmc3.xlsx` | 78 histology blocks from 31 donors: demographics, pathology text, SARS-CoV-2 status, IHC scores | tissue context; unrelated cohort |
-| `mmc4.xlsx` | HUVEC IL-33red vs vehicle, 6 h and 24 h, 26,210 genes | the stimulation reference |
-| `mmc5.xlsx` | 24 contrasts across HUVEC, HGMEC, A549, MCF7 × control arm × timepoint, 26,210 genes each (26,113 distinct symbols) | **the decisive file** |
+| `AX-1177_serum_proteomics.xlsx` | Olink serum associations: 1094 assays × OR, 95% CI, p, adj.p vs composite endpoint; 13 panels | the clinical prognostic layer |
+| `AX-1177_postmortem_lung.xlsx` | 78 histology blocks from 31 donors: demographics, pathology text, SARS-CoV-2 status, IHC scores | tissue context; unrelated cohort |
+| `AX-1177_rnaseq_huvec_il33.xlsx` | HUVEC IL-33red vs vehicle, 6 h and 24 h, 26,210 genes | the stimulation reference |
+| `AX-1177_rnaseq_contrasts.xlsx` | 24 contrasts across HUVEC, HGMEC, A549, MCF7 × control arm × timepoint, 26,210 genes each (26,113 distinct symbols) | **the decisive file** |
 | `AX-1177_methods_annex.md` | authored methods and annotation; no results, no interpretation | the editable layer |
 
 `mmc6` (ISARIC investigator list) is **dropped**: real names, institutional
@@ -96,28 +96,28 @@ emails and ORCIDs, no analytical value.
 4. Do **not** convert to CSV. `pd.read_excel` on the largest sheet is 40 s and
    838 MB peak, which is unremarkable. Conversion buys nothing and costs
    verification.
-5. Leave the `Vehicle` / `Nontreated` inconsistency in `mmc4` in place. It is a
+5. Leave the `Vehicle` / `Nontreated` inconsistency in `AX-1177_rnaseq_huvec_il33` in place. It is a
    real artifact and the two arms are the same thing.
 
 ### Anchor table
 
 | Value | File | Legible? | Steps from a cell |
 |---|---|---|---|
-| SELE adj.P 0.495; VCAM1 0.497; CXCL8 0.177 | mmc5 | yes | 0, direct read |
-| ST2 rank 2, OR 3.02 | mmc2 | yes | 0 |
-| standalone arms 31 / 36 (HUVEC), 62 / 67 (HGMEC) | mmc5 | yes | 1 |
-| receptor-null floor 27 / 17 (A549), 20 / 26 (MCF7) | mmc5 | yes | 1 |
-| HUVEC 6 h / 24 h inhibition 1126 / 417 | mmc5 | yes | 1 |
-| HGMEC 6 h / 24 h inhibition 487 / 135 | mmc5 | yes | 1 |
-| HUVEC stimulation 1068 / 512 | mmc4 | yes | 1 |
-| *IL1RL1* significant in 0 of 24 contrasts | mmc5 | yes | 1, scan |
-| **median \|logFC\| 2.0140 vs 0.7367 (6 h), 2.2349 vs 0.5136 (24 h)** | mmc5 | yes | 2 |
-| r 0.6216 (6 h) / 0.3032 (24 h) | mmc5 | yes | 2 |
-| sign agreement 76.82% / 64.27% | mmc5 | yes | 2 |
-| direction+nominal replication 28.0% / 5.5%; mirror replication 19.45% / 4.56%; Jaccard 0.1571 / 0.0356 | mmc5 | yes | 2 |
-| attribution overlap 6 / 1126 | mmc5 | yes | 2 |
-| 1094 assays → 1064 analytes; 178 hits → 169 | mmc2 | yes | 2 |
-| df.total 85.128 uniform across all 24 contrasts | mmc5 | yes | 2, invert t against P |
+| SELE adj.P 0.495; VCAM1 0.497; CXCL8 0.177 | AX-1177_rnaseq_contrasts | yes | 0, direct read |
+| ST2 rank 2, OR 3.02 | AX-1177_serum_proteomics | yes | 0 |
+| standalone arms 31 / 36 (HUVEC), 62 / 67 (HGMEC) | AX-1177_rnaseq_contrasts | yes | 1 |
+| receptor-null floor 27 / 17 (A549), 20 / 26 (MCF7) | AX-1177_rnaseq_contrasts | yes | 1 |
+| HUVEC 6 h / 24 h inhibition 1126 / 417 | AX-1177_rnaseq_contrasts | yes | 1 |
+| HGMEC 6 h / 24 h inhibition 487 / 135 | AX-1177_rnaseq_contrasts | yes | 1 |
+| HUVEC stimulation 1068 / 512 | AX-1177_rnaseq_huvec_il33 | yes | 1 |
+| *IL1RL1* significant in 0 of 24 contrasts | AX-1177_rnaseq_contrasts | yes | 1, scan |
+| **median \|logFC\| 2.0140 vs 0.7367 (6 h), 2.2349 vs 0.5136 (24 h)** | AX-1177_rnaseq_contrasts | yes | 2 |
+| r 0.6216 (6 h) / 0.3032 (24 h) | AX-1177_rnaseq_contrasts | yes | 2 |
+| sign agreement 76.82% / 64.27% | AX-1177_rnaseq_contrasts | yes | 2 |
+| direction+nominal replication 28.0% / 5.5%; mirror replication 19.45% / 4.56%; Jaccard 0.1571 / 0.0356 | AX-1177_rnaseq_contrasts | yes | 2 |
+| attribution overlap 6 / 1126 | AX-1177_rnaseq_contrasts | yes | 2 |
+| 1094 assays → 1064 analytes; 178 hits → 169 | AX-1177_serum_proteomics | yes | 2 |
+| df.total 85.128 uniform across all 24 contrasts | AX-1177_rnaseq_contrasts | yes | 2, invert t against P |
 
 Every anchor is a computation over mounted numeric cells. No handbook values, no
 transformed or synthetic quantities, nothing resting on literature. No thin
@@ -168,7 +168,7 @@ Full membership table to `/tmp/outputs/`, not the body.
 | Leg | Claim established | Mounted evidence | Route-necessary |
 |---|---|---|---|
 | 1 | the antibody effect is ligand-dependent, not artifact | the standalone sets are disjoint from the attributable set: overlap 6/1126 (HUVEC 6 h) and 1/487 (HGMEC 6 h), and removing every standalone-significant gene leaves the HGMEC median at 0.7367 unchanged | yes |
-| 2 | the HUVEC 6 h attributable set is 1126 under the package criterion | mmc5, HUVEC 6 h isotype-controlled, adj.P<0.05 and \|logFC\|>1 | yes |
+| 2 | the HUVEC 6 h attributable set is 1126 under the package criterion | AX-1177_rnaseq_contrasts, HUVEC 6 h isotype-controlled, adj.P<0.05 and \|logFC\|>1 | yes |
 | 3 | **HGMEC effects are systematically attenuated** | median \|logFC\| 2.0140 vs 0.7367 (2.734×); 2.2349 vs 0.5136 (4.351×) | **yes — everything turns on it** |
 | 4 | the lines agree at 6 h and not at 24 h | r 0.6216 vs 0.3032; sign 76.82% vs 64.27%; direction+nominal replication 28.0% vs 5.5% | yes |
 | 5 | a fixed fold-change cut understates agreement given leg 3 | 219 vs 315 off the same base; the 107 recovered genes begin at magnitude rank 79 (ACKR3, \|logFC\| 3.710) | yes |
@@ -248,7 +248,7 @@ decimals. The golden rests the claim there.
 **Provenance form**, to be used for every number:
 
 > Median |logFC| across the 1126 HUVEC-significant genes is 2.0140 in HUVEC and
-> 0.7367 for the same genes in HGMEC (`mmc5.xlsx`,
+> 0.7367 for the same genes in HGMEC (`AX-1177_rnaseq_contrasts.xlsx`,
 > `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs` and `..._HGMEC_6hrs`, median of
 > absolute `logFC` over the HUVEC-significant subset).
 
@@ -284,11 +284,11 @@ verdict; the rest fail independently of it.
 
 | Escape | Local appeal | Foreclosing fact | Where mounted |
 |---|---|---|---|
-| "different tissues, so divergence is expected and HUVEC is the relevant line" | cell-type differences are real | the same two lines agree at 6 h, r 0.6216 and 76.82%; tissue identity would apply at both timepoints | both timepoints, mmc5 |
-| "HGMEC simply isn't IL-33 responsive" | no HGMEC vehicle arm exists | 487 genes are antibody-reversed in HGMEC at 6 h; you cannot reverse what was not driven | mmc5, HGMEC 6 h |
-| "check receptor expression per line via AveExpr" | the column is right there | one fit across 114 libraries; AveExpr is per-gene identical at full precision across all 24 contrasts, for all 26,210 genes | annex §5, and mmc5 |
+| "different tissues, so divergence is expected and HUVEC is the relevant line" | cell-type differences are real | the same two lines agree at 6 h, r 0.6216 and 76.82%; tissue identity would apply at both timepoints | both timepoints, AX-1177_rnaseq_contrasts |
+| "HGMEC simply isn't IL-33 responsive" | no HGMEC vehicle arm exists | 487 genes are antibody-reversed in HGMEC at 6 h; you cannot reverse what was not driven | AX-1177_rnaseq_contrasts, HGMEC 6 h |
+| "check receptor expression per line via AveExpr" | the column is right there | one fit across 114 libraries; AveExpr is per-gene identical at full precision across all 24 contrasts, for all 26,210 genes | annex §5, and AX-1177_rnaseq_contrasts |
 | "report the top hits, they are the biology" | top hits are the mechanism | top 50 by magnitude is identical under both criteria | criterion grid |
-| "sST2 ranks second, nominate it" | it is the pathway's own receptor | *IL1RL1* in 0 of 24 contrasts | mmc5 |
+| "sST2 ranks second, nominate it" | it is the pathway's own receptor | *IL1RL1* in 0 of 24 contrasts | AX-1177_rnaseq_contrasts |
 | "pool the timepoints for power" | more samples | the question asks which timepoint carries; pooling cannot answer it | contract |
 
 ---
@@ -393,7 +393,7 @@ context and give sixteen versions of one trajectory, which thins FA coverage.
 | workbook metadata names source-paper authors and AZ's writing agency | **high** | mandatory build step, method proven lossless |
 | `mmc` filenames are an Elsevier supplementary fingerprint | medium | accepted by writer |
 | `Compound_47` and `NIP228` are inside the data and cannot be renamed without editing files; NIP228 is a documented AZ control reagent | medium | accepted, unfixable |
-| a methods annex listing `mmc2.xlsx` reads as repurposed | low | accepted |
+| a methods annex listing `AX-1177_serum_proteomics.xlsx` reads as repurposed | low | accepted |
 | `unverified-attribution` and `magnitude-ranked-response` weakly forced by the prompt | low | may not appear; FA needs only one to five of six |
 | prompt reads over-instructive | low | writer hand-editing |
 

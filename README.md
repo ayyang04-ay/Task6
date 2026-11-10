@@ -17,14 +17,24 @@ lower respiratory tract disease*, Mucosal Immunology, 10.1016/j.mucimm.2024.12.0
 
 ## Source files on disk
 
-| File | Supp. table | Contents |
-|---|---|---|
-| `mmc1.pdf` | — | supplementary methods. **Not mounted** |
-| `mmc2.xlsx` | ST7 | Olink serum associations, 1094 assays |
-| `mmc3.xlsx` | ST8 + ST9 | 78 histology blocks, 31 donors |
-| `mmc4.xlsx` | ST10a | HUVEC IL-33red vs vehicle, 6 h and 24 h |
-| `mmc5.xlsx` | ST10b | 24 contrasts, four cell lines, both timepoints |
-| mmc6 | ST12 | ISARIC4C investigator list. **Dropped** |
+Mounted files were renamed from the publisher's `mmc*` convention, which is an
+Elsevier supplementary-material tell: 8 of 8 v3 runs pattern-matched the room to
+a published study, four of them naming the convention itself. Bytes are
+unchanged — the LFS object ids are identical across the rename.
+
+| Mounted as | Source file | Supp. table | Contents |
+|---|---|---|---|
+| — | `mmc1.pdf` | — | supplementary methods. **Not mounted** |
+| `AX-1177_serum_proteomics.xlsx` | `mmc2.xlsx` | ST7 | Olink serum associations, 1094 assays |
+| `AX-1177_postmortem_lung.xlsx` | `mmc3.xlsx` | ST8 + ST9 | 78 histology blocks, 31 donors |
+| `AX-1177_rnaseq_huvec_il33.xlsx` | `mmc4.xlsx` | ST10a | HUVEC IL-33red vs vehicle, 6 h and 24 h |
+| `AX-1177_rnaseq_contrasts.xlsx` | `mmc5.xlsx` | ST10b | 24 contrasts, four cell lines, both timepoints |
+| — | mmc6 | ST12 | ISARIC4C investigator list. **Dropped** |
+
+Licence: the source article is **CC BY 4.0** (PMC states "This is an open access
+article under the CC BY license", Elsevier Sponsored Documents; © 2025
+AstraZeneca UK LTD). PubMed's API reports "All rights reserved" for this PMID —
+that is the publisher copyright line, not the licence, and it is wrong here.
 
 ## State
 

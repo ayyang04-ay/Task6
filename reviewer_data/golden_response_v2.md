@@ -11,7 +11,7 @@ against. That is a reason to redirect it, not to drop it.**
 
 **The antibody engages the ligand, and the effect needs the ligand present.**
 In HUVEC at 6 h, 1126 genes change with the antibody against the isotype
-control in the presence of IL-33 (`mmc5.xlsx`,
+control in the presence of IL-33 (`AX-1177_rnaseq_contrasts.xlsx`,
 `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs`, `adj.P.Val < 0.05` and
 `|logFC| > 1`). That is not an antibody artefact. The antibody-alone arms
 (`Compound_47_vs_NIP228_<line>_<tp>`, no IL-33) return 31 and 36 genes in
@@ -37,15 +37,15 @@ HUVEC and −2.7988 in HGMEC.
 ## 2. What our data does not establish
 
 **That IL-33 causes the disease.** No file involves a virus, an animal or a
-dose. `mmc2.xlsx` is cross-sectional at enrolment in 100 hospitalised patients
+dose. `AX-1177_serum_proteomics.xlsx` is cross-sectional at enrolment in 100 hospitalised patients
 with no treatment arm, so it shows that soluble ST2 tracks outcome — rank 2 of
 1094 assays, OR 3.0243 (1.83 to 5.01) — and cannot show that anything moves on
-treatment. `mmc3.xlsx` is post-mortem tissue from a different cohort with no
-identifiers shared with `mmc2`, so the two cannot be linked either way. The
+treatment. `AX-1177_postmortem_lung.xlsx` is post-mortem tissue from a different cohort with no
+identifiers shared with `AX-1177_serum_proteomics`, so the two cannot be linked either way. The
 package is silent on causality, not negative.
 
 **And the tissue data argues against elevation in the target disease.**
-`mmc3.xlsx` scores IL-33 immunohistochemistry in three compartments. Median
+`AX-1177_postmortem_lung.xlsx` scores IL-33 immunohistochemistry in three compartments. Median
 scores by group, COVID-negative non-pneumonia / COVID-negative pneumonia /
 COVID-positive pneumonia: bronchial and bronchiolar basal epithelium 5.50 /
 4.25 / 4.25; endothelium 5.50 / 5.50 / 4.75; vascular smooth muscle 3.25 /
@@ -62,7 +62,7 @@ all. Only reduced IL-33 was tested, although §1 names an oxidised form.
 Each endothelial line is one donor and three wells, not three donors (§3), and
 HGMEC has no vehicle arm, so the IL-33 response in the second line is never
 measured — only the part the antibody reverses. The Benjamini-Hochberg
-correction in `mmc2` reproduces only at 1,194 tests against 1,094 delivered,
+correction in `AX-1177_serum_proteomics` reproduces only at 1,194 tests against 1,094 delivered,
 so roughly 100 analysed assays are absent and at least four were significant.
 IL-33 itself is not among the 1,094.
 
@@ -72,7 +72,7 @@ IL-33 itself is not among the 1,094.
 developing against.** Anti-IL-33 is conventionally pursued through type 2
 inflammation. Our data shows IL-33 driving nothing of the kind in endothelium.
 
-In `mmc4.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`. The delivered statistics in
+In `AX-1177_rnaseq_huvec_il33.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`. The delivered statistics in
 this file are not uniformly usable, so each gene is taken with its implied
 standard error, `|logFC / t|`, against the file's median of 0.339. Genes beyond
 about five times that are not interpretable in either direction, and the
@@ -128,8 +128,8 @@ member of each is negative under antibody: 16 interferon genes, 10 NF-κB
 including NFKB2 −2.8605 and RELB −3.2667, 7 CSF and cytokine, 9 chemokine,
 plus F3 −5.4739 and C3 −4.6241.
 
-That phenotype is what the rest of the package selects for. `mmc2`'s endpoint
-is ICU admission, mechanical ventilation or death. `mmc3` samples 20
+That phenotype is what the rest of the package selects for. `AX-1177_serum_proteomics`'s endpoint
+is ICU admission, mechanical ventilation or death. `AX-1177_postmortem_lung` samples 20
 COVID-positive and 10 COVID-negative pneumonia blocks against 5
 non-pneumonia. So: stay in viral LRTD, but develop against the severe
 endothelial-injury and coagulopathy phenotype rather than a type 2 one, and
@@ -209,7 +209,7 @@ enrichment has not made an error.
 
 
 **Markers that could go into patients.** Thirteen analytes are both
-prognostic in `mmc2` and inside the 6 h reproducible set. Eight have usable
+prognostic in `AX-1177_serum_proteomics` and inside the 6 h reproducible set. Eight have usable
 precision, by which I mean an upper 95% bound under about 11:
 
 | Analyte | Gene | Serum OR (95% CI) | HUVEC 6 h logFC |
@@ -246,8 +246,8 @@ distinct analytes.
 | **Keep the type 2 framing.** It is where anti-IL-33 is developed and the standard indication set. | IL5, IL13, CCL11, CCL24 and IL25 are not in the table; IL4 is −1.229 and not significant; TSLP, CCL26, GATA3 and IL1RL1 are all non-significant. The package gives no type 2 response to block. |
 | **Conclude the response does not reproduce across lines.** Intersecting the two threshold-filtered sets gives 219 of 1126, a Jaccard of 0.1571. | The threshold is invalid on a line whose effects are 2.7337-fold smaller, and it admits 11 sign-discordant genes. On direction plus nominal significance the same data gives 315 and r 0.6216. |
 | **Carry both timepoints.** Both Jaccard values, 0.1571 and 0.0356, look low. | The statistics separate: r 0.6216 against 0.3032, sign agreement 76.82% against 64.27%, 315 genes against 23. |
-| **Nominate sST2 as the pharmacodynamic readout.** Second of 1094 at OR 3.0243, and the pathway's own receptor. | Two reasons, and the first is specific to sST2 rather than general. Soluble ST2 is the decoy receptor for the drug's own target, so its serum concentration moves with pathway activity and with disease severity at once; a fall after dosing cannot be attributed to target engagement rather than to the patient improving. Every other marker proposed here sits downstream of the receptor and does not carry that confound. Second, nothing in the package resolves its behaviour under antibody: the only receptor measurement is the `IL1RL1` transcript, +1.6020 in `mmc4` and −1.6799 in the matching inhibition contrast, with an implied standard error near 8.32 against a median of 0.34, so it is unreadable either way. Prognostic and for patient selection: yes, on the Bonferroni result. Target engagement or pharmacodynamics: not shown, and not resolvable here. |
+| **Nominate sST2 as the pharmacodynamic readout.** Second of 1094 at OR 3.0243, and the pathway's own receptor. | Two reasons, and the first is specific to sST2 rather than general. Soluble ST2 is the decoy receptor for the drug's own target, so its serum concentration moves with pathway activity and with disease severity at once; a fall after dosing cannot be attributed to target engagement rather than to the patient improving. Every other marker proposed here sits downstream of the receptor and does not carry that confound. Second, nothing in the package resolves its behaviour under antibody: the only receptor measurement is the `IL1RL1` transcript, +1.6020 in `AX-1177_rnaseq_huvec_il33` and −1.6799 in the matching inhibition contrast, with an implied standard error near 8.32 against a median of 0.34, so it is unreadable either way. Prognostic and for patient selection: yes, on the Bonferroni result. Target engagement or pharmacodynamics: not shown, and not resolvable here. |
 | **Report SELE and VCAM1 as blocked.** They carry the largest fold changes, −10.9852 and −8.7623, and are the textbook endothelial activation readouts. | Their implied standard errors are 8.779 and 7.019 against a ceiling of 1.7439 across the whole attributable set, so the delivered q-values of 0.4950 and 0.4965 establish nothing in either direction. CXCL1 at `t` −0.0071 and CXCL8, SLC7A2, CCL2 and PTGS2 are in the same condition. Indeterminate, not negative — and not citable as blocked. |
 | **Use 1094 proteins and 178 hits.** One row per assay is the obvious count. | 27 analytes appear on more than one panel. The reconciled figures are 1063 and 169. |
 | **Quote CSF-1, CTSS or BIRC2 as markers.** All three are significant and carry the largest odds ratios: 90.095, 23.199 and 12.437. | Their intervals are 4.200–1932.572, 2.691–200.019 and 2.409–64.215. Significant, but the magnitude is not estimated at n = 100 and no study could be sized on them. |
-| **Use the lung tissue to support the mechanism.** `mmc3` has IL-33 immunohistochemistry in endothelium across 78 blocks from 31 donors. | Different cohort, and `mmc2` carries assay-level summaries with no patient identifiers, so no link can be established or excluded. Its `Tissue RNA` column names 22 samples whose RNA data is not in the delivery. |
+| **Use the lung tissue to support the mechanism.** `AX-1177_postmortem_lung` has IL-33 immunohistochemistry in endothelium across 78 blocks from 31 donors. | Different cohort, and `AX-1177_serum_proteomics` carries assay-level summaries with no patient identifiers, so no link can be established or excluded. Its `Tissue RNA` column names 22 samples whose RNA data is not in the delivery. |

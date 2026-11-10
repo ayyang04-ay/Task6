@@ -1,6 +1,6 @@
 # Faithful recompute
 
-Predicate: every row as delivered in `mmc5.xlsx`. No gene-class filter, no
+Predicate: every row as delivered in `AX-1177_rnaseq_contrasts.xlsx`. No gene-class filter, no
 symbol deduplication, no annotation requirement. Contrast
 `Compound_47_IL33_vs_IL33_NIP228_<line>_<tp>` throughout, read from the `24h`
 sheet, which carries all 24 contrasts without the row padding in the `6h`
@@ -35,7 +35,7 @@ unidentified. This changes no conclusion and is left open.
 
 ## Translational shortlist
 
-Serum analytes with adj.p < 0.05 in `mmc2.xlsx` whose gene appears in the
+Serum analytes with adj.p < 0.05 in `AX-1177_serum_proteomics.xlsx` whose gene appears in the
 HUVEC 6 h core:
 
 | Core | n | Analytes |
@@ -67,7 +67,7 @@ as the answer.
 `IL1RL1` is absent from both cores, so the sST2 exclusion holds on the
 faithful predicate.
 
-## mmc2, faithful
+## AX-1177_serum_proteomics, faithful
 
 1094 assays, 1064 analytes, 178 significant rows, 169 significant analytes.
 26 analytes on more than one panel; IL6 on four, SCF and FGF-21 on three.
@@ -139,7 +139,7 @@ negative", not "all negative".
 
 Full membership in `scratch/analysis/mirror_core_symbols.json`.
 
-## mmc3 `Tissue RNA` column
+## AX-1177_postmortem_lung `Tissue RNA` column
 
 22 of 78 blocks carry an identifier of the form `Zr4940_<n>`, 20 distinct
 values. The count matches the paper's lung bulk RNA-seq cohort exactly:
@@ -188,7 +188,7 @@ rule produces it. The golden reconciles and reports 9 and 13.
 
 ### Discoverability
 
-Of the 24 contrasts in mmc5, **16 contain no IL-33 at all** — they are
+Of the 24 contrasts in AX-1177_rnaseq_contrasts, **16 contain no IL-33 at all** — they are
 antibody-against-control contrasts in all four lines, with DMSO and PBS arms
 for the epithelial pair. Only 8 involve IL-33.
 

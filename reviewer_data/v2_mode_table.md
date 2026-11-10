@@ -27,7 +27,7 @@ naming an indication.
 atopic indication, on the reasoning that anti-IL-33 is a type 2 drug. Never
 asks what IL-33 induces in the delivered data.
 
-**What refutes it.** `mmc4.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`, taken with
+**What refutes it.** `AX-1177_rnaseq_huvec_il33.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`, taken with
 each gene's implied standard error `|logFC / t|` against the file median of
 0.339, because this file's statistics are not uniformly usable.
 
@@ -52,7 +52,7 @@ the two type 2 genes it does measure well are unmoved.
 
 **Occupancy: 0 of 8.** No run named THBD or SERPINE1, so none characterised
 the haemostatic shift directionally; four named F3 alone. Every type 2 mention
-in all eight concerns `mmc3` eosinophil IHC or the Olink panel, not the
+in all eight concerns `AX-1177_postmortem_lung` eosinophil IHC or the Olink panel, not the
 transcriptomic response.
 
 **Why it is not defensible to skip.** The prompt asks what indication the data
@@ -70,7 +70,7 @@ prognostic analytes exceeds the base rate.
 and in the signature, and treats the intersection as evidence of translational
 relevance, with no denominator.
 
-**What refutes it.** In `mmc2.xlsx`, **893 of 1094 odds ratios exceed 1**
+**What refutes it.** In `AX-1177_serum_proteomics.xlsx`, **893 of 1094 odds ratios exceed 1**
 (binomial p 1.6e-104) and **176 of the 178 significant rows point the same
 way**. Being prognostic in this panel is close to universal, so an
 intersection is uninformative until tested. The test: 38 of the 315 signature
@@ -134,7 +134,7 @@ on.
 the shortlist by odds ratio, on point estimates of 90.095, 23.199 and 12.437.
 
 **What refutes it.** Their 95% intervals are **4.200 to 1932.572**, 2.691 to
-200.019 and 2.409 to 64.215 (`mmc2.xlsx`, `l95` and `u95`). All three are
+200.019 and 2.409 to 64.215 (`AX-1177_serum_proteomics.xlsx`, `l95` and `u95`). All three are
 significant and the direction is informative, but the magnitude is not
 estimated at n = 100 and no study could be sized on them. By contrast the
 eight usable analytes have upper bounds under 11, and ST2's interval ratio of
@@ -155,11 +155,11 @@ property of the source file rather than anything added.
 | Candidate | Why not |
 |---|---|
 | **The verdict.** All eight v1 runs recommended against advancing where the v1 golden recommended advancing. | The v2 golden now agrees with them, and the v2 grader places the verdict under NEUTRAL. Standing rule 4 grades the pillars and the justification, not the verdict. |
-| **mmc3's IL-33 scores.** COVID-positive pneumonia carries the lowest median in all three compartments: epithelium 4.25 against 5.50, endothelium 4.75 against 5.50, smooth muscle 2.75 against 3.25. | Kept in the golden as evidence, since the case is built from everything the room offers. Weak as a mode: a single reader's semi-quantitative scores on a cohort unrelated to the serum patients, with controls near the ceiling, is something a careful expert could decline to weight. |
+| **AX-1177_postmortem_lung's IL-33 scores.** COVID-positive pneumonia carries the lowest median in all three compartments: epithelium 4.25 against 5.50, endothelium 4.75 against 5.50, smooth muscle 2.75 against 3.25. | Kept in the golden as evidence, since the case is built from everything the room offers. Weak as a mode: a single reader's semi-quantitative scores on a cohort unrelated to the serum patients, with controls near the ceiling, is something a careful expert could decline to weight. |
 | Molar excess — 41.3-fold, all four inputs in the annex | Occupied 8 of 8. 5ee4d9d8: "only one 41:1 antibody-to-IL-33 molar ratio was tested". |
 | IL-33ox never tested though the annex claims dual-form binding | Occupied 8 of 8. |
 | Epithelial lines never receive IL-33 | Occupied 7 of 8 explicitly. |
-| mmc3 compartment analysis | Occupied 4 of 8, and they reached a finding the golden had missed. |
-| mmc5 sheet duplication and row padding | Occupied 8 of 8. Three ran explicit row-matched identity tests; 85c06969 compared all 629,040 rows. |
-| sST2 as a pharmacodynamic readout | Marginal in v1 and the basis has changed: IL1RL1's implied SE of 8.32 sits outside the attributable set's 1.7439 ceiling, so its non-significance resolves nothing. The golden now excludes sST2 because `mmc2` has no drug arm and no file measures sST2 protein under antibody. Two v1 runs handled it correctly as a stratification marker. |
+| AX-1177_postmortem_lung compartment analysis | Occupied 4 of 8, and they reached a finding the golden had missed. |
+| AX-1177_rnaseq_contrasts sheet duplication and row padding | Occupied 8 of 8. Three ran explicit row-matched identity tests; 85c06969 compared all 629,040 rows. |
+| sST2 as a pharmacodynamic readout | Marginal in v1 and the basis has changed: IL1RL1's implied SE of 8.32 sits outside the attributable set's 1.7439 ceiling, so its non-significance resolves nothing. The golden now excludes sST2 because `AX-1177_serum_proteomics` has no drug arm and no file measures sST2 protein under antibody. Two v1 runs handled it correctly as a stratification marker. |
 | Threshold intersection giving 219 | The v1 basin. Occupied 0 of 8 in the sense that nobody fell in — every run used correlation, slope or sign agreement. Retained in the grader's B section because the error remains possible, but not expected to fire. |

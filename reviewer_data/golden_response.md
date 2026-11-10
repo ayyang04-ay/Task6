@@ -12,7 +12,7 @@ isotype-controlled HUVEC 6 h contrast, it has `adj.P.Val < 0.05` and
 `adj.P.Val < 0.05` and a `logFC` of the same sign.
 
 **Resulting count: 315 genes.** The HUVEC 6 h attributable set is 1126 genes
-(`mmc5.xlsx`, `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs`, count of rows with
+(`AX-1177_rnaseq_contrasts.xlsx`, `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs`, count of rows with
 `adj.P.Val < 0.05` and `|logFC| > 1`). Of those, 315 meet the HGMEC condition
 (`..._HGMEC_6hrs`, same reduction plus sign agreement with the HUVEC `logFC`).
 
@@ -23,7 +23,7 @@ of reproducibility, for two independent reasons.
 
 First, effect sizes are systematically smaller in HGMEC. Median `|logFC|`
 across the 1126 HUVEC-significant genes is 2.0140 in HUVEC and 0.7367 for the
-same genes in HGMEC, a factor of 2.7337 (`mmc5.xlsx`,
+same genes in HGMEC, a factor of 2.7337 (`AX-1177_rnaseq_contrasts.xlsx`,
 `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs` and `..._HGMEC_6hrs`, median of
 absolute `logFC` over the HUVEC-significant subset). A cut fixed at 1.0
 therefore falls near the centre of the HGMEC distribution and removes genes
@@ -33,7 +33,7 @@ Second, the two-sided threshold rule admits genes that contradict it. Of the
 219 genes it returns, **11 have opposite signs in the two lines** — ABCC11,
 AC007336.3, AC091133.2, AL353807.3, ATP2B1-AS1, CALR4P, CNFN, DNAH17-AS1,
 GATM, MLXIPL and RF00003. RF00003 is +2.5564 in HUVEC and −2.7988 in HGMEC,
-both significant (`mmc5.xlsx`, same two contrasts). A gene regulated in
+both significant (`AX-1177_rnaseq_contrasts.xlsx`, same two contrasts). A gene regulated in
 opposite directions in the two beds is not reproducing in either direction,
 so a rule that counts it is measuring something other than agreement.
 
@@ -80,7 +80,7 @@ Both windows were assessed on the same predicate and the same contrasts.
 | signature under the stated predicate | **315** | **23** |
 | Jaccard of the two thresholded sets | 0.1571 | 0.0356 |
 
-(`mmc5.xlsx`, the four contrasts `Compound_47_IL33_vs_IL33_NIP228_{HUVEC,HGMEC}_{6hrs,24hrs}`;
+(`AX-1177_rnaseq_contrasts.xlsx`, the four contrasts `Compound_47_IL33_vs_IL33_NIP228_{HUVEC,HGMEC}_{6hrs,24hrs}`;
 r and sign agreement computed over the HUVEC-significant subset at each
 timepoint, Jaccard over the two independently thresholded sets.)
 
@@ -103,13 +103,13 @@ HGMEC at 6 h and 24 h. More importantly they are **disjoint from the
 attributable sets**: 6 of 1126 in HUVEC 6 h and 1 of 487 in HGMEC 6 h.
 Dropping every gene significant in either standalone arm leaves 1114 of the
 1126 and moves the attenuation from 2.7337× to 2.7341× (median `|logFC|`
-2.0154 in HUVEC against 0.7371 in HGMEC, `mmc5.xlsx`, the two 6 h
+2.0154 in HUVEC against 0.7371 in HGMEC, `AX-1177_rnaseq_contrasts.xlsx`, the two 6 h
 isotype-controlled contrasts restricted to that subset). The attributable
 response is therefore not a ligand-independent antibody effect.
 
 The epithelial lines give the scale of a null result. A549 and MCF7 carry
 antibody-against-control contrasts against three comparators and return 13 to
-40 genes across all six arms (`mmc5.xlsx`, the `A549` and `MCF7` contrasts).
+40 genes across all six arms (`AX-1177_rnaseq_contrasts.xlsx`, the `A549` and `MCF7` contrasts).
 HUVEC's standalone counts sit inside that range. HGMEC's sit above it, so the
 floor comparison alone does not establish ligand-dependence for that line;
 disjointness does.
@@ -120,8 +120,8 @@ HGMEC at 6 h under the package criterion, so the microvascular bed is
 IL-33-responsive and the antibody acts on it.
 
 **What it does not establish.** HGMEC has no unstimulated vehicle arm —
-`mmc5.xlsx` carries no `IL33_vs_Vehicle` or equivalent for that line, and
-`mmc4.xlsx` provides the stimulation contrast for HUVEC only. The magnitude of
+`AX-1177_rnaseq_contrasts.xlsx` carries no `IL33_vs_Vehicle` or equivalent for that line, and
+`AX-1177_rnaseq_huvec_il33.xlsx` provides the stimulation contrast for HUVEC only. The magnitude of
 the IL-33-driven response in HGMEC is therefore never measured directly, only
 the part of it the antibody reverses. The 2.734× attenuation is measured on
 antibody effect, and whether it reflects a smaller underlying IL-33 response
@@ -135,7 +135,7 @@ nothing about epithelial pharmacology.
 **One structural caveat on all of it.** A single linear model was fitted
 across the whole dataset, with `df.total` of 85.128 identical in all 24
 contrasts and `AveExpr` per-gene identical across all 24 for all 26,210 genes
-(`mmc5.xlsx`, `df.total` recovered by inverting `t` against `P.Value`).
+(`AX-1177_rnaseq_contrasts.xlsx`, `df.total` recovered by inverting `t` against `P.Value`).
 Variance is therefore moderated across cell lines that differ in expression
 range, which tends to compress between-line differences rather than inflate
 them. This is conservative with respect to our conclusion.
@@ -147,7 +147,7 @@ analytes appear on more than one panel, IL6 on four and SCF and FGF-21 on
 three. Of 178 assay rows with `adj.p.value < 0.05`, **169 are distinct
 analytes**. Counting assays rather than analytes overstates both figures.
 
-**Reconciliation rule** (`mmc2.xlsx`, `panel` and `assay` columns): merge two
+**Reconciliation rule** (`AX-1177_serum_proteomics.xlsx`, `panel` and `assay` columns): merge two
 assay names that differ only by a trailing panel suffix. Applying it to every
 trailing all-capital token rather than to a fixed list gives 28 groups over 60
 assays; one of those, `TR-AP` with `TR`, is spurious because TR-AP is
@@ -158,8 +158,8 @@ analytes**. A fixed suffix list omits at least `NEUI` and so misses
 
 **Shortlist: 13 analytes** that are both prognostic in serum and inside the
 6 h signature. Odds ratios are per log unit, adjusted for age, sex and NEWS2
-(`mmc2.xlsx`, `OR`, `l95`, `u95`, `adj.p.value`); `logFC` is the HUVEC 6 h
-isotype-controlled contrast in `mmc5.xlsx`.
+(`AX-1177_serum_proteomics.xlsx`, `OR`, `l95`, `u95`, `adj.p.value`); `logFC` is the HUVEC 6 h
+isotype-controlled contrast in `AX-1177_rnaseq_contrasts.xlsx`.
 
 | Analyte | Gene | Serum OR (95% CI) | Panel | HUVEC 6 h logFC |
 |---|---|---|---|---|
@@ -203,12 +203,12 @@ this dataset: every one of the 169 significant analyte names maps to a symbol.
 
 - **Soluble ST2, excluded as a pharmacodynamic readout because the package
   measures no pharmacodynamics for it.** `ST2` is the second-ranked analyte of
-  1094 at an odds ratio of 3.0243 (`mmc2.xlsx`, row 2 by `adj.p.value`), and it
+  1094 at an odds ratio of 3.0243 (`AX-1177_serum_proteomics.xlsx`, row 2 by `adj.p.value`), and it
   is the receptor for the pathway's own ligand, so it is the obvious
   nomination. Three things stand between it and that role, and none of them is
   a q-value.
 
-  First, `mmc2.xlsx` is a cross-sectional association study at enrolment with
+  First, `AX-1177_serum_proteomics.xlsx` is a cross-sectional association study at enrolment with
   **no drug arm**. It establishes that sST2 tracks outcome. It cannot establish
   that sST2 moves on treatment, and no file in the package does.
 
@@ -219,7 +219,7 @@ this dataset: every one of the 169 significant analyte names maps to a symbol.
   treatment.
 
   Third, that transcript does not resolve either way. `IL1RL1` is +1.6020 in
-  `mmc4.xlsx` `IL33_vs_Nontreated_HUVEC_6_hrs` and −1.6799 in the matching
+  `AX-1177_rnaseq_huvec_il33.xlsx` `IL33_vs_Nontreated_HUVEC_6_hrs` and −1.6799 in the matching
   isotype-controlled inhibition contrast, both beyond twofold, but with `t` of
   0.1925 and −0.2018 — an implied SE near 8.32, outside the 1.7439
   ceiling of the attributable set for the same reason SELE and VCAM1 are. Its
@@ -269,7 +269,7 @@ this dataset: every one of the 169 significant analyte names maps to a symbol.
 
 - **ICAM1 is the adhesion readout the data does support**, at `logFC` −5.9116
   and `adj.P.Val` 0.0101 in the inhibition contrast, driven in the first place
-  at −5.9656 and 0.0098 in `mmc4.xlsx`,
+  at −5.9656 and 0.0098 in `AX-1177_rnaseq_huvec_il33.xlsx`,
   `IL33_vs_Nontreated_HUVEC_6_hrs`. Its implied SE of 1.744 is the largest in
   the attributable set but lies inside it.
 

@@ -28,7 +28,7 @@ So 26,113 counts genes by symbol and 26,210 counts them by locus. Both are
 defensible; they are different quantities. The brief's figure is right and my
 earlier note calling it unconfirmed was wrong.
 
-## mmc4 and mmc5 share one universe
+## AX-1177_rnaseq_huvec_il33 and AX-1177_rnaseq_contrasts share one universe
 
 Identical 26,210 Ensembl sets, identical symbol mapping, 26,113 distinct
 symbols in each, zero symbol mismatches on shared IDs. The stimulation-to-
@@ -37,14 +37,14 @@ inhibition join is safe.
 This follows from the methods: both come from the same pipeline. The paper
 runs two unrelated RNA-seq pipelines and only one produced these files.
 
-| | post-mortem lung bulk | endothelial (mmc4, mmc5) |
+| | post-mortem lung bulk | endothelial (AX-1177_rnaseq_huvec_il33, AX-1177_rnaseq_contrasts) |
 |---|---|---|
 | reference | GRCh38 ensembl v100 | HG38 + ENSEMBL94 GTF |
 | quantification | NGmerge, Salmon | STAR 2.6.1d, featureCounts |
 | differential expression | DESeq2, apeglm | voom, limma |
 
 The v100 reference belongs to the lung tissue work, which is not delivered as
-a workbook. Nothing in mmc4 or mmc5 was built against it. The annex's
+a workbook. Nothing in AX-1177_rnaseq_huvec_il33 or AX-1177_rnaseq_contrasts was built against it. The annex's
 "aligned to GRCh38" is consistent; HG38 and GRCh38 are the same assembly. The
 annex's TMM normalisation and its <10-count filter appear in no methods
 section of the paper.

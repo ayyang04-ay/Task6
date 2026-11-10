@@ -2,7 +2,7 @@
 
 Every figure below was recomputed from `scratch/source_untrusted/` by
 `scratch/analysis/probe5.py` and `scratch/analysis/basin.py`. Counts use the
-`24h` sheet of mmc5, which carries all 24 contrasts without the row padding
+`24h` sheet of AX-1177_rnaseq_contrasts, which carries all 24 contrasts without the row padding
 present in the `6h` sheet.
 
 ## Confirmed
@@ -23,11 +23,11 @@ present in the `6h` sheet.
 | SELE / VCAM1 / CXCL8 adj.P | 0.495 / 0.497 / 0.177 | 0.4950 / 0.4965 / 0.1772 |
 | ICAM1 adj.P | 0.0101 | 0.0101 |
 | AveExpr constant across lines | asserted | 1.0989 in all 24 contrasts |
-| mmc2 assays | 1094 | 1094 |
-| mmc2 significant rows | 178 | 178 |
+| AX-1177_serum_proteomics assays | 1094 | 1094 |
+| AX-1177_serum_proteomics significant rows | 178 | 178 |
 | ST2 rank, OR | 2, 3.02 | 2, 3.0243 |
-| mmc4 HUVEC stimulation | 1068 / 512 | 1068 / 512 |
-| mmc3 donors | 31 | 31 |
+| AX-1177_rnaseq_huvec_il33 HUVEC stimulation | 1068 / 512 | 1068 / 512 |
+| AX-1177_postmortem_lung donors | 31 | 31 |
 
 The brief's "replication 28.0% / 5.5%" is the direction-plus-nominal measure,
 not the mirror rule: 315/1124 and 23/417. Both reproduce. The mirror rule
@@ -48,15 +48,15 @@ locus count. Excluding Rfam symbols reproduces 485, 134, 15, 218 and the
 
 1124 is the brief's headline count and is most likely a slip.
 
-The mmc2 figures are a separate error that still stands:
+The AX-1177_serum_proteomics figures are a separate error that still stands:
 
 | Anchor | Brief | Measured |
 |---|---|---|
-| mmc2 analytes | 1077 | 1064 |
-| mmc2 significant analytes | 173 | 169 |
+| AX-1177_serum_proteomics analytes | 1077 | 1064 |
+| AX-1177_serum_proteomics significant analytes | 173 | 169 |
 | analytes on more than one panel | 15, IL6 on three | 26, IL6 on four |
 
-The mmc2 figures are a separate, independent error. Panel suffixes are
+The AX-1177_serum_proteomics figures are a separate, independent error. Panel suffixes are
 -ONCII, -ONCIII, -INFI, -CVDII, -CVDIII, -CRE, -IMO, -MET, -NEX, -ODA.
 Stripping them leaves 1064 analytes. SCF and FGF-21 are on three panels,
 IL6 on four.
@@ -70,7 +70,7 @@ IL6 on four.
 
 ## Observations not in the brief
 
-1. mmc5's two sheets carry the same 24 contrasts with identical values; 22
+1. AX-1177_rnaseq_contrasts's two sheets carry the same 24 contrasts with identical values; 22
    are byte-identical and 2 differ only in row order. The `6h` sheet is
    dimensioned to Excel's 1,048,576-row ceiling, holding 629,040 data rows
    and 419,535 empty ones. `pd.read_excel` with default arguments reads that
@@ -81,7 +81,7 @@ IL6 on four.
    isotype-controlled (4239 / 1126); `Compound_47_IL33_vs_IL33_HUVEC_6hrs`
    is against IL-33 alone (4049 / 1075). A solver choosing the second gets a
    differently-controlled set that still looks defensible.
-3. mmc5 carries the same `dc:creator` / `cp:lastModifiedBy` metadata as the
+3. AX-1177_rnaseq_contrasts carries the same `dc:creator` / `cp:lastModifiedBy` metadata as the
    other workbooks. The strip step applies to it too.
 
 ## df.total — confirmed, and it corroborates the design

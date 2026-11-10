@@ -18,6 +18,8 @@ parameters. It records no results and no interpretation.
 | NIP228 | Non-binding isotype control antibody; no known human antigen | Human IgG1 | 10 µg/mL |
 | IL-33red | Recombinant human IL-33, reduced form, mature processed species (residues 112–270) | Recombinant protein | 30 ng/mL |
 
+Compound_47 is the research designation for AX-1177. NIP228 is the isotype control.
+
 Compound_47 nominal molecular weight 146 kDa. NIP228 nominal molecular weight 146 kDa.
 IL-33red nominal molecular weight 18.1 kDa.
 
@@ -32,7 +34,7 @@ programme biologics file and are not part of this dataset.
 
 | Label | Cell type | Vascular bed | Source | Donor | Passage used |
 |---|---|---|---|---|---|
-| HUVEC | Human umbilical vein endothelial cells | Macrovascular, venous | Commercial primary | Single donor | P4 |
+| HUVEC | Human umbilical vein endothelial cells | Macrovascular, venous | Commercial primary | Single donor | P2 |
 | HGMEC | Human glomerular microvascular endothelial cells | Microvascular | Commercial primary | Single donor | P5 |
 | A549 | Human lung adenocarcinoma epithelial line | n/a | ATCC CCL-185 | n/a | — |
 | MCF7 | Human breast adenocarcinoma epithelial line | n/a | ATCC HTB-22 | n/a | — |
@@ -82,8 +84,8 @@ was used.
 
 Total RNA was extracted using column-based purification with on-column DNase
 treatment. RNA integrity was assessed on an Agilent TapeStation; all samples carried
-forward had RIN ≥ 8.0. Libraries were prepared with poly(A) selection. Sequencing was
-performed on an Illumina NovaSeq 6000, paired-end 2 × 150 bp, targeting 30 M read
+forward had RIN ≥ 8.0. Libraries were prepared with ribosomal RNA depletion. Sequencing was
+performed on an Illumina NovaSeq 6000, paired-end 2 × 100 bp, targeting 25 M read
 pairs per library.
 
 All 114 libraries were prepared in a single batch and sequenced across one flow cell.
@@ -92,9 +94,8 @@ All 114 libraries were prepared in a single batch and sequenced across one flow 
 
 ## 5. Analysis parameters
 
-Reads were aligned to GRCh38 and summarised to Ensembl gene identifiers. Genes with
-fewer than 10 counts across all libraries were removed. Counts were normalised by TMM
-and transformed with voom.
+Reads were aligned to GRCh38 and summarised to Ensembl gene identifiers.
+Low-expression genes were removed. Counts were normalised and transformed with voom.
 
 **A single linear model was fitted across the full 114-library dataset.** The design
 matrix encoded cell line, timepoint and treatment arm, with one coefficient per
@@ -173,10 +174,10 @@ sections as indicated in the column headers.
 
 | File | Contents |
 |---|---|
-| `mmc2.xlsx` | per-assay odds ratios, confidence intervals, p values and adjusted p values against the composite endpoint |
-| `mmc3.xlsx` | per-block donor demographics, pathology text, SARS-CoV-2 status and immunohistochemistry scores |
-| `mmc4.xlsx` | contrast output, IL-33red versus vehicle in HUVEC, both timepoints |
-| `mmc5.xlsx` | contrast output, all remaining contrasts extracted from the fitted model |
+| `AX-1177_serum_proteomics.xlsx` | per-assay odds ratios, confidence intervals, p values and adjusted p values against the composite endpoint |
+| `AX-1177_postmortem_lung.xlsx` | per-block donor demographics, pathology text, SARS-CoV-2 status and immunohistochemistry scores |
+| `AX-1177_rnaseq_huvec_il33.xlsx` | contrast output, IL-33red versus vehicle in HUVEC, both timepoints |
+| `AX-1177_rnaseq_contrasts.xlsx` | contrast output, all remaining contrasts extracted from the fitted model |
 
 ---
 

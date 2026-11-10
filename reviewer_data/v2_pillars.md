@@ -25,7 +25,7 @@ the data points at**.
 
 ## P1 — Target engagement is established and is ligand-dependent
 
-**For.** 1126 genes are attributable in HUVEC at 6 h (`mmc5`,
+**For.** 1126 genes are attributable in HUVEC at 6 h (`AX-1177_rnaseq_contrasts`,
 `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs`, `adj.P.Val < 0.05` and
 `|logFC| > 1`). The effect requires ligand: the antibody-alone sets are
 disjoint from the attributable sets, overlap 6 of 1126 in HUVEC 6 h and 1 of
@@ -47,7 +47,7 @@ measured, only the part the antibody reverses.
 **This is the pillar that sets the indication, and it is the one no v1 run
 made.**
 
-**For.** In `mmc4.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`:
+**For.** In `AX-1177_rnaseq_huvec_il33.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`:
 
 | Arm | Genes | Result |
 |---|---|---|
@@ -72,8 +72,8 @@ overall.
 The programme this package shows the antibody blocking is interferon-driven,
 neutrophilic and procoagulant. On the package's own evidence the indication to
 consider is endothelial injury with thrombotic and neutrophilic features, which
-is what `mmc2`'s composite endpoint of ICU, ventilation or death selects for and
-what `mmc3`'s 20 COVID-positive and 10 COVID-negative pneumonia blocks sample.
+is what `AX-1177_serum_proteomics`'s composite endpoint of ICU, ventilation or death selects for and
+what `AX-1177_postmortem_lung`'s 20 COVID-positive and 10 COVID-negative pneumonia blocks sample.
 Type 2 indications are not supported by anything in the room.
 
 ## P3 — Reproducibility: 6 h across two endothelial beds, not 24 h
@@ -93,23 +93,23 @@ than a verdict.
 
 ## P4 — The human evidence is associative, with no drug arm anywhere
 
-**For.** `mmc2` is cross-sectional at enrolment in 100 hospitalised patients
+**For.** `AX-1177_serum_proteomics` is cross-sectional at enrolment in 100 hospitalised patients
 with no treatment arm. It establishes that sST2 tracks outcome, rank 2 of 1094
 assays at OR 3.0243 (1.83 to 5.01). It cannot establish that any marker moves
-on treatment. `mmc3` is post-mortem tissue from an unrelated cohort with no
-patient identifiers in `mmc2`, so the two cannot be linked in either direction.
+on treatment. `AX-1177_postmortem_lung` is post-mortem tissue from an unrelated cohort with no
+patient identifiers in `AX-1177_serum_proteomics`, so the two cannot be linked in either direction.
 No file in the package involves a virus, an animal, or a dose.
 
 **Against.** Nothing in the room contradicts a causal role; the package is
 silent rather than negative.
 
-**Caveat.** The Benjamini-Hochberg correction in `mmc2` only reproduces at
+**Caveat.** The Benjamini-Hochberg correction in `AX-1177_serum_proteomics` only reproduces at
 1,194 tests against 1,094 delivered, so roughly 100 analysed assays are absent
 and at least four of them were significant. IL-33 itself is not among the 1,094.
 
 ## P5 — The readouts validation should carry
 
-**For.** 13 analytes are both prognostic in `mmc2` and inside the 6 h
+**For.** 13 analytes are both prognostic in `AX-1177_serum_proteomics` and inside the 6 h
 signature. Eight have usable precision: CCL20 1.830 (1.284 to 2.608), MCP-3
 1.719, IL6 2.066 to 2.308 across four panels, B4GALT1 2.315, IL1B 2.447,
 FSTL3 2.527, TRIM21 2.950, TANK 3.324. ICAM1 is the attributable adhesion
@@ -132,7 +132,7 @@ transcripts:
 | Pillar | Occupied by v1 runs? |
 |---|---|
 | P1 | yes — several ran the standalone-arm check |
-| **P2** | **no. Zero of eight.** No run observed that IL-33 induces no type 2 programme in endothelium; every type-2 mention concerns `mmc3` eosinophil IHC or the Olink panel. No run named THBD or SERPINE1, so none characterised the procoagulant switch directionally. Four named F3 alone |
+| **P2** | **no. Zero of eight.** No run observed that IL-33 induces no type 2 programme in endothelium; every type-2 mention concerns `AX-1177_postmortem_lung` eosinophil IHC or the Olink panel. No run named THBD or SERPINE1, so none characterised the procoagulant switch directionally. Four named F3 alone |
 | P3 | yes — all eight reached the timepoint result |
 | P4 | yes — all eight, and it is why they said no |
 | P5 | partly. None raised the odds-ratio precision problem |
