@@ -92,13 +92,13 @@ panels before counting.
 
 **Case for.**
 
-- 26 analytes appear on more than one panel; IL6 on four, SCF and FGF-21 on
-  three. The reconciled figures are 1064 and 169.
+- 27 analytes appear on more than one panel; IL6 on four, SCF and FGF-21 on
+  three. The reconciled figures are 1063 and 169.
 - The panel column is right there in the file, and the suffixes (-INFI,
   -CVDII, -ONCII and so on) are visible in the assay names themselves.
 - The annex states that assay identifiers are panel-specific and reported
   without reconciliation, so the room says the work is needed.
-- Trivially confirmable: the number is either 1094 or 1064.
+- Trivially confirmable: the number is either 1094 or 1063.
 
 **Case against.** Low consequence. It changes a reported count, not the
 recommendation. A solver could also argue the per-assay figure is what the

@@ -104,7 +104,10 @@ No file in the package involves a virus, an animal, or a dose.
 silent rather than negative.
 
 **Caveat.** The Benjamini-Hochberg correction in `AX-1177_serum_proteomics` only reproduces at
-1,194 tests against 1,094 delivered, so roughly 100 analysed assays are absent
+1,194 tests against 1,094 delivered (the ratio of delivered adjusted p to the
+BH value at the delivered count is a constant 1094/1194 across all rows, and
+the binding step-up ranks imply m = 1194.00 exactly), so roughly 100 analysed
+assays are absent
 and at least four of them were significant. IL-33 itself is not among the 1,094.
 
 ## P5 — The readouts validation should carry
@@ -132,7 +135,7 @@ transcripts:
 | Pillar | Occupied by v1 runs? |
 |---|---|
 | P1 | yes — several ran the standalone-arm check |
-| **P2** | **no. Zero of eight.** No run observed that IL-33 induces no type 2 programme in endothelium; every type-2 mention concerns `mmc3` eosinophil IHC or the Olink panel. No run named THBD or SERPINE1, so none characterised the procoagulant switch directionally. Four named F3 alone |
+| **P2** | **no. Zero of eight.** No run observed that IL-33 induces no type 2 programme in endothelium; every type-2 mention concerns the post-mortem workbook (then mounted as `mmc3`) eosinophil IHC or the Olink panel. No run named THBD or SERPINE1, so none characterised the procoagulant switch directionally. Four named F3 alone |
 | P3 | yes — all eight reached the timepoint result |
 | P4 | yes — all eight, and it is why they said no |
 | P5 | partly. None raised the odds-ratio precision problem |

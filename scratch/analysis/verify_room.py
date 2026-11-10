@@ -55,10 +55,12 @@ x=pd.ExcelFile('data_room/AX-1177_rnaseq_huvec_il33.xlsx')
 for sh,want in (('IL33_vs_Vehicle_HUVEC_6_hrs',1068),('IL33_vs_Vehicle_HUVEC_24_hrs',512)):
     d=x.parse(sh); chk('AX-1177_rnaseq_huvec_il33 %s'%sh, int(((d['adj.P.Val']<0.05)&(d['logFC'].abs()>1)).sum()), want)
 d=pd.read_excel('data_room/AX-1177_serum_proteomics.xlsx')
-# Panel suffixes that actually occur in the delivery. CAM and NEUI were missing,
-# which left the analyte count at 1064. Tokens like PAR, RAGE, MRAP, NT, CSF and EGF
-# also follow a hyphen but are gene-name fragments and must NOT be stripped.
-SFX=['ONCII','ONCIII','INFI','CVDII','CVDIII','CRE','IMO','MET','NEX','ODA','CAM','NEUI']
+# Panel suffixes that actually occur in the delivery. NEUI was missing, which left
+# the analyte count at 1064: GDNF-INFI and GDNF-NEUI are one analyte on two panels.
+# Do NOT add CAM. It changes no count but strips the genuine analytes Ep-CAM and
+# Nr-CAM to "Ep" and "Nr". Likewise PAR, RAGE, MRAP, NT, CSF and EGF follow a
+# hyphen but are gene-name fragments.
+SFX=['ONCII','ONCIII','INFI','CVDII','CVDIII','CRE','IMO','MET','NEX','ODA','NEUI']
 bs=lambda a:next((a[:-(len(s)+1)] for s in sorted(SFX,key=len,reverse=True) if a.endswith('-'+s)), a)
 d['an']=d.assay.map(bs)
 chk('AX-1177_serum_proteomics assays', len(d), 1094); chk('AX-1177_serum_proteomics analytes', d.an.nunique(), 1063)

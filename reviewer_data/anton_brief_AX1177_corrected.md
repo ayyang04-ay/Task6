@@ -116,7 +116,7 @@ emails and ORCIDs, no analytical value.
 | sign agreement 76.82% / 64.27% | AX-1177_rnaseq_contrasts | yes | 2 |
 | direction+nominal replication 28.0% / 5.5%; mirror replication 19.45% / 4.56%; Jaccard 0.1571 / 0.0356 | AX-1177_rnaseq_contrasts | yes | 2 |
 | attribution overlap 6 / 1126 | AX-1177_rnaseq_contrasts | yes | 2 |
-| 1094 assays → 1064 analytes; 178 hits → 169 | AX-1177_serum_proteomics | yes | 2 |
+| 1094 assays → 1063 analytes; 178 hits → 169 | AX-1177_serum_proteomics | yes | 2 |
 | df.total 85.128 uniform across all 24 contrasts | AX-1177_rnaseq_contrasts | yes | 2, invert t against P |
 
 Every anchor is a computation over mounted numeric cells. No handbook values, no
@@ -174,7 +174,7 @@ Full membership table to `/tmp/outputs/`, not the body.
 | 5 | a fixed fold-change cut understates agreement given leg 3 | 219 vs 315 off the same base; the 107 recovered genes begin at magnitude rank 79 (ACKR3, \|logFC\| 3.710) | yes |
 | 6 | the reproducible core is coherent suppressed inflammatory biology | interferon, NF-κB (incl. NFKB2 −2.86, RELB −3.27), CSF and cytokine, and chemokine modules all present; F3 −5.47, C3 −4.62; every member of the named modules is negative | yes, for the justification |
 | 7 | sST2 has no pharmacodynamic response | *IL1RL1* in 0 of 24 contrasts, absent from the core | serum product only |
-| 8 | the Olink delivery is 1094 assays over 1064 analytes | 26 analytes on more than one panel, IL6 on four | serum product only |
+| 8 | the Olink delivery is 1094 assays over 1063 analytes | 27 analytes on more than one panel, IL6 on four | serum product only |
 
 ### Derivation notes
 
@@ -270,7 +270,7 @@ transcripts is the fastest route to the required one to five.
 |---|---|---|---|---|
 | `threshold-intersection` | whether between-line effect-size difference invalidates a fixed fold-change cut as a reproducibility test | intersecting significant sets is the standard move, and both arrive pre-thresholded by the package's own criterion | median \|logFC\| 2.0140 vs 0.7367 over the same genes | direction plus nominal significance gives 315 and r 0.6216; the intersection gives 219 and reads as failure |
 | `both-windows-rejection` | that the correction separates the two timepoints | Jaccard 0.1571 and 0.0356 both read as low; one uniform conclusion is tidier | r 0.6216 vs 0.3032; direction+nominal replication 28.0% vs 5.5% | 6 h carries, 24 h does not |
-| `assay-as-analyte` | reconciliation of assay identifiers across panels | one row per assay, 1094 rows, the obvious count | 26 analytes appear on more than one panel | 1064 analytes, 169 significant |
+| `assay-as-analyte` | reconciliation of assay identifiers across panels | one row per assay, 1094 rows, the obvious count | 27 analytes appear on more than one panel | 1063 analytes, 169 significant |
 | `prognostic-as-pharmacodynamic` | whether the top-ranked marker responds to the intervention | sST2 ranks second of 1094 at OR 3.02 and is the pathway's own receptor | *IL1RL1* not significant in any of 24 contrasts | shortlist of 5-9 (219 core) or 9-13 (315 core) by declared criterion, sST2 excluded |
 | `unverified-attribution` | the ligand-independent antibody term | the isotype appears in the contrast name, which looks like it handles it | the contrast is (Ab+IL-33) vs (isotype+IL-33); the antibody-alone term sits in the numerator only. 16 of the 24 contrasts contain no IL-33, so the data for the check is two thirds of the file | the standalone sets are disjoint from the attributable set, overlap 6/1126 and 1/487; attribution holds. **Low consequence** — removing every standalone-significant gene leaves the 6 h ratio at 2.734× |
 | `magnitude-ranked-response` | the significance filter when naming the strongest effects | SELE, VCAM1 and CXCL8 are the textbook endothelial readouts and carry three of the ten largest fold changes | adj.P 0.495, 0.497, 0.177 | none is attributable; ICAM1 at adj.P 0.0101 is |
@@ -312,7 +312,7 @@ timepoint where the response is in fact reproducible.
 | internal consistency | does the reported count follow from the solver's own declared base filter and rule |
 | the diagnostic | a count of 215–245 alongside a reproducibility-failure claim indicates the mirror rule (measured mirror values are 219, 239, 241) |
 | the conclusion | 6 h carries, 24 h does not |
-| analyte handling | 1064 and 169, not 1094 and 178 |
+| analyte handling | 1063 and 169, not 1094 and 178 |
 | sST2 | excluded with a stated reason |
 
 No absolute count band. The count is a legitimate degree of freedom; the
@@ -359,7 +359,7 @@ exhaustive — apply your judgment to any other issues you identify.
 - Concluding that the response does not reproduce across cell lines, on the
   basis of intersecting threshold-filtered gene sets.
 - Reporting 1094 proteins, or 178 significant proteins, where those figures
-  count assays rather than analytes. The reconciled figures are 1064 and 169.
+  count assays rather than analytes. The reconciled figures are 1063 and 169.
 - Nominating soluble ST2 as a pharmacodynamic readout.
 - Reporting adhesion molecules, in particular SELE or VCAM1, as part of the
   antibody-attributable response.
@@ -392,7 +392,7 @@ context and give sixteen versions of one trajectory, which thins FA coverage.
 |---|---|---|
 | workbook metadata names source-paper authors and AZ's writing agency | **high** | mandatory build step, method proven lossless |
 | `mmc` filenames are an Elsevier supplementary fingerprint | medium | **fixed after v3**: 8 of 8 v3 runs pattern-matched the room, four naming the convention; files renamed |
-| `Compound_47` and `IC119` are inside the data and cannot be renamed without editing files; IC119 is a documented AZ control reagent | medium | accepted, unfixable |
+| `Compound_47` and `NIP228` are inside the data and cannot be renamed without editing files; NIP228 is a documented AZ control reagent | medium | **fixed after v3**: `NIP228` -> `IC119` by string substitution in `strip_meta.py`, which leaves every numeric cell untouched. `Compound_47` kept: it carries no information and no run reached AstraZeneca from it alone |
 | a methods annex listing `mmc2.xlsx` reads as repurposed | low | **fixed**: mounted files renamed off the `mmc*` convention |
 | `unverified-attribution` and `magnitude-ranked-response` weakly forced by the prompt | low | may not appear; FA needs only one to five of six |
 | prompt reads over-instructive | low | writer hand-editing |

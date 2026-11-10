@@ -54,11 +54,14 @@ The AX-1177_serum_proteomics figures are a separate error that still stands:
 |---|---|---|
 | AX-1177_serum_proteomics analytes | 1077 | 1063 |
 | AX-1177_serum_proteomics significant analytes | 173 | 169 |
-| analytes on more than one panel | 15, IL6 on three | 26, IL6 on four |
+| analytes on more than one panel | 15, IL6 on three | 27, IL6 on four |
 
-The AX-1177_serum_proteomics figures are a separate, independent error. Panel suffixes are
--ONCII, -ONCIII, -INFI, -CVDII, -CVDIII, -CRE, -IMO, -MET, -NEX, -ODA.
-Stripping them leaves 1063 analytes. SCF and FGF-21 are on three panels,
+The AX-1177_serum_proteomics figures are a separate, independent error. Panel
+suffixes are -ONCII, -ONCIII, -INFI, -CVDII, -CVDIII, -CRE, -IMO, -MET, -NEX,
+-ODA, -NEUI. Stripping them leaves 1063 analytes. Omitting -NEUI yields 1064 and
+is the origin of that figure: `GDNF-INFI` and `GDNF-NEUI` are one analyte on two
+panels. `-CAM` is not a panel suffix here -- stripping it would mangle the
+genuine analytes `Ep-CAM` and `Nr-CAM`. SCF and FGF-21 are on three panels,
 IL6 on four.
 
 ## Not yet checked
@@ -70,14 +73,14 @@ IL6 on four.
 
 ## Observations not in the brief
 
-1. AX-1177_rnaseq_contrasts's two sheets carry the same 24 contrasts with identical values; 22
+1. the source `mmc5.xlsx`'s two sheets carry the same 24 contrasts with identical values; 22
    are byte-identical and 2 differ only in row order. The `6h` sheet is
    dimensioned to Excel's 1,048,576-row ceiling, holding 629,040 data rows
    and 419,535 empty ones. `pd.read_excel` with default arguments reads that
    sheet and returns the padding; concatenating both sheets doubles every
    contrast. Either silently corrupts a count.
 2. Two inhibition contrast families exist for both lines and both
-   timepoints. `Compound_47_IL33_vs_IL33_IC119_HUVEC_6hrs` is
+   timepoints. `Compound_47_IL33_vs_IL33_NIP228_HUVEC_6hrs` is
    isotype-controlled (4239 / 1126); `Compound_47_IL33_vs_IL33_HUVEC_6hrs`
    is against IL-33 alone (4049 / 1075). A solver choosing the second gets a
    differently-controlled set that still looks defensible.

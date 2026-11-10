@@ -3,8 +3,10 @@
 Three transforms, nothing else:
   1. rename  mmc<n>.xlsx -> the mounted AX-1177_* name (publisher convention is a leak)
   2. blank   docProps/core.xml and app.xml (they name the source authors and agency)
-  3. replace NIP228 -> IC119 (a real, published AstraZeneca isotype-control reagent;
-     all 8 v3 runs used it to identify the source programme)
+  3. replace NIP228 -> IC119. NIP228 is the leak: it is a real, published
+     AstraZeneca isotype-control reagent, and all 8 v3 runs used it to identify
+     the source programme, two of them stating the inference outright. IC119 is
+     an arbitrary internal code with no published referent.
 
 Everything else is copied byte-for-byte and verified as such.
 """

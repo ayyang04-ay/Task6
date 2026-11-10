@@ -1,5 +1,6 @@
 # Originals and large intermediates live here, out of git.
-# mmc5.xlsx is 133 MB; GitHub rejects single files over 100 MB without LFS.
+# The sources are large (mmc5.xlsx is ~139 MB / 133 MiB); GitHub rejects single
+# files over 100 MB without LFS.
 scratch/
 __pycache__/
 *.pyc

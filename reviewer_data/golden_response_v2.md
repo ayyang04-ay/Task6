@@ -62,13 +62,17 @@ all. Only reduced IL-33 was tested, although §1 names an oxidised form.
 Each endothelial line is one donor and three wells, not three donors (§3), and
 HGMEC has no vehicle arm, so the IL-33 response in the second line is never
 measured — only the part the antibody reverses. The Benjamini-Hochberg
-correction in `AX-1177_serum_proteomics` reproduces only at 1,194 tests against 1,094 delivered,
+correction in `AX-1177_serum_proteomics` reproduces only at 1,194 tests The test is the ratio of the delivered adjusted p to the
+BH value at the delivered count: it is a constant 1094/1194 = 0.916248 across
+all 1,094 rows, and the binding step-up ranks imply m = 1194.00 exactly. A
+max-error fit over every row is the wrong test, because the delivered column is
+monotonised and most rows' values are carried from a later rank. against 1,094 delivered,
 so roughly 100 analysed assays are absent and at least four were significant.
 IL-33 itself is not among the 1,094.
 
-## 3. The indication our data points at, and whether viral LRTD is right
+## 3. The indication our data points at, and whether severe lower viral respiratory infection is right
 
-**Viral LRTD is the right disease area and the wrong mechanism to be
+**Severe lower viral respiratory infection is the right disease area and the wrong mechanism to be
 developing against.** Anti-IL-33 is conventionally pursued through type 2
 inflammation. Our data shows IL-33 driving nothing of the kind in endothelium.
 
@@ -131,7 +135,7 @@ plus F3 −5.4739 and C3 −4.6241.
 That phenotype is what the rest of the package selects for. `AX-1177_serum_proteomics`'s endpoint
 is ICU admission, mechanical ventilation or death. `AX-1177_postmortem_lung` samples 20
 COVID-positive and 10 COVID-negative pneumonia blocks against 5
-non-pneumonia. So: stay in viral LRTD, but develop against the severe
+non-pneumonia. So: stay in severe lower viral respiratory infection, but develop against the severe
 endothelial-injury and coagulopathy phenotype rather than a type 2 one, and
 select patients on that basis. Nothing in the package supports an asthma,
 COPD or atopic indication, and the absence of the type 2 arm is a positive
@@ -196,11 +200,11 @@ compare like with like: among analytes whose gene was measured in the RNA data
 at all, is the significance rate higher inside the signature? It is — 13 of 38
 against 129 of 729, **34.2% against 17.7%, Fisher OR 2.419, p 0.0169**.
 Comparing instead against the base rate over all 1063 analytes, including those
-mapping to no measured gene, inflates this to 2.15-fold at p 0.0037 and should
+mapping to no measured gene, inflates this to 2.15-fold at Fisher p 0.0049 and should
 not be used.
 
 The result is sensitive to how the signature is drawn. On the tight 315-gene
-direction-plus-nominal core it holds. On looser signatures of several hundred to
+direction-plus-adjusted core it holds. On looser signatures of several hundred to
 a thousand genes the same test returns null, because a larger set is less
 specific. So a proposal that defines a broader signature and finds no
 enrichment has not made an error.
@@ -231,7 +235,7 @@ adhesion molecules, at `adj.P.Val` 0.0101 and an implied standard error of
 
 Four of the thirteen need the analyte-to-gene mapping before they appear at
 all: `OPG` is TNFRSF11B, `CSF-1` is CSF1, `MCP-3` is CCL7, `IL-18R1` is
-IL18R1. Matching Olink assay names to gene symbols literally returns five of
+IL18R1. Matching Olink assay names to gene symbols literally returns nine of
 the thirteen and drops those four. On the same point, the delivery is 1094
 assays over **1063** distinct analytes: 27 analytes sit on more than one panel,
 IL6 on four, SCF and FGF-21 on three. Of 178 significant assay rows, 169 are
@@ -243,7 +247,7 @@ distinct analytes.
 |---|---|
 | **Drop the asset.** Nothing here shows the pathway causes disease, and there is no in vivo, potency or exposure data. | Target engagement is established and the blocked programme is characterised and reproducible at 6 h across two beds. That is a validation gap, not a dead target, and the gap is closable with the studies in section 4. |
 | **Keep the type 2 framing.** It is where anti-IL-33 is developed and the standard indication set. | IL5, IL13, CCL11, CCL24 and IL25 are not in the table; IL4 is −1.229 and not significant; TSLP, CCL26, GATA3 and IL1RL1 are all non-significant. The package gives no type 2 response to block. |
-| **Conclude the response does not reproduce across lines.** Intersecting the two threshold-filtered sets gives 219 of 1126, a Jaccard of 0.1571. | The threshold is invalid on a line whose effects are 2.7337-fold smaller, and it admits 11 sign-discordant genes. On direction plus nominal significance the same data gives 315 and r 0.6216. |
+| **Conclude the response does not reproduce across lines.** Intersecting the two threshold-filtered sets gives 219 of 1126, a Jaccard of 0.1571. | The threshold is invalid on a line whose effects are 2.7337-fold smaller, and it admits 11 sign-discordant genes. On direction plus adjusted significance the same data gives 315 and r 0.6216. |
 | **Carry both timepoints.** Both Jaccard values, 0.1571 and 0.0356, look low. | The statistics separate: r 0.6216 against 0.3032, sign agreement 76.82% against 64.27%, 315 genes against 23. |
 | **Nominate sST2 as the pharmacodynamic readout.** Second of 1094 at OR 3.0243, and the pathway's own receptor. | Two reasons, and the first is specific to sST2 rather than general. Soluble ST2 is the decoy receptor for the drug's own target, so its serum concentration moves with pathway activity and with disease severity at once; a fall after dosing cannot be attributed to target engagement rather than to the patient improving. Every other marker proposed here sits downstream of the receptor and does not carry that confound. Second, nothing in the package resolves its behaviour under antibody: the only receptor measurement is the `IL1RL1` transcript, +1.6020 in `AX-1177_rnaseq_huvec_il33` and −1.6799 in the matching inhibition contrast, with an implied standard error near 8.32 against a median of 0.34, so it is unreadable either way. Prognostic and for patient selection: yes, on the Bonferroni result. Target engagement or pharmacodynamics: not shown, and not resolvable here. |
 | **Report SELE and VCAM1 as blocked.** They carry the largest fold changes, −10.9852 and −8.7623, and are the textbook endothelial activation readouts. | Their implied standard errors are 8.779 and 7.019 against a ceiling of 1.7439 across the whole attributable set, so the delivered q-values of 0.4950 and 0.4965 establish nothing in either direction. CXCL1 at `t` −0.0071 and CXCL8, SLC7A2, CCL2 and PTGS2 are in the same condition. Indeterminate, not negative — and not citable as blocked. |

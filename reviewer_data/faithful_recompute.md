@@ -69,8 +69,8 @@ faithful predicate.
 
 ## AX-1177_serum_proteomics, faithful
 
-1094 assays, 1064 analytes, 178 significant rows, 169 significant analytes.
-26 analytes on more than one panel; IL6 on four, SCF and FGF-21 on three.
+1094 assays, 1063 analytes, 178 significant rows, 169 significant analytes.
+27 analytes on more than one panel; IL6 on four, SCF and FGF-21 on three.
 
 ## The two inhibition contrast families give the same verdict
 
@@ -141,7 +141,7 @@ Full membership in `scratch/analysis/mirror_core_symbols.json`.
 
 ## AX-1177_postmortem_lung `Tissue RNA` column
 
-22 of 74 blocks carry an identifier of the form `Zr4940_<n>`, 20 distinct
+22 of 74 blocks carry an identifier of the form `Zr4940_<n>`, 22 distinct
 values. The count matches the paper's lung bulk RNA-seq cohort exactly:
 n = 9 COVID, n = 9 non-COVID pneumonia, n = 4 non-pneumonia, total 22.
 
