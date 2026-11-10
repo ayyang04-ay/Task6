@@ -2,7 +2,7 @@
 
 Every figure below was recomputed from `scratch/source_untrusted/` by
 `scratch/analysis/probe5.py` and `scratch/analysis/basin.py`. Counts use the
-`24h` sheet of AX-1177_rnaseq_contrasts, which carries all 24 contrasts without the row padding
+`24h` sheet of the source `mmc5.xlsx`, which carries all 24 contrasts without the row padding
 present in the `6h` sheet.
 
 ## Confirmed
@@ -81,7 +81,7 @@ IL6 on four.
    isotype-controlled (4239 / 1126); `Compound_47_IL33_vs_IL33_HUVEC_6hrs`
    is against IL-33 alone (4049 / 1075). A solver choosing the second gets a
    differently-controlled set that still looks defensible.
-3. AX-1177_rnaseq_contrasts carries the same `dc:creator` / `cp:lastModifiedBy` metadata as the
+3. The source `mmc5.xlsx` carries the same `dc:creator` / `cp:lastModifiedBy` metadata as the
    other workbooks. The strip step applies to it too.
 
 ## df.total — confirmed, and it corroborates the design
