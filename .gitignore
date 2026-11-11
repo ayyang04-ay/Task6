@@ -6,3 +6,4 @@ __pycache__/
 *.pyc
 .DS_Store
 fa/v3/rebuilt/*_parsed.json
+fa/v4/rebuilt/*_parsed.json
