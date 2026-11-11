@@ -113,6 +113,82 @@ common root, and counting it twice would overstate prevalence.
 
 ---
 
+## M4 — the isotype comparator's timepoint-dependence is not named
+
+**Class.** Convention-not-declared (a named-convention omission, not a wrong
+figure).
+
+**Not checked / measured / corrected for.** Whether the isotype arm is inert at
+the timepoint being quoted. It is at 6 h and is not at 24 h, so a blanket claim
+of inertness is wrong for any 24 h number, and the choice of comparator
+(isotype+IL-33 versus IL-33 alone) moves the reversal figure in a known
+direction.
+
+**[computed] The governing values** (HUVEC, derived from the delivered contrasts
+as `(Compound_47_IL33_vs_IL33_<line>_<tp>) − (Compound_47_IL33_vs_IL33_IC119_<line>_<tp>)`,
+over IL-33-induced genes with `adj.P.Val < 0.05`, `logFC > 1` and implied SE < 1.0):
+
+| Selection | n | median difference | fraction of the IL-33 response the isotype retains |
+|---|---|---|---|
+| 6 h | 639 | −0.0173 log2 | **0.991** — inert |
+| 24 h, selected on the 24 h contrast | 313 | −0.3129 log2 | 0.844 |
+| 24 h, **selected at 6 h and measured at 24 h** (independent) | 205 | −0.2378 log2 | **0.874** |
+| whole gene universe, either timepoint | 26,113 | −0.005 to +0.008 log2 | ~1.00 |
+
+Two cautions that the numbers themselves impose, and that cost me two wrong
+readings before I ran the third test:
+
+- The 24 h effect is **partly** winner's curse. Selecting genes on the 24 h
+  IL-33 contrast shares the IL-33-alone group with the quantity being measured,
+  which inflates it from 0.874 to 0.844. About a quarter of the apparent
+  dampening is selection artefact; the rest survives independent selection and
+  is real.
+- Genome-wide the difference is centred at zero at **both** timepoints, because
+  most genes are not IL-33-responsive. A genome-wide null is therefore a valid
+  calibration target — `92f09677` uses exactly that and its method is sound.
+  The dampening is a property of the induced set, not of the whole file.
+
+**Requirement basis (prompt, verbatim).** *"All recommendations and/or conclusions
+should be grounded in our data"* — a reversal percentage is only interpretable
+once the comparator and its timepoint behaviour are stated.
+
+**Trajectory IDs and evidence.**
+
+| Trajectory | **[transcript]** the claim | Why it fails |
+|---|---|---|
+| `af1a3322` | §4.1: *"Reversal is complete for robust genes at both timepoints, and the isotype is inert."* | Asserts inertness **at both timepoints** explicitly. False at 24 h for the induced set, which is the set its own reversal figures are computed on; §2 quotes a 24 h residual of 1% (−10 to +15%) that depends on it |
+| `920dbc63` | §2.1: *"The IL-33 + isotype arm reproduced the full IL-33 response (median log2FC 4.12 vs 4.02), so the effect is specific to AX-1177."* | A 6 h figure — the ~2% gap matches the 6 h value — carried as a general claim with no timepoint named |
+
+**Why this is not defensible.** Four trajectories state it, one of them in a
+single sentence that is the model answer:
+
+| Trajectory | **[transcript]** how it is handled |
+|---|---|
+| `c402acd4` | *"**The isotype control is not neutral at 24 h.** The IL-33 + isotype arm keeps 95% of the IL-33-alone response at 6 h but only 86% at 24 h. Any claim of AX-1177 efficacy 'vs IL-33 alone' therefore overstates it. All numbers in this brief use the isotype-matched arm."* — names the convention, quantifies both timepoints, states the direction of the error, declares which it uses |
+| `cc5a3c81` | Tabulates both conventions at both timepoints: reversal 95%/98% at 6 h and 73%/84% at 24 h; *"Median IL-33 effect retained with isotype control: 99% / 84%"* |
+| `dbd6f47e` | §7: *"Measuring neutralisation against 'IL-33 alone' … inflates reversal (slope −0.82 vs −0.62 against isotype at 6 h). We used isotype as comparator throughout."* Also flags the winner's-curse component separately |
+| `bd4f9a92` | Restricts the inertness claim to its timepoint — *"For genes induced >4-fold at 6 h, the isotype has no effect (ratio ≈ 0)"* — and reports the 24 h attenuation (7–20%) separately |
+
+**Counterfactual.** Name the comparator and its timepoint behaviour wherever a
+reversal figure is quoted, in one sentence, as `c402acd4` does. Restricting an
+inertness claim to 6 h is sufficient; asserting it at both timepoints is not.
+
+**Consequence.** Benign for the verdict — both carriers reach defensible
+positions — but it makes their 24 h neutralisation figures uninterpretable as
+stated, and `af1a3322` builds a stated claim on a property the data contradicts.
+
+**Plain-language restatement (inference check).** The control antibody really is
+doing nothing at 6 hours, so measuring the drug against it is clean. By 24 hours
+the control is itself knocking about 13% off the IL-33 response, so "the drug
+removed X% compared with control" means something different then. Two runs said
+the control does nothing, full stop — one of them explicitly "at both
+timepoints" — and then quoted 24-hour numbers resting on it. Four runs said which
+comparator they used and what it does at each timepoint.
+
+**Graded?** `not in grader`.
+
+---
+
 ## Candidates that cleared the floor but are weak
 
 Recorded with their weakness stated, so the choice to ship or drop them is
@@ -175,7 +251,16 @@ gives no signal is required.
 
 ## Gate
 
-**Cleared.** M1 is held by `c402acd4` and `bd4f9a92`, with the raised-then-abandoned
-shape, confirmed in the deliverable text and in the thinking channel, and
-non-defensible because six trajectories state the objection and four act on it.
-Two further candidates clear the floor but are benign and weak.
+**Cleared.** Four candidates reach the prevalence floor, but they do not all
+reach the same standard and should not be presented as equivalent:
+
+| | Mode | Trajectories | Clears the defensibility bar? |
+|---|---|---|---|
+| M1 | sST2's decoy direction raised then dropped | `c402acd4`, `bd4f9a92` | **Yes.** Six trajectories state the objection, four act on it; one carrier omits it from a section built to enumerate alternatives |
+| M4 | Isotype comparator's timepoint-dependence not named | `af1a3322`, `920dbc63` | **Yes.** Computable ground truth; four trajectories state it, one in a single sentence |
+| M2 | Procoagulant switch not directional | `cc5a3c81`, `970c71dd` | **Marginal.** `cc5a3c81`'s claim is true as far as it goes and `970c71dd`'s is an omission, not an error |
+| M3 | Assays reported as proteins | `af1a3322`, `bd4f9a92` | **Marginal.** A 2.9% denominator error that changes no conclusion; "1,094 proteins" reads as shorthand |
+
+M1 and M4 are the submission. M2 and M3 are available if more volume is wanted,
+with the caveat that the defensibility bar is the strictest test in the guidance
+and is applied before the prevalence floor.
