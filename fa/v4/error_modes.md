@@ -29,7 +29,7 @@ blocks carry text), so claims about what a run weighed internally are supportabl
 
 ---
 
-## M1 — sST2's decoy direction is raised in reasoning and dropped from the deliverable
+## M1 (PRIMARY — ships on its own) — sST2's decoy direction is raised in reasoning and dropped from the deliverable
 
 **Class.** Raised-then-abandoned (verdict-chain gap, not a knowledge gap — both
 runs derived the objection).
@@ -113,7 +113,7 @@ common root, and counting it twice would overstate prevalence.
 
 ---
 
-## M4 — the isotype comparator's timepoint-dependence is not named
+## M4 (secondary — mention only) — the isotype comparator's timepoint-dependence is not named
 
 **Class.** Convention-not-declared (a named-convention omission, not a wrong
 figure).
@@ -189,7 +189,7 @@ comparator they used and what it does at each timepoint.
 
 ---
 
-## Candidates that cleared the floor but are weak
+## M2 and M3 (secondary — mention only)
 
 Recorded with their weakness stated, so the choice to ship or drop them is
 deliberate.
@@ -198,6 +198,52 @@ deliberate.
 |---|---|---|
 | **Procoagulant switch not stated directionally.** `cc5a3c81` writes *"procoagulant genes: tissue factor (F3, +5.6) and PAI-1 (SERPINE1, +1.7)"* with no anticoagulant arm; `970c71dd` lists F3 +5.6 among inflammatory genes and never characterises the haemostatic module. **[computed]** THBD is −1.0005 at `adj.P.Val` 1.72e-10, implied SE 0.123 — among the best-measured genes in the file | `cc5a3c81`, `970c71dd` | `cc5a3c81`'s statement is true as far as it goes, and `970c71dd`'s is an omission rather than an error. Six trajectories state it directionally, so it does not discriminate. An expert defends both |
 | **Assays reported as proteins.** `af1a3322` writes *"#2 of 1,094 proteins"* and *"176 of 178 significant proteins"* with no reconciliation anywhere; `bd4f9a92` writes *"Of 1,094 serum proteins"* and *"82% of all 1,094 proteins"* in its bottom line and scorecard while computing *"27 proteins appear on >1 panel (58 assays)"* in §9. **[computed]** 1,094 assays = 1,063 analytes; the single load-bearing suffix is `-NEUI`, since `GDNF-INFI` and `GDNF-NEUI` are one analyte | `af1a3322`, `bd4f9a92` | Benign: a 2.9% error in a denominator that changes no conclusion. `920dbc63` corrects it explicitly as a ruled-out item. An expert may read "1,094 proteins" as shorthand |
+
+---
+
+## Adjudication findings that did not reach the floor
+
+Recorded because they are the right *kind* of finding — inference and judgement
+rather than retrieval — and the writer may want to reference them even though
+neither ships as a mode.
+
+**A. One run asserts what its own test refutes.** Every trajectory computes the
+set-level enrichment of the AX-1177-reversible programme among outcome-associated
+serum proteins, and every one gets a null. What each licenses from that null is a
+pure judgement call, and seven let the null govern the claim:
+
+| Trajectory | **[transcript]** what it licensed |
+|---|---|
+| `af1a3322` | grades the claim *"The AX-1177-reversible programme is what is active in severe patients"* as **"Not shown"** |
+| `920dbc63` | §2.2 heading states the negative: *"the IL-33 programme as a class does not predict outcome"* |
+| `c402acd4` | ruled-out row: *"The set of IL-33-inducible severity proteins as a translational bridge. Rejected: there is no enrichment over random proteins."* |
+| `92f09677` | §3.4 heading: *"Synthesis: the bridge that is not there"* |
+| `970c71dd` | *"The bridge is partial, not a fingerprint."* |
+| `dbd6f47e` | *"Not preferentially… This is the strongest argument against a broad claim, and we do not make it."* |
+| `cc5a3c81` | confines it to node level — overlap *"at specific, measurable nodes"* |
+| **`bd4f9a92`** | **§3.3 heading: *"The biology AX-1177 blocks is the biology that tracks outcome"***, with the refutation four lines below it in the same section: *"That is the same rate as for all other proteins (38 % vs 37 %), so the set-level test is null."* Its evidence scorecard grades the same question "Moderate" |
+
+**[inference]** One trajectory. Below the floor, and recorded only because it is the
+same class as M1 — a run letting a claim stand that its own analysis removes the
+support for.
+
+**B. The keep/drop divergence is a labelling divergence, not a decision one.**
+**[transcript]** All eight recommend the same action: freeze indication-directed
+spend, run a short gate on material already held, pre-commit kill criteria.
+`92f09677` labels it "No" and then writes *"Before the asset is formally closed,
+take up to one quarter to recover three datasets… The asset re-enters only if
+those data meet the pre-specified criteria."* `c402acd4` labels it "No" and
+prescribes a one-quarter gated hold. Both are coherent, so neither is an error —
+but it means the verdict axis does not discriminate in this task, which is the
+structural reason the panel reads as uniform.
+
+**C. The SE-inflated genes are a real judgement split with no defective side.**
+`af1a3322` excludes them outright (*"our mechanistic case rests only on genes with
+interpretable statistics"*); five trajectories retain them on an empirical
+replication argument. **[inference]** The retainers' inference is sound: the
+logFC estimates come from disjoint sample groups while the inflated variance is a
+pooled-model artefact, so consistent large effects across independent contrasts do
+license the conclusion. Both sides reason correctly to opposite choices.
 
 ---
 
@@ -251,16 +297,28 @@ gives no signal is required.
 
 ## Gate
 
-**Cleared.** Four candidates reach the prevalence floor, but they do not all
-reach the same standard and should not be presented as equivalent:
+**Cleared on M1 alone.** Project guidance requires one to five modes with a floor
+of two trajectories, so M1 ships by itself.
 
-| | Mode | Trajectories | Clears the defensibility bar? |
-|---|---|---|---|
-| M1 | sST2's decoy direction raised then dropped | `c402acd4`, `bd4f9a92` | **Yes.** Six trajectories state the objection, four act on it; one carrier omits it from a section built to enumerate alternatives |
-| M4 | Isotype comparator's timepoint-dependence not named | `af1a3322`, `920dbc63` | **Yes.** Computable ground truth; four trajectories state it, one in a single sentence |
-| M2 | Procoagulant switch not directional | `cc5a3c81`, `970c71dd` | **Marginal.** `cc5a3c81`'s claim is true as far as it goes and `970c71dd`'s is an omission, not an error |
-| M3 | Assays reported as proteins | `af1a3322`, `bd4f9a92` | **Marginal.** A 2.9% denominator error that changes no conclusion; "1,094 proteins" reads as shorthand |
+| | Mode | Trajectories | Type | Role in the submission |
+|---|---|---|---|---|
+| **M1** | sST2's decoy direction raised then dropped | `c402acd4`, `bd4f9a92` | **Adjudication** — both runs held the counter-argument and did not let it bear on the role assignment | **Primary** |
+| M4 | Isotype comparator's timepoint-dependence not named | `af1a3322`, `920dbc63` | Reporting | Mention |
+| M2 | Procoagulant switch not stated directionally | `cc5a3c81`, `970c71dd` | Characterisation | Mention |
+| M3 | Serum assays reported as proteins | `af1a3322`, `bd4f9a92` | Retrieval | Mention |
 
-M1 and M4 are the submission. M2 and M3 are available if more volume is wanted,
-with the caveat that the defensibility bar is the strictest test in the guidance
-and is applied before the prevalence floor.
+M1 is the only one that is about inference and judgement rather than retrieval.
+M2–M4 are real and verified, but each is a missing statement rather than a
+defective chain, and a reviewer may strip them.
+
+## Notes for the Studio write-up
+
+- Name the trajectories; do not report counts or k-of-n ratios.
+- Cite no scores, and do not rank or label runs by score.
+- Describe and locate the evidence rather than quoting it. The verbatim quotes in
+  this file are for checking against, not for pasting.
+- Line numbers are approximate — `outputs/` was excluded from the export again, so
+  all eight deliverables were rebuilt by replaying transcript file operations.
+  Cite section headings.
+- Anything a run did *well* belongs in the "what should the model have done"
+  section, not in the failure item. Praise inside a failure item gets it rejected.
