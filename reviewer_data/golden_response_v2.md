@@ -74,7 +74,11 @@ IL-33 itself is not among the 1,094.
 
 **Severe lower respiratory viral infection is the right disease area and the wrong mechanism to be
 developing against.** Anti-IL-33 is conventionally pursued through type 2
-inflammation. Our data shows IL-33 driving nothing of the kind in endothelium.
+inflammation. What our data shows IL-33 driving in endothelium is something
+else entirely — interferon-driven, neutrophilic and procoagulant — and the type
+2 axis is null in the patients. The stimulation data cannot speak to type 2
+either way, so the case rests on what is positively characterised plus the human
+markers, not on an in vitro absence.
 
 In `AX-1177_rnaseq_huvec_il33.xlsx`, `IL33_vs_Nontreated_HUVEC_6_hrs`. The delivered statistics in
 this file are not uniformly usable, so each gene is taken with its implied
@@ -83,24 +87,58 @@ about five times that are not interpretable in either direction, and the
 `AveExpr` column cannot stand in for expression here because it carries one
 value per gene across all 114 libraries, including the two epithelial lines.
 
-**The type 2 axis, taken honestly.**
+**The type 2 axis: the stimulation data cannot test it.**
 
-| Gene | logFC | implied SE | adj.P | usable? |
-|---|---|---|---|---|
-| IL4 | −1.229 | 0.759 (2.2×) | 0.3371 | **yes — a real null** |
-| TSLP | +0.176 | 0.606 (1.8×) | 0.9705 | **yes — a real null** |
-| CCL26 | −0.839 | 0.724 (2.1×) | 0.5467 | **yes — a real null** |
-| GATA3 | −0.978 | **22.891 (67.6×)** | 0.9869 | no |
-| IL1RL1 | +1.602 | **8.324 (24.6×)** | 0.9803 | no |
-| IL5, IL13, CCL11, CCL24, IL25 | — | — | — | absent from the gene universe |
+| Gene | logFC | implied SE | AveExpr (percentile) | adj.P | reading |
+|---|---|---|---|---|---|
+| IL4 | −1.229 | 0.759 (2.2×) | −4.164 (**4th**) | 0.3371 | uninformative — bottom decile of expression |
+| TSLP | +0.176 | 0.606 (1.8×) | −3.999 (**5th**) | 0.9705 | uninformative — bottom decile of expression |
+| CCL26 | −0.839 | 0.724 (2.1×) | −2.016 (29th) | 0.5467 | readable and null, but one gene |
+| GATA3 | −0.978 | **22.891 (67.6×)** | 6.328 (91st) | 0.9869 | unreadable |
+| IL1RL1 | +1.602 | **8.324 (24.6×)** | 0.971 (53rd) | 0.9803 | unreadable |
+| IL5, IL13, CCL11, CCL24, IL25 | — | — | — | — | absent from the gene universe |
 
-Three measured type 2 genes have sound statistics and none of them moves.
-GATA3 and IL1RL1 cannot be used in either direction: their standard errors put
-them in the same unreadable class as SELE at 8.866 and VCAM1 at 7.064, and a
-proposal leaning on GATA3's `adj.P` of 0.9869 makes the same mistake as one
-leaning on SELE's 0.4979. The five absent effectors were filtered as
-unexpressed and support no claim; endothelium is not a type 2 effector cell, so
-an expert would expect that.
+The file's `AveExpr` median is 0.50 and its 10th percentile −3.52, so IL4 and
+TSLP sit in the bottom tenth of the expression range. A null in a gene at that
+level cannot distinguish *not induced* from *not detectable*, so it is not
+evidence against type 2 biology.
+
+The system argument is the stronger one. The only IL-33 arms in the package are
+HUVEC and HGMEC endothelial monocultures; A549 and MCF7 never received IL-33
+(annex §3). Those cultures contain none of the cells through which IL-33 drives
+type 2 biology — ILC2s, Th2 cells, mast cells, basophils. IL4 is a
+lymphocyte, mast cell and basophil product, TSLP is epithelial, and CCL26 is
+induced through IL-4/IL-13 and STAT6, which these cultures do not supply. A
+flat logFC for a gene the assay system cannot induce is not a negative result.
+
+**The asymmetry matters and cuts only one way.** Low expression does not void a
+positive: CSF2 sits at `AveExpr` −3.194, the 14th percentile, and is +10.296 at
+`adj.P` 5.3e-23. Low expression with significance is a real induction from near
+zero; low expression with a null is uninformative. And `AveExpr` carries one
+value per gene across all 114 libraries including the epithelial lines, so it
+cannot measure endothelial expression either — it bounds this claim rather than
+establishing it.
+
+GATA3 and IL1RL1 are unreadable in either direction: their standard errors put
+them in the same class as SELE at 8.866 and VCAM1 at 7.064, and a proposal
+leaning on GATA3's `adj.P` of 0.9869 makes the same mistake as one leaning on
+SELE's 0.4979. The five absent effectors were filtered as unexpressed and
+support no claim.
+
+**So the correct statement is that type 2 was never tested in vitro.** An answer
+that says so is right, and an answer that reads the IL4 and TSLP nulls as
+evidence against type 2 is overreading its own data.
+
+**Where type 2 is actually excluded: the patients.** `AX-1177_serum_proteomics`
+carries nine type 2 or effector-cell markers and every one is null against the
+composite endpoint — IL5 OR 1.001 (`adj.p` 0.9999), eotaxin-1/CCL11 on two
+panels at 1.079 and 0.979 (0.9006, 0.9795), eotaxin-2/CCL24 0.922 (0.7294),
+TARC/CCL17 0.849 (0.5651), tryptase/TPSAB1 1.068 (0.912), IL-5Rα 1.615
+(0.1671), KIT 1.049 (0.9399) and CD63 1.436 (0.251). IL13RA1 at 4.803 is the
+only one near significance and it does not survive adjustment (0.08672). In
+`AX-1177_postmortem_lung` the eosinophil, basophil, IL-5Rα and mast cell scores
+do not separate COVID-positive from COVID-negative pneumonia. That is a
+statement about the disease, which is what the indication question asks.
 
 **What is blocked, on readable statistics throughout.** Every gene below has an
 implied SE under three times the median.
@@ -119,9 +157,9 @@ implied SE under three times the median.
   part of the whole response.
 
 **So the claim is about what the package can support, and about which of its
-numbers can be read.** It cannot support a type 2 indication: the three type 2
-genes measured cleanly do not move, the two measured badly cannot be read, and
-the effectors were never measured. What it can support, on twenty-three genes
+numbers can be read.** It cannot support a type 2 indication, but not because the stimulation data
+rules one out — that data cannot test type 2 at all. The exclusion rests on the
+null type 2 axis in serum and tissue. What it can support, on twenty-three genes
 with sound statistics, is a programme that is interferon-driven, neutrophilic
 and procoagulant.
 
@@ -138,8 +176,9 @@ COVID-positive and 10 COVID-negative pneumonia blocks against 5
 non-pneumonia. So: stay in severe lower respiratory viral infection, but develop against the severe
 endothelial-injury and coagulopathy phenotype rather than a type 2 one, and
 select patients on that basis. Nothing in the package supports an asthma,
-COPD or atopic indication, and the absence of the type 2 arm is a positive
-reason not to try.
+COPD or atopic indication: the human type 2 markers are null and the epithelial
+biology was never tested. The missing type 2 arm is a gap in the package, not
+evidence against the mechanism.
 
 ## 4. What the next studies have to establish
 
@@ -246,7 +285,7 @@ distinct analytes.
 | Option | What closed it |
 |---|---|
 | **Drop the asset.** Nothing here shows the pathway causes disease, and there is no in vivo, potency or exposure data. | Target engagement is established and the blocked programme is characterised and reproducible at 6 h across two beds. That is a validation gap, not a dead target, and the gap is closable with the studies in section 4. |
-| **Keep the type 2 framing.** It is where anti-IL-33 is developed and the standard indication set. | IL5, IL13, CCL11, CCL24 and IL25 are not in the table; IL4 is −1.229 and not significant; TSLP, CCL26, GATA3 and IL1RL1 are all non-significant. The package gives no type 2 response to block. |
+| **Keep the type 2 framing.** It is where anti-IL-33 is developed and the standard indication set. | The human data closes it: nine type 2 and effector-cell markers in serum are all null against the endpoint (IL5 OR 1.001, eotaxins, CCL17, tryptase, IL-5Rα, KIT, CD63), and the tissue eosinophil, basophil and mast cell scores do not separate COVID-positive from COVID-negative pneumonia. The stimulation data is silent rather than negative — endothelial monocultures cannot mount a type 2 response, and IL4 and TSLP sit in the bottom tenth of the expression range. |
 | **Conclude the response does not reproduce across lines.** Intersecting the two threshold-filtered sets gives 219 of 1126, a Jaccard of 0.1571. | The threshold is invalid on a line whose effects are 2.7337-fold smaller, and it admits 11 sign-discordant genes. On direction plus adjusted significance the same data gives 315 and r 0.6216. |
 | **Carry both timepoints.** Both Jaccard values, 0.1571 and 0.0356, look low. | The statistics separate: r 0.6216 against 0.3032, sign agreement 76.82% against 64.27%, 315 genes against 23. |
 | **Nominate sST2 as the pharmacodynamic readout.** Second of 1094 at OR 3.0243, and the pathway's own receptor. | Two reasons, and the first is specific to sST2 rather than general. Soluble ST2 is the decoy receptor for the drug's own target, so its serum concentration moves with pathway activity and with disease severity at once; a fall after dosing cannot be attributed to target engagement rather than to the patient improving. Every other marker proposed here sits downstream of the receptor and does not carry that confound. Second, nothing in the package resolves its behaviour under antibody: the only receptor measurement is the `IL1RL1` transcript, +1.6020 in `AX-1177_rnaseq_huvec_il33` and −1.6799 in the matching inhibition contrast, with an implied standard error near 8.32 against a median of 0.34, so it is unreadable either way. Prognostic and for patient selection: yes, on the Bonferroni result. Target engagement or pharmacodynamics: not shown, and not resolvable here. |

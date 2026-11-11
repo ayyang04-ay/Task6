@@ -103,10 +103,22 @@ _d=_d[_d.t.abs()>0].copy(); _d['se']=(_d.logFC/_d.t).abs(); _med=_d.se.median()
 def _se(gn):
     r=_d[_d.symbol.astype(str)==gn]; return float(r.se.iloc[0]) if len(r) else None
 claim('AX-1177_rnaseq_huvec_il33 median implied SE 0.339', round(_med,3)==0.339 and inG('0.339'))
-claim('IL4/TSLP/CCL26 readable and null',
-      all(_se(x)<5*_med for x in ('IL4','TSLP','CCL26'))
-      and all(float(_d[_d.symbol.astype(str)==x]['adj.P.Val'].iloc[0])>=0.05 for x in ('IL4','TSLP','CCL26'))
-      and inG('0.759') and inG('0.606') and inG('0.724'))
+# IL4/TSLP nulls are UNINFORMATIVE, not evidence: they sit in the bottom decile of
+# AveExpr, so a null cannot separate "not induced" from "not detectable". Only CCL26
+# is readable on expression. The golden must state the percentiles, not treat the
+# nulls as a negative result.
+def _pctile(gn):
+    av=sorted(float(x) for x in _d['AveExpr'].dropna())
+    import bisect
+    r=_d[_d.symbol.astype(str)==gn]
+    return 100.0*bisect.bisect_left(av,float(r.AveExpr.iloc[0]))/len(av) if len(r) else None
+claim('IL4/TSLP in the bottom decile of AveExpr, so their nulls are uninformative',
+      _pctile('IL4')<10 and _pctile('TSLP')<10 and _pctile('CCL26')>25
+      and inG('4th') and inG('5th') and inG('bottom tenth'))
+claim('golden states type 2 was never tested in vitro',
+      inG('type 2 was never tested in vitro') or inG('cannot test type 2'))
+claim('low expression does not void a positive: CSF2 cited as the counter-case',
+      _pctile('CSF2')<20 and inG('10.296') and inG('5.3e-23'))
 claim('GATA3 SE 22.891 unreadable', round(_se('GATA3'),3)==22.891 and inG('22.891'))
 claim('IL1RL1 SE 8.324 unreadable', round(_se('IL1RL1'),3)==8.324 and inG('8.324'))
 claim('CXCL1/CXCL8 excluded with their SEs',
