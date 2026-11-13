@@ -86,6 +86,11 @@ for p in sorted(glob.glob(B+'/transcripts/*.json')):
                 if isinstance(x,dict) and x.get('data'): out+=str(x.get('data'))
         steps.append((c.get('name'), c.get('parameters') or {}, out))
     mds=[prm['path'] for nm,prm,_ in steps if nm!='bash' and prm.get('command')=='create' and str(prm.get('path','')).endswith('.md')]
+    if not mds:
+        # Some runs generate the deliverable from a script instead of writing it
+        # directly. Report and continue; handle those separately.
+        print('%-22s NO DIRECT .md CREATE - deliverable is script-generated, handle separately' % run)
+        continue
     target=mds[0]; base=os.path.basename(target)
     doc=None; applied=0; failed=0; aborted=0; log=[]
     for nm,prm,out in steps:

@@ -7,3 +7,4 @@ __pycache__/
 .DS_Store
 fa/v3/rebuilt/*_parsed.json
 fa/v4/rebuilt/*_parsed.json
+fa/v5/rebuilt/*_parsed.json
